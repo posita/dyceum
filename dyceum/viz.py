@@ -754,8 +754,18 @@ class BurstHPlotter(HPlotter):
             for label, first_h, second_h in hs:
                 yield (
                     label,
-                    first_h.zero_fill(unique_outcomes),
-                    None if second_h is None else second_h.zero_fill(unique_outcomes),
+                    H.from_counts(
+                        first_h,
+                        dict.fromkeys(unique_outcomes, 0),
+                        preserve_zero_counts=True,
+                    ),
+                    None
+                    if second_h is None
+                    else H.from_counts(
+                        second_h,
+                        dict.fromkeys(unique_outcomes, 0),
+                        preserve_zero_counts=True,
+                    ),
                 )
 
         if settings["burst_zero_fill_normalize"]:
