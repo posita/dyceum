@@ -84,7 +84,7 @@ Pytest discovers doctests from package docstrings, `README.md`, and Markdown und
   Quote forward references only when necessary.
 - Public docstrings use Markdown, raw triple-quoted strings, and one sentence per source line.
 - Use mkdocstrings cross-references for public intra-library references.
-- Use `` `#!python expression` `` and `` `#!math expression` `` for inline code and math.
+- Use `` `expression` `` and `` `#!math expression` `` for inline code and math.
 - Comments should explain architecture, component boundaries, or genuinely counterintuitive code.
   Prefer descriptive names over commentary that restates the implementation.
 - Use American spelling except for the project-wide `cancelled` and `cancelling` forms.
