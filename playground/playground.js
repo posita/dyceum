@@ -201,6 +201,8 @@ import {
   parseUrlHashForProgramId,
 } from "./url-fragment.js";
 import {
+  GH_MIRROR_HOSTNAME,
+  GH_MIRROR_PATH_PREFIX,
   ghMirrorUrlForProgramId,
   programIdAsHex,
   provenanceHeader,
@@ -227,7 +229,23 @@ async function fetchProgramFromUrl() {
     setStatus(`Invalid program ID: ${rawId}`);
     return null;
   }
-  const url = ghMirrorUrlForProgramId(hexId);
+  let url;
+  try {
+    url = new URL(ghMirrorUrlForProgramId(hexId));
+  } catch {
+    setStatus(`Invalid corpus URL for 0x${hexId}.`);
+    return null;
+  }
+  // raw.githubusercontent.com serves every public repository. Accept only
+  // https URLs under this corpus prefix.
+  if (
+    url.protocol !== "https:" ||
+    url.hostname !== GH_MIRROR_HOSTNAME ||
+    !url.pathname.startsWith(GH_MIRROR_PATH_PREFIX)
+  ) {
+    setStatus(`Refusing to load 0x${hexId} from outside the corpus mirror.`);
+    return null;
+  }
   setStatus(`Loading program 0x${hexId} from corpus...`);
   try {
     const resp = await fetch(url);

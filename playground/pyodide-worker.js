@@ -231,6 +231,12 @@ function runSource(source) {
 }
 
 self.addEventListener("message", async (ev) => {
+  // A dedicated worker receives messages only from the document that created
+  // it. Some browsers leave event.origin empty for those messages, so only a
+  // non-empty foreign origin is ignored.
+  if (ev.origin && ev.origin !== self.location.origin) {
+    return;
+  }
   const msg = ev.data;
   if (msg.type === "init") {
     try {
