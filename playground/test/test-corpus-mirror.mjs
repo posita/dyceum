@@ -10,6 +10,8 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 
 import {
+  GH_MIRROR_HOSTNAME,
+  GH_MIRROR_PATH_PREFIX,
   ghMirrorUrlForProgramId,
   programIdAsHex,
   programIdAsInt,
@@ -211,6 +213,24 @@ test("ghMirrorUrlForProgramId: well-known corpus IDs from our session", () => {
 
 test("ghMirrorUrlForProgramId: throws on invalid input", () => {
   assert.throws(() => ghMirrorUrlForProgramId("not-hex!"));
+});
+
+test("ghMirrorUrlForProgramId: stays on the corpus mirror", () => {
+  for (const id of ["123", "-12", "183b0"]) {
+    const url = new URL(ghMirrorUrlForProgramId(id));
+    assert.equal(url.protocol, "https:");
+    assert.equal(url.hostname, GH_MIRROR_HOSTNAME);
+    assert.equal(url.pathname.startsWith(GH_MIRROR_PATH_PREFIX), true);
+  }
+  const otherHost = new URL(
+    "https://example.invalid/posita/anydice-data/refs/heads/main/" +
+      "anydice.com/program/00/01/1.txt",
+  );
+  assert.notEqual(otherHost.hostname, GH_MIRROR_HOSTNAME);
+  const otherPath = new URL(
+    "https://raw.githubusercontent.com/other/repo/refs/heads/main/file.txt",
+  );
+  assert.equal(otherPath.pathname.startsWith(GH_MIRROR_PATH_PREFIX), false);
 });
 
 // ---- provenanceHeader -------------------------------------------------------
