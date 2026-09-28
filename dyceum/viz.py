@@ -30,6 +30,7 @@ from typing import (
     Literal,
     TypedDict,
     TypeVar,
+    Unpack,
     cast,
 )
 
@@ -44,13 +45,29 @@ from dyce.viz.matplotlib import (
 )
 from dyce.viz.matplotlib import _DEFAULT_PLOT_ALPHA as _DEFAULT_ALPHA
 from IPython.display import HTML, display
-from ipywidgets import widgets  # type: ignore[import-untyped]
+from ipywidgets.widgets import (  # type: ignore[import-untyped]
+    Accordion,  # zuban: ignore[attr-defined]
+    Checkbox,  # zuban: ignore[attr-defined]
+    ColorPicker,  # zuban: ignore[attr-defined]
+    Dropdown,  # zuban: ignore[attr-defined]
+    FloatLogSlider,  # zuban: ignore[attr-defined]
+    FloatSlider,  # zuban: ignore[attr-defined]
+    HBox,  # zuban: ignore[attr-defined]
+    Image,  # zuban: ignore[attr-defined]
+    IntSlider,  # zuban: ignore[attr-defined]
+    IntText,  # zuban: ignore[attr-defined]
+    Select,  # zuban: ignore[attr-defined]
+    Tab,  # zuban: ignore[attr-defined]
+    Text,  # zuban: ignore[attr-defined]
+    VBox,  # zuban: ignore[attr-defined]
+    Widget,  # zuban: ignore[attr-defined]
+    interactive_output,  # zuban: ignore[attr-defined]
+)
 from matplotlib import colors as mcolors
 from matplotlib import markers as mmarkers
 from matplotlib import pyplot as plt
 from matplotlib import style as mstyle
 from matplotlib import ticker as mticker
-from matplotlib.axes import Axes as Axes
 from traitlets import TraitError
 
 from .csv import csv_base64, csv_filename
@@ -69,12 +86,20 @@ _T = TypeVar("_T")
 _ChangeT = Mapping[str, Any]
 ColorT = tuple[float, float, float, float]
 ColorListT = Sequence[ColorT]
-HLikeT = H | HableT
+HLikeT = H[Any] | HableT[Any]
 HPlotterFactoryT = Callable[[], "HPlotter"]
 
 
 def _first_of(i: Iterable[_T]) -> _T:
     return next(iter(i))
+
+
+def _display(obj: object) -> None:
+    display(obj)  # type: ignore[no-untyped-call]
+
+
+def _html(source: str) -> Any:  # ruff: ignore[any-type]
+    return HTML(source)  # type: ignore[no-untyped-call]
 
 
 _DEFAULT_GRAPH_TYPE = GraphType.NORMAL
@@ -211,22 +236,22 @@ class _SvgImg:
 @dataclass(frozen=True)
 class _PlotWidgetsDataclass:
     # Widget to trigger updates (hack)
-    rev_no: widgets.IntText = field(
+    rev_no: IntText = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.IntText,
+            IntText,
             value=0,
             layout={"display": "none"},
         ),
     )
 
     # Data culling widgets
-    cutoff: widgets.FloatLogSlider = field(
+    cutoff: FloatLogSlider = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.FloatLogSlider,
+            FloatLogSlider,
             value=_CUTOFF_BASE ** -(_CUTOFF_EXP - 2),
             base=_CUTOFF_BASE,
             min=-_CUTOFF_EXP,
@@ -238,21 +263,21 @@ class _PlotWidgetsDataclass:
         ),
     )
 
-    enable_cutoff: widgets.Checkbox = field(
+    enable_cutoff: Checkbox = field(
         init=True,
         repr=False,
         default_factory=partial(
-            widgets.Checkbox,
+            Checkbox,
             description="Hide Small Outcomes",
         ),
     )
 
     # Generic display widgets
-    resolution: widgets.IntSlider = field(
+    resolution: IntSlider = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.IntSlider,
+            IntSlider,
             value=_DEFAULT_RESOLUTION,
             min=4,
             max=32,
@@ -263,84 +288,84 @@ class _PlotWidgetsDataclass:
     )
 
     # Burst plot widgets
-    burst_cmap_inner: widgets.Dropdown = field(
+    burst_cmap_inner: Dropdown = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.Dropdown,
+            Dropdown,
             value=_DEFAULT_CMAP,
             options=_CMAP_NAMES,
             description="Inner Colors",
         ),
     )
 
-    burst_cmap_link: widgets.Checkbox = field(
+    burst_cmap_link: Checkbox = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.Checkbox,
+            Checkbox,
             description="Link Colors",
         ),
     )
 
-    burst_cmap_outer: widgets.Dropdown = field(
+    burst_cmap_outer: Dropdown = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.Dropdown,
+            Dropdown,
             value=_DEFAULT_COMPARE_CMAP,
             options=_CMAP_NAMES,
             description="Outer Colors",
         ),
     )
 
-    burst_cmap_use_midpoints: widgets.Checkbox = field(
+    burst_cmap_use_midpoints: Checkbox = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.Checkbox,
+            Checkbox,
             value=True,
             description="Color at Midpoints",
         ),
     )
 
-    burst_color_bg: widgets.ColorPicker = field(
+    burst_color_bg: ColorPicker = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.ColorPicker,
+            ColorPicker,
             value=_DEFAULT_BURST_COLOR_BG,
             concise=False,
             description="Background",
         ),
     )
 
-    burst_color_bg_trnsp: widgets.Checkbox = field(
+    burst_color_bg_trnsp: Checkbox = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.Checkbox,
+            Checkbox,
             value=False,
             description="Transparent",
         ),
     )
 
-    burst_color_text: widgets.ColorPicker = field(
+    burst_color_text: ColorPicker = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.ColorPicker,
+            ColorPicker,
             value=_DEFAULT_BURST_COLOR_TEXT,
             concise=False,
             description="Text",
         ),
     )
 
-    burst_columns: widgets.IntSlider = field(
+    burst_columns: IntSlider = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.IntSlider,
+            IntSlider,
             value=_DEFAULT_COLS_BURST,
             min=1,
             max=12,
@@ -350,31 +375,31 @@ class _PlotWidgetsDataclass:
         ),
     )
 
-    burst_swap: widgets.Checkbox = field(
+    burst_swap: Checkbox = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.Checkbox,
+            Checkbox,
             description="Swap Inner/Outer Histograms",
             disabled=True,
         ),
     )
 
-    burst_zero_fill_normalize: widgets.Checkbox = field(
+    burst_zero_fill_normalize: Checkbox = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.Checkbox,
+            Checkbox,
             description="Normalize Outcomes",
         ),
     )
 
     # Traditional plot widgets
-    alpha: widgets.FloatSlider = field(
+    alpha: FloatSlider = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.FloatSlider,
+            FloatSlider,
             value=1.0,
             min=0.0,
             max=1.0,
@@ -385,11 +410,11 @@ class _PlotWidgetsDataclass:
         ),
     )
 
-    graph_type: widgets.Select = field(
+    graph_type: Select = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.Select,
+            Select,
             value=_DEFAULT_GRAPH_TYPE,
             options=[(graph_type, graph_type) for graph_type in GraphType],
             description="Plot Type",
@@ -397,21 +422,21 @@ class _PlotWidgetsDataclass:
         ),
     )
 
-    markers: widgets.Text = field(
+    markers: Text = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.Text,
+            Text,
             value=_DEFAULT_MARKERS,
             description="Markers",
         ),
     )
 
-    plot_style: widgets.Dropdown = field(
+    plot_style: Dropdown = field(
         init=False,
         repr=False,
         default_factory=partial(
-            widgets.Dropdown,
+            Dropdown,
             value=_DEFAULT_MPL_STYLE,
             options=[_DEFAULT_MPL_STYLE]
             + [style for style in mstyle.available if not style.startswith("_")],
@@ -584,7 +609,10 @@ class PlotWidgets(_PlotWidgetsDataclass):
         )
 
     def asdict(self) -> dict[str, Any]:
-        return {field.name: getattr(self, field.name) for field in fields(self)}
+        return {
+            f.name: getattr(self, f.name)
+            for f in fields(cast("_PlotWidgetsDataclass", self))
+        }
 
     @property
     def plot_updates_suspended(self) -> bool:
@@ -631,12 +659,12 @@ class HPlotter:
         """
         raise NotImplementedError
 
-    def layout(self, plot_widgets: PlotWidgets) -> widgets.Widget:
+    def layout(self, plot_widgets: PlotWidgets) -> Widget:
         r"""
         Takes a set of widgets (*plot_widgets*) and returns a container (layout) widget
         selecting those needed by the plotter.
         """
-        return widgets.VBox(
+        return VBox(
             [
                 plot_widgets.enable_cutoff,
                 plot_widgets.cutoff,
@@ -647,7 +675,7 @@ class HPlotter:
     @abstractmethod
     def plot(
         self,
-        hs: Sequence[tuple[str, H, H | None]],
+        hs: Sequence[tuple[str, H[Any], H[Any] | None]],
         settings: SettingsDict,
     ) -> None:
         r"""
@@ -682,19 +710,19 @@ class BurstHPlotter(HPlotter):
 
     NAME: str = "Burst Plots"
 
-    def layout(self, plot_widgets: PlotWidgets) -> widgets.Widget:
+    def layout(self, plot_widgets: PlotWidgets) -> Widget:
         cutoff_layout_widget = super().layout(plot_widgets)
 
-        return widgets.VBox(
+        return VBox(
             [
-                widgets.HBox(
+                HBox(
                     [
-                        widgets.VBox(
+                        VBox(
                             [
                                 cutoff_layout_widget,
                             ]
                         ),
-                        widgets.VBox(
+                        VBox(
                             [
                                 plot_widgets.burst_swap,
                                 plot_widgets.burst_zero_fill_normalize,
@@ -704,7 +732,7 @@ class BurstHPlotter(HPlotter):
                                 plot_widgets.burst_cmap_link,
                             ]
                         ),
-                        widgets.VBox(
+                        VBox(
                             [
                                 plot_widgets.alpha,
                                 plot_widgets.plot_style,
@@ -721,7 +749,7 @@ class BurstHPlotter(HPlotter):
 
     def plot(
         self,
-        hs: Sequence[tuple[str, H, H | None]],
+        hs: Sequence[tuple[str, H[Any], H[Any] | None]],
         settings: SettingsDict,
     ) -> None:
         cols = settings["burst_columns"]
@@ -745,7 +773,7 @@ class BurstHPlotter(HPlotter):
             logical_rows * actual_rows_per_fig + total_gaps * actual_rows_per_gap
         )
 
-        def _zero_fill_normalize() -> Iterator[tuple[str, H, H | None]]:
+        def _zero_fill_normalize() -> Iterator[tuple[str, H[Any], H[Any] | None]]:
             unique_outcomes: set[Any] = set()
             for _, first_h, second_h in hs:
                 unique_outcomes.update(first_h)
@@ -770,8 +798,8 @@ class BurstHPlotter(HPlotter):
 
         if settings["burst_zero_fill_normalize"]:
             hs = tuple(_zero_fill_normalize())
-        h_inner: H
-        h_outer: H | None
+        h_inner: H[Any]
+        h_outer: H[Any] | None
         for i, (label, h_inner, h_outer) in enumerate(hs):
             if h_outer is not None and settings["burst_swap"]:
                 h_inner, h_outer = h_outer, h_inner  # ruff: ignore[redefined-loop-name]
@@ -782,7 +810,8 @@ class BurstHPlotter(HPlotter):
                 (actual_row_start, i % cols),
                 rowspan=actual_rows_per_fig,
             )
-            plot_burst(
+            # TODO(@posita): <https://github.com/zubanls/zuban/issues/591>
+            plot_burst(  # zuban: ignore[call-overload]
                 h_inner,
                 h_outer,
                 alpha=settings["alpha"],
@@ -824,16 +853,16 @@ class HorizontalBarHPlotter(HPlotter):
 
     NAME: str = "Horizontal Bar Plots"
 
-    def layout(self, plot_widgets: PlotWidgets) -> widgets.Widget:
+    def layout(self, plot_widgets: PlotWidgets) -> Widget:
         cutoff_layout_widget = super().layout(plot_widgets)
 
-        return widgets.VBox(
+        return VBox(
             [
-                widgets.HBox(
+                HBox(
                     [
                         cutoff_layout_widget,
                         plot_widgets.graph_type,
-                        widgets.VBox(
+                        VBox(
                             [
                                 plot_widgets.alpha,
                                 plot_widgets.plot_style,
@@ -846,7 +875,7 @@ class HorizontalBarHPlotter(HPlotter):
 
     def plot(
         self,
-        hs: Sequence[tuple[str, H, H | None]],
+        hs: Sequence[tuple[str, H[Any], H[Any] | None]],
         settings: SettingsDict,
     ) -> None:
         total_outcomes = sum(len(h) for _, h, _ in hs)
@@ -921,16 +950,16 @@ class LineHPlotter(HPlotter):
 
     NAME: str = "Line Plot"
 
-    def layout(self, plot_widgets: PlotWidgets) -> widgets.Widget:
+    def layout(self, plot_widgets: PlotWidgets) -> Widget:
         cutoff_layout_widget = super().layout(plot_widgets)
 
-        return widgets.VBox(
+        return VBox(
             [
-                widgets.HBox(
+                HBox(
                     [
                         cutoff_layout_widget,
                         plot_widgets.graph_type,
-                        widgets.VBox(
+                        VBox(
                             [
                                 plot_widgets.alpha,
                                 plot_widgets.plot_style,
@@ -944,7 +973,7 @@ class LineHPlotter(HPlotter):
 
     def plot(
         self,
-        hs: Sequence[tuple[str, H, H | None]],
+        hs: Sequence[tuple[str, H[Any], H[Any] | None]],
         settings: SettingsDict,
     ) -> None:
         _, ax = plt.subplots(
@@ -1068,20 +1097,20 @@ class HPlotterChooser:
             plot_widgets = PlotWidgets()
 
         self._plot_widgets = plot_widgets
-        self._layouts_by_name: Mapping[str, widgets.Widget] = {}
+        self._layouts_by_name: dict[str, Widget] = {}
 
         for plotter_name, plotter in self._plotters_by_name.items():
             self._layouts_by_name[plotter_name] = plotter.layout(plot_widgets)
 
-        self.hs: tuple[tuple[str, H, H | None], ...] = ()
-        self._hs_culled: tuple[tuple[str, H, H | None], ...] = ()
+        self.hs: tuple[tuple[str, H[Any], H[Any] | None], ...] = ()
+        self._hs_culled: tuple[tuple[str, H[Any], H[Any] | None], ...] = ()
         self._cutoff: float | None = None
         self._csv_download_link_html = ""
         self.update_hs(histogram_specs)
         self._selected_plotter: HPlotter | None
         tab_names = tuple(self._plotters_by_name.keys())
 
-        chooser_tab = widgets.Tab(
+        chooser_tab = Tab(
             children=tuple(self._layouts_by_name.values()),
             selected_index=(
                 0 if selected_name is None else tab_names.index(selected_name)
@@ -1089,7 +1118,7 @@ class HPlotterChooser:
         )
 
         for i, tab_name in enumerate(tab_names):
-            chooser_tab.set_title(i, tab_name)
+            chooser_tab.set_title(i, tab_name)  # zuban: ignore[no-untyped-call]
 
         def _handle_tab(change: _ChangeT) -> None:
             assert change["name"] == "selected_index"
@@ -1104,9 +1133,9 @@ class HPlotterChooser:
             islice(self._plotters_by_name.values(), chooser_tab.selected_index, None)
         )
 
-        self._out = widgets.VBox(
+        self._out = VBox(
             [
-                widgets.Accordion(
+                Accordion(
                     children=[chooser_tab],
                     titles=["Plot Controls"],
                     selected_index=0 if controls_expanded else None,
@@ -1116,7 +1145,9 @@ class HPlotterChooser:
                 # _handle_plot_style. See the matching note there. Do not reorder these
                 # so that interactive_output observes plot_style before
                 # _handle_plot_style.
-                widgets.interactive_output(self.plot, self._plot_widgets.asdict()),
+                interactive_output(  # zuban: ignore[no-untyped-call]
+                    self.plot, self._plot_widgets.asdict()
+                ),
             ]
         )
 
@@ -1124,11 +1155,11 @@ class HPlotterChooser:
         r"""
         Displays the container responsible for selecting which plotter is used.
         """
-        display(self._out)
+        _display(self._out)
 
     def plot(
         self,
-        **kw,  # ruff: ignore[missing-type-kwargs]
+        **kw: Unpack[SettingsDict],
     ) -> None:
         r"""
         Callback for updating the visualization in response to configuration or data
@@ -1137,7 +1168,7 @@ class HPlotterChooser:
         """
         if self._plot_widgets.plot_updates_suspended:
             return
-        settings = cast("SettingsDict", kw)
+        settings = kw
         cutoff = (
             self._plot_widgets.cutoff.value
             if self._plot_widgets.enable_cutoff.value
@@ -1168,16 +1199,16 @@ class HPlotterChooser:
             )
             img_name = "-".join(label for label, _, _ in self.hs)
             svg_raw = buf.getvalue().decode()
-            display(
-                HTML(
+            _display(
+                _html(
                     rf"""
 {self._csv_download_link_html} |
 <a download="{img_name}.svg" href="data:image/svg+xml,{urllib.parse.quote(svg_raw)}" target="_blank">Download SVG image</a>
                 """.strip()
                 )
             )
-            display(
-                widgets.Image(
+            _display(
+                Image(
                     value=svg_raw.encode("utf-8"),
                     format="svg+xml",
                     width="100%",
@@ -1219,7 +1250,7 @@ class HPlotterChooser:
 
 
 @experimental
-def limit_for_display(h: H[_T], cutoff: Fraction) -> H:
+def limit_for_display(h: H[_T], cutoff: Fraction) -> H[_T]:
     r"""
     !!! warning "Experimental"
 
@@ -1365,7 +1396,7 @@ def jupyter_visualize(
     plotter_chooser.interact()
 
 
-def _csv_download_link(hs: Sequence[tuple[str, H, H | None]]) -> str:
+def _csv_download_link(hs: Sequence[tuple[str, H[Any], H[Any] | None]]) -> str:
     csv_name = csv_filename(label for label, _, _ in hs)
     payload = csv_base64(hs)
 
@@ -1381,7 +1412,7 @@ def _histogram_specs_to_h_tuples(
         HLikeT | tuple[str, HLikeT] | tuple[str, HLikeT, HLikeT | None] | None
     ],
     cutoff: float | None = None,
-) -> tuple[tuple[str, H, H | None], ...]:
+) -> tuple[tuple[str, H[Any], H[Any] | None], ...]:
     h_specs = []
 
     if cutoff is None:
@@ -1409,23 +1440,22 @@ def _histogram_specs_to_h_tuples(
             second_h_like = thing[2] if len(thing) >= 3 else None
 
         assert isinstance(label, str)
-        first_h = limit_for_display(
-            first_h_like.h() if isinstance(first_h_like, HableT) else first_h_like,
-            cutoff_frac,
-        )
+        first_h = first_h_like.h() if isinstance(first_h_like, HableT) else first_h_like
+        first_h = limit_for_display(first_h, cutoff_frac)  # zuban: ignore[arg-type]
 
         if second_h_like is None:
             second_h = None
         else:
+            second_h = (
+                second_h_like.h()
+                if isinstance(second_h_like, HableT)
+                else second_h_like
+            )
             second_h = limit_for_display(
-                (
-                    second_h_like.h()
-                    if isinstance(second_h_like, HableT)
-                    else second_h_like
-                ),
+                second_h,  # zuban: ignore[arg-type]
                 cutoff_frac,
             )
 
         h_specs.append((label, first_h, second_h))
 
-    return tuple(h_specs)
+    return tuple(h_specs)  # zuban: ignore[arg-type]

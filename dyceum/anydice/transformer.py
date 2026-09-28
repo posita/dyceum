@@ -77,7 +77,7 @@ def _parse_string(token: str) -> StringExpr:
 
 
 @v_args(inline=True)
-class AnyDiceTransformer(Transformer):
+class AnyDiceTransformer(Transformer[Token, Program]):
     # ---- Program -----------------------------------------------------------------------
 
     def start(self, *stmts: Stmt) -> Program:

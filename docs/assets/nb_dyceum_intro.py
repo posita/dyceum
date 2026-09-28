@@ -36,7 +36,7 @@
 
 # %% jupyter={"source_hidden": true}
 # Install additional requirements if necessary
-from prerequisites import (  # pyright: ignore[reportMissingImports] # pyrefly: ignore[missing-import] # ty: ignore[unresolved-import]
+from prerequisites import (  # pyright: ignore[reportMissingImports] # ty: ignore[unresolved-import] # zuban: ignore[import-not-found]
     install_if_missing,
 )
 
@@ -54,7 +54,7 @@ from dyce.lifecycle import ExperimentalWarning
 
 import dyceum.magic  # ruff: ignore[unused-import]
 
-matplotlib_inline.backend_inline.set_matplotlib_formats("svg")
+matplotlib_inline.backend_inline.set_matplotlib_formats("svg")  # type: ignore[no-untyped-call]
 warnings.simplefilter("ignore", ExperimentalWarning)
 
 # %% [markdown]
@@ -75,7 +75,7 @@ class PBTA(IntEnum):
     SUCC = auto()
 
 
-def pbta(result: HResult) -> PBTA:
+def pbta(result: HResult[int]) -> PBTA:
     if result.outcome <= 6:
         return PBTA.FAIL
     elif result.outcome >= 10:

@@ -37,8 +37,9 @@ def pytest_ignore_collect(
     if platform.python_implementation() == "PyPy":
         # These modules require Matplotlib, which is absent on PyPy. See
         # <http://packages.pypy.org/>.
-        return collection_path.match("docs/assets/") or collection_path.name in (
-            "magic.py",
-            "viz.py",
+        return (
+            collection_path.match("docs/assets/")
+            or collection_path.match("dyceum/magic.py")
+            or collection_path.match("dyceum/viz.py")
         )
     return False

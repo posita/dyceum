@@ -90,11 +90,11 @@ lint = [
     "mypy",
     "pre-commit",
     "pre-commit-uv",
-    "pyrefly",
     "pyright",
     "pytest",
     "ruff",
-    "ty>=0.0.70",  # TODO(posita): https://github.com/astral-sh/ty/issues/4222
+    "ty",
+    "zuban",
     {include-group = "docs"},
 ]
 # Only what's needed for quickstart-local.sh
@@ -149,15 +149,11 @@ files = ["dyceum", "docs", "helpers", "tests", "*.py"]
 # )"""
 exclude_gitignore = true
 python_version = "3.11"
-warn_redundant_casts = true
+strict = true
+# warn_redundant_casts = true  # included in strict
 warn_unreachable = true
-warn_unused_configs = true
-warn_unused_ignores = true
-
-[tool.pyrefly]
-project-includes = ["dyceum", "docs", "helpers", "tests", "*.py"]
-python-version = "3.11.0"
-infer-with-first-use = false
+# warn_unused_configs = true  # included in strict
+# warn_unused_ignores = true  # included in strict
 
 [warnings]
 unused-ignore = true
@@ -191,38 +187,38 @@ docstring-code-line-length = "dynamic"
 
 [tool.ruff.lint.per-file-ignores]
 "dyceum/magic.py" = [
-  "T201",  # `print` is the Jupyter cell-output mechanism
+  "print",  # `print` is the Jupyter cell-output mechanism
 ]
 "docs/assets/nb_*.py" = [
   # Allow co-mingled imports for snippets
-  "E402",  # Module level import not at top of file
+  "module-import-not-at-top-of-file",  # Module level import not at top of file
   # ruff is confused by jupytext comments
-  "ERA001",  # Found commented-out code
+  "commented-out-code",  # Found commented-out code
   # Cells support `await` statements
-  "F704",  # `await` statement outside of a function
-  "PLE1142",  # `await` should be used within an async function
+  "yield-outside-function",  # `await` statement outside of a function
+  "await-outside-async",  # `await` should be used within an async function
   # Useful for cell display
-  "B018",   # Found useless expression
-  "T201",  # `print` found (eglot-check)
+  "useless-expression",   # Found useless expression
+  "print",  # `print` found (eglot-check)
   # Catch-all for things that are only ignored in these files
-  "RUF100",  # Unused `noqa` directive ...
+  "unused-noqa",  # Unused `noqa` directive ...
 ]
 "docs/assets/plot_*.py" = [
   # Allow co-mingled imports for snippets
-  "E402",  # Module level import not at top of file
+  "module-import-not-at-top-of-file",  # Module level import not at top of file
   # Useful for cell display
-  "B018",   # Found useless expression
-  "T201",  # `print` found (eglot-check)
+  "useless-expression",   # Found useless expression
+  "print",  # `print` found (eglot-check)
 ]
 "docs/notebooks/*.ipynb" = [
-  "E402",  # Module level import not at top of file
+  "module-import-not-at-top-of-file",  # Module level import not at top of file
   # Useful for cell display
-  "B018",   # Found useless expression
-  "T201",  # `print` found (eglot-check)
+  "useless-expression",   # Found useless expression
+  "print",  # `print` found (eglot-check)
 ]
 "helpers/anydice-programs.py" = [
-  "C901",  # `...` is too complex
-  "T201",  # `print` found (eglot-check)
+  "complex-structure",  # `...` is too complex
+  "print",  # `print` found (eglot-check)
 ]
 
 [tool.ruff.lint]
@@ -235,18 +231,18 @@ ignore = [
   "FIX",  # TODO(posita): run occasionally, or figure out how to make these warnings
   "PLC",
   "PLR",
-  "COM812",  # Trailing comma missing
-  "E501",  # Line too long (... > ...)
-  "INP001",  # File ... is part of an implicit namespace package. Add an `__init__.py`.
-  "N806",  # Variable ... in function should be lowercase
-  "RET505",  # Unnecessary `else` after `return` statement
-  "RET506",  # Unnecessary `else` after `raise` statement
-  "RET507",  # Unnecessary `else` after `continue` statement
-  "RUF002",  # Docstring contains ambiguous ...
-  "RUF067",  # `__init__` module should only contain docstrings and re-exports
-  "S101",  # Use of `assert` detected
-  "S311",  # Standard pseudo-random generators are not suitable for cryptographic purposes
-  "TRY003",  # Avoid specifying long messages outside the exception class
+  "missing-trailing-comma",  # Trailing comma missing
+  "line-too-long",  # Line too long (... > ...)
+  "implicit-namespace-package",  # File ... is part of an implicit namespace package. Add an `__init__.py`.
+  "non-lowercase-variable-in-function",  # Variable ... in function should be lowercase
+  "superfluous-else-return",  # Unnecessary `else` after `return` statement
+  "superfluous-else-raise",  # Unnecessary `else` after `raise` statement
+  "superfluous-else-continue",  # Unnecessary `else` after `continue` statement
+  "ambiguous-unicode-character-docstring",  # Docstring contains ambiguous ...
+  "non-empty-init-module",  # `__init__` module should only contain docstrings and re-exports
+  "assert",  # Use of `assert` detected
+  "suspicious-non-cryptographic-random-usage",  # Standard pseudo-random generators are not suitable for cryptographic purposes
+  "raise-vanilla-args",  # Avoid specifying long messages outside the exception class
 ]
 select = [
   "ALL",
@@ -256,13 +252,26 @@ select = [
 include = ["dyceum", "docs", "helpers", "tests", "*.py"]
 exclude = ["docs/assets/nb_*.py"]
 
+[tool.zuban]
+files = ["dyceum", "docs", "helpers", "tests", "*.py"]
+# exclude = """(?x)(
+#     ^docs/assets/nb_.*\\.py$
+# )"""
+exclude_gitignore = true
+python_version = "3.11"
+strict = true
+# warn_redundant_casts = true  # included in strict
+warn_unreachable = true
+# warn_unused_configs = true  # included in strict
+# warn_unused_ignores = true  # included in strict
+
 [tool.check_doctests]
 # log_level = "DEBUG"
 
 [tool.check_doctests.check]
 checkers = [
   ["ty", "check"],
-  ["pyrefly", "check", "--search-path", "."],
+  ["zuban", "check"],
   ["pyright"],
   ["mypy"],
 ]

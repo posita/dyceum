@@ -29,7 +29,7 @@ __all__ = ("BUILTINS",)
 # ---- Helpers ---------------------------------------------------------------------------
 
 
-def _h_from_pool(p: P) -> H:
+def _h_from_pool(p: P[int]) -> H[int]:
     r"""Collapse a pool to a die representing the sum distribution."""
     return H({0: 1}) if len(p) == 0 else p.at(slice(0, None))
 
@@ -52,7 +52,7 @@ def _count_in(values: tuple[int, ...], seq: tuple[int, ...]) -> int:
     return sum(values.count(v) for v in seq)
 
 
-def _maximum_of(die: H | P) -> int:
+def _maximum_of(die: H[int] | P[int]) -> int:
     # AnyDice (42b18): `[maximum of <pool>]` returns the max of the sum H.
     # Empty die returns 0 (NOT H({}) -- AnyDice does not propagate emptiness
     # through `[maximum of]`).
@@ -77,19 +77,19 @@ def _lowest_of_and(a: int, b: int) -> int:
     return min(a, b)
 
 
-def _highest_n_of(n: int, pool: P) -> H:
+def _highest_n_of(n: int, pool: P[int]) -> H[int]:
     # sum of n highest dice from pool
     selectors = tuple(slice(-(i), -(i - 1) if i > 1 else None) for i in range(1, n + 1))
     return pool.at(*selectors) if selectors else H({0: 1})
 
 
-def _lowest_n_of(n: int, pool: P) -> H:
+def _lowest_n_of(n: int, pool: P[int]) -> H[int]:
     # sum of n lowest dice from pool
     selectors = tuple(slice(i, i + 1) for i in range(n))
     return pool.at(*selectors) if selectors else H({0: 1})
 
 
-def _middle_n_of(n: int, pool: P) -> H:
+def _middle_n_of(n: int, pool: P[int]) -> H[int]:
     # Sum of middle n dice. Per AnyDice (42b1c):
     #   - n <= 0     -> H({0: 1}) (NOT H({})).
     #   - n >= total -> clamp to total (return the full pool sum).
@@ -106,7 +106,7 @@ def _middle_n_of(n: int, pool: P) -> H:
     return pool.at(*selectors)
 
 
-def _explode(die: H | P, depth: int) -> H:
+def _explode(die: H[int] | P[int], depth: int) -> H[int]:
     r"""Explode a die: when the max face is rolled, add that value and roll again, up to `depth` extra times."""
     if isinstance(die, P):
         die = _h_from_pool(die)

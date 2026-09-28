@@ -16,6 +16,7 @@
 import re
 import warnings
 from collections.abc import Callable
+from typing import cast
 from unittest.mock import ANY, Mock, call, create_autospec
 
 import pytest
@@ -31,7 +32,7 @@ except ImportError:
 
 
 from dyceum import magic as dyceum_magic
-from dyceum.anydice import AnyDiceResultsT, Settings
+from dyceum.anydice import AnyDiceResultsT, Settings, run
 from dyceum.anydice.fetch import NetworkError, NoSuchProgramError
 from dyceum.magic import anyd, anyd_load, load_ipython_extension
 
@@ -81,7 +82,7 @@ def ipython_shell() -> InteractiveShell:
 @pytest.fixture
 def recording_shell(monkeypatch: pytest.MonkeyPatch) -> Mock:
     r"""Replace the active IPython shell with an autospecced mock for this test."""
-    shell = create_autospec(InteractiveShell, instance=True)
+    shell = cast("Mock", create_autospec(InteractiveShell, instance=True))
     monkeypatch.setattr(dyceum_magic, "get_ipython", lambda: shell)
     return shell
 
@@ -181,7 +182,7 @@ class TestAnydMagicWarnings:
         recwarn: pytest.WarningsRecorder,
         monkeypatch: pytest.MonkeyPatch,
     ) -> None:
-        original_run = dyceum_magic.run
+        original_run = run
 
         def _emit_deprecation(
             source: str, *, settings: Settings | None = None
@@ -212,7 +213,7 @@ class TestAnydMagicWarnings:
         recwarn: pytest.WarningsRecorder,
         monkeypatch: pytest.MonkeyPatch,
     ) -> None:
-        original_run = dyceum_magic.run
+        original_run = run
 
         def _emit_truncation(
             source: str, *, settings: Settings | None = None
@@ -382,6 +383,6 @@ class TestLoadIPythonExtension:
         ipython_shell: InteractiveShell,
     ) -> None:
         load_ipython_extension(ipython_shell)
-        ipython_shell.run_cell_magic("anyd", "--text", "output 2d6")
+        ipython_shell.run_cell_magic("anyd", "--text", "output 2d6")  # type: ignore[no-untyped-call]
         out = capsys.readouterr().out
         assert re.search(r"^==== output 1 ====$", out, re.MULTILINE)

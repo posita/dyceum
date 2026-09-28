@@ -25,6 +25,7 @@ import tomllib
 import urllib.request
 from collections.abc import Iterable, Iterator, Sequence
 from pathlib import Path
+from typing import Any
 from urllib.parse import urlsplit
 
 _LOGGER = logging.getLogger("mkdocs.hooks")
@@ -90,7 +91,7 @@ def on_pre_build(**_kwargs: object) -> None:
     _uv_run(("make", "-C", "docs", "-j", "4"))
 
 
-def on_post_build(config: dict, **_kwargs: object) -> None:
+def on_post_build(config: dict[str, Any], **_kwargs: object) -> None:
     cmd = ["uv", "build", "--wheel"]
     _LOGGER.info("running %s", " ".join(cmd))
     subprocess.run(cmd, check=True)  # ruff: ignore[subprocess-without-shell-equals-true]

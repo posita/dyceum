@@ -21,7 +21,11 @@ from dyce.viz import GraphType
 
 try:
     import matplotlib as mpl
-    from ipywidgets import widgets  # type: ignore[import-untyped]
+    from ipywidgets.widgets import (  # type: ignore[import-untyped]
+        Accordion,  # zuban: ignore[attr-defined]
+        Tab,  # zuban: ignore[attr-defined]
+        Widget,  # zuban: ignore[attr-defined]
+    )
 except ImportError:
     pytest.skip(
         "one or more of ipywidgets and matplotlib not available",
@@ -90,7 +94,7 @@ class TestPlotWidgets:
             "plot_style",
             "resolution",
         }
-        assert all(isinstance(widget, widgets.Widget) for widget in widget_map.values())
+        assert all(isinstance(widget, Widget) for widget in widget_map.values())
 
     def test_construction_warns_on_nonexistant_plot_type(self) -> None:
         mpl.use("agg")
@@ -103,7 +107,7 @@ class TestBurstHPlotter:
         plot_widgets = PlotWidgets()
         burst_plotter = BurstHPlotter()
         layout_widget = burst_plotter.layout(plot_widgets)
-        assert isinstance(layout_widget, widgets.Widget)
+        assert isinstance(layout_widget, Widget)
 
 
 class TestHorizontalBarHPlotter:
@@ -111,7 +115,7 @@ class TestHorizontalBarHPlotter:
         plot_widgets = PlotWidgets()
         horizontal_bar_plotter = HorizontalBarHPlotter()
         layout_widget = horizontal_bar_plotter.layout(plot_widgets)
-        assert isinstance(layout_widget, widgets.Widget)
+        assert isinstance(layout_widget, Widget)
 
 
 class TestLineHPlotter:
@@ -119,7 +123,7 @@ class TestLineHPlotter:
         plot_widgets = PlotWidgets()
         line_plotter = LineHPlotter()
         layout_widget = line_plotter.layout(plot_widgets)
-        assert isinstance(layout_widget, widgets.Widget)
+        assert isinstance(layout_widget, Widget)
 
 
 class TestHPlotterChooser:
@@ -135,10 +139,10 @@ class TestHPlotterChooser:
             "Burst Plots",
         }
         accordion_widget = chooser._out.children[0]  # ruff: ignore[private-member-access]
-        assert isinstance(accordion_widget, widgets.Accordion)
+        assert isinstance(accordion_widget, Accordion)
         assert accordion_widget.selected_index is None
         tab_widget = accordion_widget.children[0]
-        assert isinstance(tab_widget, widgets.Tab)
+        assert isinstance(tab_widget, Tab)
         assert tab_widget.selected_index == 0
 
     def test_construction_histogram_specs(self) -> None:
@@ -148,7 +152,7 @@ class TestHPlotterChooser:
     def test_construction_controls_expanded(self) -> None:
         chooser = HPlotterChooser(controls_expanded=True)
         accordion_widget = chooser._out.children[0]  # ruff: ignore[private-member-access]
-        assert isinstance(accordion_widget, widgets.Accordion)
+        assert isinstance(accordion_widget, Accordion)
         assert accordion_widget.selected_index == 0
 
     def test_construction_selected_name(self) -> None:
@@ -157,9 +161,9 @@ class TestHPlotterChooser:
             selected_name="Line Plot",
         )
         accordion_widget = chooser._out.children[0]  # ruff: ignore[private-member-access]
-        assert isinstance(accordion_widget, widgets.Accordion)
+        assert isinstance(accordion_widget, Accordion)
         tab_widget = accordion_widget.children[0]
-        assert isinstance(tab_widget, widgets.Tab)
+        assert isinstance(tab_widget, Tab)
         assert tab_widget.selected_index == 1
 
     def test_construction_warns_on_duplicate_plotter_name(self) -> None:

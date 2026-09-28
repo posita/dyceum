@@ -158,7 +158,7 @@ def extract_program_from_json(
     # strict=False allows literal control characters to be present without causing an
     # error.
     program = json.loads(json_str, strict=False)
-    if not program:
+    if not isinstance(program, str) or not program:
         raise EmptyProgramError(
             f"empty program found in content at {program_id_hex}"
             + (f" ({program_url})" if program_url else ""),

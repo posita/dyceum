@@ -42,7 +42,7 @@ def _resolve(obj: griffe.Object, name: str) -> str:
 class LifecycleExtension(griffe.Extension):
     r"""Prepends an Experimental admonition to docstrings of decorated callables."""
 
-    def on_function_instance(
+    def on_function_instance(  # zuban: ignore[override]
         self,
         *,
         func: griffe.Function,
@@ -51,7 +51,7 @@ class LifecycleExtension(griffe.Extension):
         r"""Processes functions and methods."""
         self._annotate(func)
 
-    def on_class_instance(
+    def on_class_instance(  # zuban: ignore[override]
         self,
         *,
         cls: griffe.Class,

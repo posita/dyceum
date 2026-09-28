@@ -19,13 +19,14 @@ import io
 import re
 from collections.abc import Iterable, Sequence
 from itertools import chain
+from typing import Any
 
 from dyce import H
 
 __all__ = ("csv_base64",)
 
 
-def csv_base64(hs: Sequence[tuple[str, H, H | None]]) -> str:
+def csv_base64(hs: Sequence[tuple[str, H[Any], H[Any] | None]]) -> str:
     unique_outcomes = sorted(set(chain.from_iterable(h.outcomes() for _, h, _ in hs)))
     labels = [label for label, _, _ in hs]
     raw_buffer = io.BytesIO()
