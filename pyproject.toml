@@ -80,6 +80,7 @@ docs = [
     "pandas",
     "pandas-stubs",
     "pymdown-extensions",
+    "zensical",
     {include-group = "jupyter"},
 ]
 # Mirrors optional dependencies
@@ -143,9 +144,9 @@ branch = true
 show_missing = true
 
 [tool.mypy]
-files = ["dyceum", "docs", "helpers", "tests", "*.py"]
+files = ["dyceum", "docs", "docs-src", "helpers", "tests", "*.py"]
 # exclude = """(?x)(
-#     ^docs/assets/nb_.*\\.py$
+#     ^docs-src/nb_.*\\.py$
 # )"""
 exclude_gitignore = true
 python_version = "3.11"
@@ -159,7 +160,7 @@ warn_unreachable = true
 unused-ignore = true
 
 [tool.pyright]
-include = ["dyceum", "docs", "helpers", "tests", "*.py"]
+include = ["dyceum", "docs", "docs-src", "helpers", "tests", "*.py"]
 pythonVersion = "3.11"
 reportUnnecessaryTypeIgnoreComment = "warning"
 typeCheckingMode = "basic"
@@ -179,7 +180,7 @@ doctest_optionflags = [
   # See also <https://docs.pytest.org/en/stable/how-to/doctest.html#using-doctest-options>
   "NUMBER",
 ]
-testpaths = ["README.md", "dyceum", "docs", "helpers", "tests", "*.py"]
+testpaths = ["README.md", "dyceum", "docs", "docs-src", "helpers", "tests", "*.py"]
 
 [tool.ruff.format]
 docstring-code-format = true
@@ -189,7 +190,7 @@ docstring-code-line-length = "dynamic"
 "dyceum/magic.py" = [
   "print",  # `print` is the Jupyter cell-output mechanism
 ]
-"docs/assets/nb_*.py" = [
+"docs-src/nb_*.py" = [
   # Allow co-mingled imports for snippets
   "module-import-not-at-top-of-file",  # Module level import not at top of file
   # ruff is confused by jupytext comments
@@ -203,7 +204,7 @@ docstring-code-line-length = "dynamic"
   # Catch-all for things that are only ignored in these files
   "unused-noqa",  # Unused `noqa` directive ...
 ]
-"docs/assets/plot_*.py" = [
+"docs-src/plot_*.py" = [
   # Allow co-mingled imports for snippets
   "module-import-not-at-top-of-file",  # Module level import not at top of file
   # Useful for cell display
@@ -249,13 +250,13 @@ select = [
 ]
 
 [tool.ty.src]
-include = ["dyceum", "docs", "helpers", "tests", "*.py"]
-exclude = ["docs/assets/nb_*.py"]
+include = ["dyceum", "docs", "docs-src", "helpers", "tests", "*.py"]
+exclude = ["docs-src/nb_*.py"]
 
 [tool.zuban]
-files = ["dyceum", "docs", "helpers", "tests", "*.py"]
+files = ["dyceum", "docs", "docs-src", "helpers", "tests", "*.py"]
 # exclude = """(?x)(
-#     ^docs/assets/nb_.*\\.py$
+#     ^docs-src/nb_.*\\.py$
 # )"""
 exclude_gitignore = true
 python_version = "3.11"

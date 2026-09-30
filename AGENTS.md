@@ -16,6 +16,9 @@ If it changed, re-read it and preserve the newer work.
 After editing, inspect the diff and limit it to the requested regions.
 Do not stage changes unless the user asks.
 
+Generated documentation files can change during `make -C docs-src`.
+Edit their source scripts rather than generated output, and verify hashes around generation when another process may be touching the tree.
+
 When work depends on unreleased `dyce` changes, use the neighboring development checkout deliberately and do not leave accidental path dependencies in `pyproject.toml` or `uv.lock`.
 
 ## Layout
@@ -27,7 +30,8 @@ When work depends on unreleased `dyce` changes, use the neighboring development 
 - `dyceum/csv.py` provides result-export helpers.
 - `playground/` is a static, zero-build application using JavaScript modules, Pyodide, CodeMirror, and Plotly.
 - `tests/` contains package and interpreter tests.
-- `docs/` contains MkDocs sources, notebooks, compatibility findings, and release notes.
+- `docs/` contains site pages, notebooks, compatibility findings, and release notes.
+- `docs-src/` contains the documentation generators and notebook sources used during site builds.
 - `docs/notes/` and `notes/` contain design and reverse-engineering material rather than public API guarantees.
 
 Avoid exhaustive module inventories here.
@@ -58,9 +62,6 @@ cd playground
 npm test
 ```
 
-`_mkdocs_hooks.py` builds the wheel and assembles JupyterLite, the playground, and pinned wheels into the documentation site.
-Review that hook before changing documentation packaging.
-
 ## Common commands
 
 ```bash
@@ -69,7 +70,10 @@ uv run pytest
 uv run pytest --cov --cov-report=term-missing
 uv run tox -e py313
 uv run pre-commit run --all-files --hook-stage pre-push
+uv run make -C docs-src
 uv run mkdocs build
+uv run zensical build
+uv run zensical serve
 ```
 
 The pre-push hooks run Ruff, doctest normalization checks, and all four static type checkers: mypy, pyright, ty, and zuban.
@@ -78,12 +82,16 @@ Tox adds runtime checking with beartype and covers the supported Python matrix.
 
 Pytest discovers doctests from package docstrings, `README.md`, and Markdown under `docs/`.
 
+`docs-src/Makefile` builds the wheel and assembles JupyterLite, the playground, and pinned wheels into `docs/`.
+Run it before building or serving the site with either builder.
+Review it before changing documentation packaging.
+
 ## Python and documentation conventions
 
 - Do not add `from __future__ import annotations`.
   Quote forward references only when necessary.
 - Public docstrings use Markdown, raw triple-quoted strings, and one sentence per source line.
-- Use mkdocstrings cross-references for public intra-library references.
+- Use mkdocstrings cross-references such as ``[`anyd`][dyceum.magic.anyd]`` for public intra-library references.
 - Use `` `expression` `` and `` `#!math expression` `` for inline code and math.
 - Comments should explain architecture, component boundaries, or genuinely counterintuitive code.
   Prefer descriptive names over commentary that restates the implementation.
@@ -93,9 +101,17 @@ Pytest discovers doctests from package docstrings, `README.md`, and Markdown und
 - Type-ignore comments have no space before `[`, and multiple error codes are alphabetized.
   All four type checkers must pass.
 
-Write direct prose.
-Prefer periods to semicolons or dashes used as asides.
-Avoid “+” as shorthand for “and” and avoid stock AI metaphors or throat-clearing.
+### Write plainly
+
+Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
+
+Use Orwell's tests: know what you mean; choose concrete words; cut needless words; prefer active voice when the actor matters; and avoid stale metaphors and inflated jargon. Imitate Vonnegut. Prefer minimalism, satire, and a conversational tone that prioritizes clarity and emotional resonance over complex syntax. Employ short, direct sentences and plain language to make complex or profound themes accessible to a broad audience.
+
+Complete thoughts should be separated by periods and a single space. Colons, em-dashes, and semicolons should be used sparingly. For example, semicolons may be used to separate items in a complicated list, usually preceded by a colon (see, e.g., Orwell's tests above). Em-dashes can be used to signal the occasional aside or parenthetical, but parentheses are preferred. If the aside is relevant in context, consider instead restructuring to improve clarity or simplicity. If it is not relevant, omit it. Occasional, brief asides that providing an appropriate jab or comic relief to a frustrating or complicated topic can remain in place, but the bar to retain should be high.
+
+Avoid empty openings, recaps, motivational language, marketing adjectives, and conclusions that add no information. Do not shorten text by deleting a necessary fact or qualifier.
+
+Use ASD-STE100 Simplified Technical English, Issue 9 (January 2025), as the writing standard for new or changed technical prose. This requirement applies to documentation, runbooks, handoff material, architecture text, migration plans, pull request text, review comments, issue comments, and code comments.
 
 ## Project mechanisms
 
