@@ -5,15 +5,9 @@ all : \
 	jupyterlite \
 	playground
 
-# These targets are names, not files. Make must always run them. A
-# real file that must be rebuilt every time depends on FORCE instead.
 .PHONY : all jupyterlite playground wheel FORCE
 FORCE :
 
-# The wheel file name contains the version, so no file target can name
-# it. "jupyterlite" and "playground" both need the wheel. Make runs
-# each target one time for each invocation, so this rule runs one
-# time, even with "make -j".
 wheel : FORCE
 	cd .. && uv build --wheel
 
@@ -57,18 +51,44 @@ wheel : FORCE
 	ruff format $@
 	touch $@
 
-# Zensical has no post-build hook. These rules assemble JupyterLite
-# and the playground into docs/ before the site build. Git ignores
-# both output directories.
+# Prints the pinned "none-any" wheel URL for each package named on the
+# command line.
+UV_LOCK_WHEELS = "$${PYTHON:-python3}" -c 'import sys, tomllib; packages = tomllib.load(open("uv.lock", "rb"))["package"]; print("\n".join(next(w["url"] for p in packages if p["name"] == pkg_name for w in p.get("wheels", []) if "none-any" in w["url"]) for pkg_name in sys.argv[1:]))'
+
 jupyterlite : FORCE wheel ../docs/notebooks/dyceum_intro.ipynb
 	@cd .. && set -eu; \
 		dyceum_wheel=$$(ls -t dist/dyceum*-none-any.whl | head -n 1); \
 		test -f "$$dyceum_wheel"; \
 		set -- --piplite-wheels "$$dyceum_wheel"; \
-		for url in $$("$${PYTHON:-python3}" docs-src/_uv_lock_wheels.py dyce lark optype ipywidgets jupyterlab-widgets widgetsnbextension); do \
+		for url in $$($(UV_LOCK_WHEELS) dyce lark optype ipywidgets jupyterlab-widgets widgetsnbextension); do \
 			set -- "$$@" --piplite-wheels "$$url"; \
 		done; \
 		jupyter lite build --debug --output-dir docs/jupyter "$$@"
 
 playground : FORCE wheel
-	@cd .. && "$${PYTHON:-python3}" docs-src/assemble_playground.py docs/playground
+	@cd .. && set -eu; \
+		rm -rf docs/playground; \
+		rsync -a \
+			--exclude node_modules \
+			--exclude package.json \
+			--exclude test \
+			playground/ docs/playground/; \
+		wheels_dir=docs/playground/wheels; \
+		mkdir -p "$$wheels_dir"; \
+		dyceum_wheel=$$(ls -t dist/dyceum*-none-any.whl | head -n 1); \
+		test -f "$$dyceum_wheel"; \
+		cp "$$dyceum_wheel" "$$wheels_dir"; \
+		names=$$(basename "$$dyceum_wheel"); \
+		for url in $$($(UV_LOCK_WHEELS) dyce lark optype); do \
+			curl --fail --silent --show-error --location \
+				--output "$$wheels_dir/$$(basename "$$url")" "$$url"; \
+			names="$$names $$(basename "$$url")"; \
+		done; \
+		{ printf '[\n'; \
+			first=1; \
+			for name in $$names; do \
+				if [ "$$first" = 1 ]; then first=0; else printf ',\n'; fi; \
+				printf '  "%s"' "$$name"; \
+			done; \
+			printf '\n]\n'; \
+		} > "$$wheels_dir/index.json"

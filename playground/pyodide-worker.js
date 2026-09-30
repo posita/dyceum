@@ -192,15 +192,8 @@ async function init() {
   }
 
   postStatus(`Installing ${wheelNames.length} local wheel(s)...`);
-  // Install all bundled wheels in a SINGLE micropip call so micropip resolves
-  // the set as one transaction: inter-dependencies (dyce needs optype;
-  // dyceum needs dyce/lark) are satisfied from the provided wheels rather
-  // than fetched from PyPI, so init makes no cross-origin round-trips.
-  // (Installing one wheel at a time would let a dependency resolve from PyPI
-  // before its bundled wheel had been installed -- notably optype, which dyce
-  // pulls in -- which is why ordering the loop wasn't enough.) micropip
-  // requires absolute URLs with a real scheme, so resolve each against the
-  // worker's location (e.g. http://localhost:8000/wheels/X.whl).
+  // Install all wheels at once rather than trying to get the
+  // dependency order correct.
   const wheelUrls = wheelNames.map((name) =>
     new URL(`./wheels/${name}`, self.location.href).toString(),
   );

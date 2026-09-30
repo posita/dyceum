@@ -81,7 +81,7 @@ In addition to supporting (almost[^2]) all AnyDice features, settings, library f
    This is either a non-negative integer indicating the maximum number of bits to allow for outcome counts within a die before quantization occurs, or one of: `"default"` (equivalent to `256`), `"low"` (`64`), `"medium"` (`256`), `"high"` (`1024`), and `"exact"` (`0`, meaning do not quantize).
    This setting affects computations that follow it and can be changed multiple times.
    Note that `"exact"` or `0` ***never*** quantizes, ***even where numbers and computations would exhaust all available resources***, so use those values with caution.
-   (See [the note on performance below](#note-on-performance).)
+   (See [the note on performance below](#a-note-on-performance).)
 2. `"dyceum: display precision"` -
    This is either a non-negative integer indicating how many decimal places to show when displaying results, or one of: `"default"` (equivalent to `2`), `"low"` (`0`), `"medium"` (`2`), `"high"` (`6`), and `"exact"` (`13`, which isn’t ***really*** exact, but it’s probably far more detailed than you’ll ever need).
    Only the most recent value is applied to all display outputs once a program completes.
@@ -290,7 +290,7 @@ For lowest first, they would be: `{1, 1}`, `{1, 2}`, `{1, 3}`, `{2, 2}`, `{2, 3}
 
 Order in sequences is preserved, meaning `output 2@{3, 5, 1}` yields `5`.
 Order of the outcomes of a single die are always lowest-to-highest.
-As [discussed below](#modifications-to-some-expanded-parameters-are-durable-across-expansion-calls), where expansion occurs over multiple parameters, ordering is even more subtle, as illustrated by the following program:
+As [discussed below](#even-modifications-to-some-expanded-parameters-are-durable-visible-across-expansion-calls), where expansion occurs over multiple parameters, ordering is even more subtle, as illustrated by the following program:
 
 ```c
 set "position order" to "highest first"
