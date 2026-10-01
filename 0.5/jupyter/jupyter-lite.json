@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "dyce",
     "appUrl": "./lab",
-    "appVersion": "0.8.2",
+    "appVersion": "0.8.4",
     "baseUrl": "./",
     "collaborative": false,
     "contentStorageDrivers": [
@@ -21,7 +21,7 @@
       },
       {
         "extension": "./extension",
-        "load": "static/remoteEntry.97483f0457056319.js",
+        "load": "static/remoteEntry.abcac41d5ca77040.js",
         "name": "@jupyterlite/pyodide-kernel-extension"
       },
       {
@@ -415,8 +415,8 @@
     "litePluginSettings": {
       "@jupyterlite/pyodide-kernel-extension:kernel": {
         "pipliteUrls": [
-          "./pypi/all.json?sha256=a26c58114cbc953d5ff7478b54f5086b632d03b0b89950a4d36878ba702cae4f",
-          "./extensions/@jupyterlite/pyodide-kernel-extension/static/pypi/all.json?sha256=de767a4dd4c6415cd5cfd3b63a3e6f1e9305811af7619dc577ff7dd8dd7b5d4c"
+          "./pypi/all.json?sha256=e0d539bb7b187cfa24685f93964624841f303282e646f96125b3d55ddec6313f",
+          "./extensions/@jupyterlite/pyodide-kernel-extension/static/pypi/all.json?sha256=94e75a51d1c49df7d0c23591188ff4a7ca5475efe7332814b3e5c4b980ef5a71"
         ]
       }
     },
@@ -431,11 +431,11 @@
     "versionInfo": {
       "@jupyter-notebook/application": {
         "label": "Jupyter Notebook",
-        "version": "7.6.0"
+        "version": "7.6.3"
       },
       "@jupyterlab/application": {
         "label": "JupyterLab",
-        "version": "4.6.0"
+        "version": "4.6.4"
       }
     }
   },

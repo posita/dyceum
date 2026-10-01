@@ -56,12 +56,11 @@ from dyce.viz.plotly import bar_spec, line_spec, ridge_spec
 # playground UI shows every warning explicitly in the logs pane, so we
 # switch to "always" -- a recurring TruncationWarning at the same site
 # should be visible each run, not silently de-duplicated. simplefilter()
-# RESETS the filter list, so the category-specific ignores below MUST be
-# added AFTER it; filterwarnings() prepends, so the last-added rule is
-# checked first.
+# prepends each rule, so the category-specific ignores below MUST be added
+# AFTER the general rule to take precedence.
 warnings.simplefilter("always")
-warnings.filterwarnings("ignore", category=DeprecationWarning)
-warnings.filterwarnings("ignore", category=ExperimentalWarning)
+warnings.simplefilter("ignore", DeprecationWarning)
+warnings.simplefilter("ignore", ExperimentalWarning)
 
 from dyceum.anydice import Settings, format_results, run as _dyceum_run
 from dyceum.csv import csv_base64, csv_filename
@@ -193,15 +192,8 @@ async function init() {
   }
 
   postStatus(`Installing ${wheelNames.length} local wheel(s)...`);
-  // Install all bundled wheels in a SINGLE micropip call so micropip resolves
-  // the set as one transaction: inter-dependencies (dyce needs optype;
-  // dyceum needs dyce/lark) are satisfied from the provided wheels rather
-  // than fetched from PyPI, so init makes no cross-origin round-trips.
-  // (Installing one wheel at a time would let a dependency resolve from PyPI
-  // before its bundled wheel had been installed -- notably optype, which dyce
-  // pulls in -- which is why ordering the loop wasn't enough.) micropip
-  // requires absolute URLs with a real scheme, so resolve each against the
-  // worker's location (e.g. http://localhost:8000/wheels/X.whl).
+  // Install all wheels at once rather than trying to get the
+  // dependency order correct.
   const wheelUrls = wheelNames.map((name) =>
     new URL(`./wheels/${name}`, self.location.href).toString(),
   );
@@ -231,6 +223,12 @@ function runSource(source) {
 }
 
 self.addEventListener("message", async (ev) => {
+  // A dedicated worker receives messages only from the document that created
+  // it. Some browsers leave event.origin empty for those messages, so only a
+  // non-empty foreign origin is ignored.
+  if (ev.origin && ev.origin !== self.location.origin) {
+    return;
+  }
   const msg = ev.data;
   if (msg.type === "init") {
     try {

@@ -13,7 +13,7 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="./..">
       
       
         <link rel="next" href="../notes/">
@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="zensical-0.0.66">
     
     
       
@@ -31,10 +31,15 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.1502b751.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.812a03bb.min.css">
       
       
 
@@ -48,14 +53,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
-    
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -76,7 +79,7 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
@@ -100,15 +103,15 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="dyceum" class="md-header__button md-logo" aria-label="dyceum" data-md-component="logo">
+    <a href="./.." title="dyceum" class="md-header__button md-logo" aria-label="dyceum" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -170,57 +173,30 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
-      <div class="md-header__source">
-        <a href="https://github.com/posita/anydyce/" title="Go to repository" class="md-source" data-md-component="source">
+    <div class="md-header__source">
+      
+        <a href="https://github.com/posita/dyceum/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -246,20 +222,20 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="dyceum" class="md-nav__button md-logo" aria-label="dyceum" data-md-component="logo">
+    <a href="./.." title="dyceum" class="md-nav__button md-logo" aria-label="dyceum" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     dyceum
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/posita/anydyce/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/posita/dyceum/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -276,15 +252,14 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="./.." class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Introduction
-  
+  Introduction
 
     
   </span>
@@ -306,7 +281,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
       
       
         
@@ -319,8 +294,7 @@
   <span class="md-ellipsis">
     
   
-    AnyDice Interpreter
-  
+  AnyDice Interpreter
 
     
   </span>
@@ -330,15 +304,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    AnyDice Interpreter
-  
+  AnyDice Interpreter
 
     
   </span>
@@ -349,7 +322,8 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -358,16 +332,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Features
-      
+      </span>
     </span>
   </a>
   
@@ -377,9 +351,9 @@
           <li class="md-nav__item">
   <a href="#no-server-required" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         No server required
-      
+      </span>
     </span>
   </a>
   
@@ -388,9 +362,9 @@
           <li class="md-nav__item">
   <a href="#the-url-is-the-program" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        The URL is the program
-      
+      <span class="md-typeset">
+        The URL <strong><em>is</em></strong> the program
+      </span>
     </span>
   </a>
   
@@ -399,9 +373,9 @@
           <li class="md-nav__item">
   <a href="#loading-programs-saved-to-anydicecom-by-program-ids" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Loading programs saved to anydice.com by program IDs
-      
+      </span>
     </span>
   </a>
   
@@ -410,9 +384,9 @@
           <li class="md-nav__item">
   <a href="#no-floats" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        No floats
-      
+      <span class="md-typeset">
+        No <code>float</code>s
+      </span>
     </span>
   </a>
   
@@ -421,9 +395,9 @@
           <li class="md-nav__item">
   <a href="#proprietary-extensions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Proprietary extensions
-      
+      </span>
     </span>
   </a>
   
@@ -432,9 +406,9 @@
           <li class="md-nav__item">
   <a href="#portable-python-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Portable Python implementation
-      
+      </span>
     </span>
   </a>
   
@@ -443,9 +417,9 @@
           <li class="md-nav__item">
   <a href="#a-note-on-performance" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         A note on performance
-      
+      </span>
     </span>
   </a>
   
@@ -459,9 +433,9 @@
         <li class="md-nav__item">
   <a href="#background-purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Background &amp; purpose
-      
+      </span>
     </span>
   </a>
   
@@ -470,9 +444,9 @@
         <li class="md-nav__item">
   <a href="#reverse-engineering-methodology" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Reverse-engineering methodology
-      
+      </span>
     </span>
   </a>
   
@@ -482,9 +456,9 @@
           <li class="md-nav__item">
   <a href="#prior-art" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Prior art
-      
+      </span>
     </span>
   </a>
   
@@ -498,9 +472,9 @@
         <li class="md-nav__item">
   <a href="#notes-on-the-anydicecom-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Notes on the anydice.com implementation
-      
+      </span>
     </span>
   </a>
   
@@ -510,9 +484,9 @@
           <li class="md-nav__item">
   <a href="#types-numbers-sequences-of-numbers-and-dice-whose-faces-are-numbers" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Types: numbers, sequences of numbers, and dice whose faces are numbers
-      
+      </span>
     </span>
   </a>
   
@@ -522,9 +496,9 @@
           <li class="md-nav__item">
   <a href="#the-empty-die-d" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        The empty die - d{}
-      
+      <span class="md-typeset">
+        The empty die - <code>d{}</code>
+      </span>
     </span>
   </a>
   
@@ -533,9 +507,9 @@
           <li class="md-nav__item">
   <a href="#on-ordering" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         On ordering
-      
+      </span>
     </span>
   </a>
   
@@ -549,9 +523,9 @@
           <li class="md-nav__item">
   <a href="#variables" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Variables
-      
+      </span>
     </span>
   </a>
   
@@ -560,9 +534,9 @@
           <li class="md-nav__item">
   <a href="#operators" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Operators
-      
+      </span>
     </span>
   </a>
   
@@ -572,9 +546,9 @@
           <li class="md-nav__item">
   <a href="#precedence" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Precedence
-      
+      </span>
     </span>
   </a>
   
@@ -583,9 +557,9 @@
           <li class="md-nav__item">
   <a href="#operand-interpretation-and-collapse" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Operand interpretation and collapse
-      
+      </span>
     </span>
   </a>
   
@@ -594,9 +568,9 @@
           <li class="md-nav__item">
   <a href="#certain-operators-and-the-empty-die" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Certain operators and the empty die
-      
+      </span>
     </span>
   </a>
   
@@ -605,9 +579,9 @@
           <li class="md-nav__item">
   <a href="#dice-pool-sizes" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Dice pool sizes
-      
+      </span>
     </span>
   </a>
   
@@ -621,9 +595,9 @@
           <li class="md-nav__item">
   <a href="#functions-variable-scope-type-coercion-and-type-expansion" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Functions, variable scope, type coercion, and type expansion
-      
+      </span>
     </span>
   </a>
   
@@ -633,9 +607,9 @@
           <li class="md-nav__item">
   <a href="#coercion" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Coercion
-      
+      </span>
     </span>
   </a>
   
@@ -644,9 +618,9 @@
           <li class="md-nav__item">
   <a href="#expansion" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Expansion
-      
+      </span>
     </span>
   </a>
   
@@ -655,9 +629,9 @@
           <li class="md-nav__item">
   <a href="#variable-scope" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Variable scope
-      
+      </span>
     </span>
   </a>
   
@@ -666,9 +640,9 @@
           <li class="md-nav__item">
   <a href="#modifications-to-parameters-are-durable-across-expansion-calls" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Modifications to parameters are durable across expansion calls
-      
+      <span class="md-typeset">
+        Modifications <strong><em>to parameters</em></strong> are durable across expansion calls
+      </span>
     </span>
   </a>
   
@@ -677,9 +651,9 @@
           <li class="md-nav__item">
   <a href="#even-modifications-to-some-expanded-parameters-are-durable-visible-across-expansion-calls" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Even modifications to some expanded parameters are durable (visible) across expansion calls
-      
+      <span class="md-typeset">
+        Even modifications to some <strong><em>expanded</em></strong> parameters are durable (visible) across expansion calls
+      </span>
     </span>
   </a>
   
@@ -688,9 +662,9 @@
           <li class="md-nav__item">
   <a href="#diagnosingavoiding-parameter-leaks-on-anydicecom" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Diagnosing/avoiding parameter leaks on anydice.com
-      
+      </span>
     </span>
   </a>
   
@@ -699,9 +673,9 @@
           <li class="md-nav__item">
   <a href="#function-signatures-and-duplicate-parameter-names" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Function signatures and duplicate parameter names
-      
+      </span>
     </span>
   </a>
   
@@ -715,9 +689,9 @@
           <li class="md-nav__item">
   <a href="#phantom-mass" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         “Phantom” Mass
-      
+      </span>
     </span>
   </a>
   
@@ -726,9 +700,9 @@
           <li class="md-nav__item">
   <a href="#overflows" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Overflows
-      
+      </span>
     </span>
   </a>
   
@@ -737,9 +711,9 @@
           <li class="md-nav__item">
   <a href="#legacy-programs" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         “Legacy” programs
-      
+      </span>
     </span>
   </a>
   
@@ -753,9 +727,9 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Conclusion
-      
+      </span>
     </span>
   </a>
   
@@ -783,8 +757,7 @@
   <span class="md-ellipsis">
     
   
-    Release notes
-  
+  Release notes
 
     
   </span>
@@ -810,8 +783,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
-  
+  Contributing
 
     
   </span>
@@ -837,8 +809,7 @@
   <span class="md-ellipsis">
     
   
-    License
-  
+  License
 
     
   </span>
@@ -882,8 +853,7 @@
   <span class="md-ellipsis">
     
   
-    API
-  
+  API
 
     
   </span>
@@ -893,19 +863,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
   
-    API
-  
+  API
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -918,8 +888,7 @@
   <span class="md-ellipsis">
     
   
-    AnyDice
-  
+  AnyDice
 
     
   </span>
@@ -930,10 +899,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -946,8 +915,7 @@
   <span class="md-ellipsis">
     
   
-    Jupyter
-  
+  Jupyter
 
     
   </span>
@@ -958,10 +926,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -977,10 +946,24 @@
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -989,16 +972,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Features
-      
+      </span>
     </span>
   </a>
   
@@ -1008,9 +991,9 @@
           <li class="md-nav__item">
   <a href="#no-server-required" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         No server required
-      
+      </span>
     </span>
   </a>
   
@@ -1019,9 +1002,9 @@
           <li class="md-nav__item">
   <a href="#the-url-is-the-program" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        The URL is the program
-      
+      <span class="md-typeset">
+        The URL <strong><em>is</em></strong> the program
+      </span>
     </span>
   </a>
   
@@ -1030,9 +1013,9 @@
           <li class="md-nav__item">
   <a href="#loading-programs-saved-to-anydicecom-by-program-ids" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Loading programs saved to anydice.com by program IDs
-      
+      </span>
     </span>
   </a>
   
@@ -1041,9 +1024,9 @@
           <li class="md-nav__item">
   <a href="#no-floats" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        No floats
-      
+      <span class="md-typeset">
+        No <code>float</code>s
+      </span>
     </span>
   </a>
   
@@ -1052,9 +1035,9 @@
           <li class="md-nav__item">
   <a href="#proprietary-extensions" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Proprietary extensions
-      
+      </span>
     </span>
   </a>
   
@@ -1063,9 +1046,9 @@
           <li class="md-nav__item">
   <a href="#portable-python-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Portable Python implementation
-      
+      </span>
     </span>
   </a>
   
@@ -1074,9 +1057,9 @@
           <li class="md-nav__item">
   <a href="#a-note-on-performance" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         A note on performance
-      
+      </span>
     </span>
   </a>
   
@@ -1090,9 +1073,9 @@
         <li class="md-nav__item">
   <a href="#background-purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Background &amp; purpose
-      
+      </span>
     </span>
   </a>
   
@@ -1101,9 +1084,9 @@
         <li class="md-nav__item">
   <a href="#reverse-engineering-methodology" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Reverse-engineering methodology
-      
+      </span>
     </span>
   </a>
   
@@ -1113,9 +1096,9 @@
           <li class="md-nav__item">
   <a href="#prior-art" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Prior art
-      
+      </span>
     </span>
   </a>
   
@@ -1129,9 +1112,9 @@
         <li class="md-nav__item">
   <a href="#notes-on-the-anydicecom-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Notes on the anydice.com implementation
-      
+      </span>
     </span>
   </a>
   
@@ -1141,9 +1124,9 @@
           <li class="md-nav__item">
   <a href="#types-numbers-sequences-of-numbers-and-dice-whose-faces-are-numbers" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Types: numbers, sequences of numbers, and dice whose faces are numbers
-      
+      </span>
     </span>
   </a>
   
@@ -1153,9 +1136,9 @@
           <li class="md-nav__item">
   <a href="#the-empty-die-d" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        The empty die - d{}
-      
+      <span class="md-typeset">
+        The empty die - <code>d{}</code>
+      </span>
     </span>
   </a>
   
@@ -1164,9 +1147,9 @@
           <li class="md-nav__item">
   <a href="#on-ordering" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         On ordering
-      
+      </span>
     </span>
   </a>
   
@@ -1180,9 +1163,9 @@
           <li class="md-nav__item">
   <a href="#variables" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Variables
-      
+      </span>
     </span>
   </a>
   
@@ -1191,9 +1174,9 @@
           <li class="md-nav__item">
   <a href="#operators" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Operators
-      
+      </span>
     </span>
   </a>
   
@@ -1203,9 +1186,9 @@
           <li class="md-nav__item">
   <a href="#precedence" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Precedence
-      
+      </span>
     </span>
   </a>
   
@@ -1214,9 +1197,9 @@
           <li class="md-nav__item">
   <a href="#operand-interpretation-and-collapse" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Operand interpretation and collapse
-      
+      </span>
     </span>
   </a>
   
@@ -1225,9 +1208,9 @@
           <li class="md-nav__item">
   <a href="#certain-operators-and-the-empty-die" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Certain operators and the empty die
-      
+      </span>
     </span>
   </a>
   
@@ -1236,9 +1219,9 @@
           <li class="md-nav__item">
   <a href="#dice-pool-sizes" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Dice pool sizes
-      
+      </span>
     </span>
   </a>
   
@@ -1252,9 +1235,9 @@
           <li class="md-nav__item">
   <a href="#functions-variable-scope-type-coercion-and-type-expansion" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Functions, variable scope, type coercion, and type expansion
-      
+      </span>
     </span>
   </a>
   
@@ -1264,9 +1247,9 @@
           <li class="md-nav__item">
   <a href="#coercion" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Coercion
-      
+      </span>
     </span>
   </a>
   
@@ -1275,9 +1258,9 @@
           <li class="md-nav__item">
   <a href="#expansion" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Expansion
-      
+      </span>
     </span>
   </a>
   
@@ -1286,9 +1269,9 @@
           <li class="md-nav__item">
   <a href="#variable-scope" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Variable scope
-      
+      </span>
     </span>
   </a>
   
@@ -1297,9 +1280,9 @@
           <li class="md-nav__item">
   <a href="#modifications-to-parameters-are-durable-across-expansion-calls" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Modifications to parameters are durable across expansion calls
-      
+      <span class="md-typeset">
+        Modifications <strong><em>to parameters</em></strong> are durable across expansion calls
+      </span>
     </span>
   </a>
   
@@ -1308,9 +1291,9 @@
           <li class="md-nav__item">
   <a href="#even-modifications-to-some-expanded-parameters-are-durable-visible-across-expansion-calls" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Even modifications to some expanded parameters are durable (visible) across expansion calls
-      
+      <span class="md-typeset">
+        Even modifications to some <strong><em>expanded</em></strong> parameters are durable (visible) across expansion calls
+      </span>
     </span>
   </a>
   
@@ -1319,9 +1302,9 @@
           <li class="md-nav__item">
   <a href="#diagnosingavoiding-parameter-leaks-on-anydicecom" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Diagnosing/avoiding parameter leaks on anydice.com
-      
+      </span>
     </span>
   </a>
   
@@ -1330,9 +1313,9 @@
           <li class="md-nav__item">
   <a href="#function-signatures-and-duplicate-parameter-names" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Function signatures and duplicate parameter names
-      
+      </span>
     </span>
   </a>
   
@@ -1346,9 +1329,9 @@
           <li class="md-nav__item">
   <a href="#phantom-mass" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         “Phantom” Mass
-      
+      </span>
     </span>
   </a>
   
@@ -1357,9 +1340,9 @@
           <li class="md-nav__item">
   <a href="#overflows" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Overflows
-      
+      </span>
     </span>
   </a>
   
@@ -1368,9 +1351,9 @@
           <li class="md-nav__item">
   <a href="#legacy-programs" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         “Legacy” programs
-      
+      </span>
     </span>
   </a>
   
@@ -1384,9 +1367,9 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Conclusion
-      
+      </span>
     </span>
   </a>
   
@@ -1406,8 +1389,6 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
   
   
 
@@ -1428,7 +1409,7 @@
 
 <h1 id="dyceums-mostly-compatible-anydice-interpreter"><code>dyceum</code>’s <em>Mostly</em>-Compatible AnyDice Interpreter</h1>
 <p><code>dyceum</code> now includes an Open Source, pure-Python, cleanroom implementation of <a href="https://catlikecoding.com/jasper-flick/">Jasper Flick</a>’s <a href="https://anydice.com/">AnyDice Dice Probability Calculator</a>.</p>
-<p>An interactive version can be found here: <a href="../playground/"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>An interactive version can be found here: <a href="../../playground/"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>You can also <a href="../#running-locally">host your own or run it locally</a>.</p>
 <p>The <code>dyceum</code> interpreter strives to be a working replacement in all meaningful aspects, but it is <strong><em>not</em></strong> 100% compatible, favoring fundamental correctness over producing identical results.
 Besides <a href="#features">detailing features</a> and <a href="#conclusion">enumerating goals</a>, this document primarily focuses on two categories of behaviors:</p>
@@ -1477,7 +1458,7 @@ This does not eliminate errors, but it does allow authors to arbitrarily tune pr
    This is either a non-negative integer indicating the maximum number of bits to allow for outcome counts within a die before quantization occurs, or one of: <code>"default"</code> (equivalent to <code>256</code>), <code>"low"</code> (<code>64</code>), <code>"medium"</code> (<code>256</code>), <code>"high"</code> (<code>1024</code>), and <code>"exact"</code> (<code>0</code>, meaning do not quantize).
    This setting affects computations that follow it and can be changed multiple times.
    Note that <code>"exact"</code> or <code>0</code> <strong><em>never</em></strong> quantizes, <strong><em>even where numbers and computations would exhaust all available resources</em></strong>, so use those values with caution.
-   (See <a href="#note-on-performance">the note on performance below</a>.)</li>
+   (See <a href="#a-note-on-performance">the note on performance below</a>.)</li>
 <li><code>"dyceum: display precision"</code> -
    This is either a non-negative integer indicating how many decimal places to show when displaying results, or one of: <code>"default"</code> (equivalent to <code>2</code>), <code>"low"</code> (<code>0</code>), <code>"medium"</code> (<code>2</code>), <code>"high"</code> (<code>6</code>), and <code>"exact"</code> (<code>13</code>, which isn’t <strong><em>really</em></strong> exact, but it’s probably far more detailed than you’ll ever need).
    Only the most recent value is applied to all display outputs once a program completes.</li>
@@ -1500,7 +1481,7 @@ This does not eliminate errors, but it does allow authors to arbitrarily tune pr
 <span class="n">output</span><span class="w"> </span><span class="mi">20</span><span class="n">d6</span><span class="w"> </span><span class="n">named</span><span class="w"> </span><span class="s">"20d6 without any quantization"</span>
 <span class="n">set</span><span class="w"> </span><span class="s">"dyceum: display precision"</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="s">"exact"</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=XCBUaGlzIGlsbHVzdHJhdGVzIHF1YW5pdHphdGlvbiBpbiBhY3Rpb24uIE5vdGUgZXNwZWNpYWxseSB0aGUgdGFpbHMKICBvZiB0aGUgZGlzdHJpYnV0aW9uLiBNb3JlIGRldGFpbCBjYW4gYmUgc2VlIGluIHRoZSB0ZXh0IG91dHB1dC4gXApsb29wIFAgb3ZlciB7NCwgOH0gewogIHNldCAiZHljZXVtOiBjYWxjdWxhdGlvbiBwcmVjaXNpb24iIHRvIFAKICBvdXRwdXQgMjBkNiBuYW1lZCAiMjBkNiB3aXRoIGNvbXB1dGF0aW9ucyBxdWFudGl6ZWQgYXQgW1BdIGJpdHMiCn0Kc2V0ICJkeWNldW06IGNhbGN1bGF0aW9uIHByZWNpc2lvbiIgdG8gImV4YWN0IgpvdXRwdXQgMjBkNiBuYW1lZCAiMjBkNiB3aXRob3V0IGFueSBxdWFudGl6YXRpb24iCnNldCAiZHljZXVtOiBkaXNwbGF5IHByZWNpc2lvbiIgdG8gImV4YWN0Igo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=XCBUaGlzIGlsbHVzdHJhdGVzIHF1YW5pdHphdGlvbiBpbiBhY3Rpb24uIE5vdGUgZXNwZWNpYWxseSB0aGUgdGFpbHMKICBvZiB0aGUgZGlzdHJpYnV0aW9uLiBNb3JlIGRldGFpbCBjYW4gYmUgc2VlIGluIHRoZSB0ZXh0IG91dHB1dC4gXApsb29wIFAgb3ZlciB7NCwgOH0gewogIHNldCAiZHljZXVtOiBjYWxjdWxhdGlvbiBwcmVjaXNpb24iIHRvIFAKICBvdXRwdXQgMjBkNiBuYW1lZCAiMjBkNiB3aXRoIGNvbXB1dGF0aW9ucyBxdWFudGl6ZWQgYXQgW1BdIGJpdHMiCn0Kc2V0ICJkeWNldW06IGNhbGN1bGF0aW9uIHByZWNpc2lvbiIgdG8gImV4YWN0IgpvdXRwdXQgMjBkNiBuYW1lZCAiMjBkNiB3aXRob3V0IGFueSBxdWFudGl6YXRpb24iCnNldCAiZHljZXVtOiBkaXNwbGF5IHByZWNpc2lvbiIgdG8gImV4YWN0Igo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <h3 id="portable-python-implementation">Portable Python implementation</h3>
 <p>The back-end can be incorporated into other projects via the <a class="autorefs autorefs-internal" href="../dyceum.anydice/#dyceum.anydice"><code>dyceum.anydice</code></a> subpackage.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1559,11 +1540,11 @@ This can be hard to gauge, since the <code>dyceum</code> interpreter runs in the
 For example, on modest hardware, the following program completes in under 2s in the <code>dyceum</code> interpreter, but times out before producing results on anydice.com.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">output</span><span class="w"> </span><span class="mi">300</span><span class="err">@</span><span class="p">(</span><span class="mi">1000</span><span class="n">d100</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=b3V0cHV0IDMwMEAoMTAwMGQxMDApCg"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
-<p>In other cases, the <code>dyceum</code> interpreter under-performs anydice.com, sometimes by an order of magnitude or more (e.g., programs <a href="../playground/#id=26da9"><code>26da9</code></a> and <a href="../playground/#id=286e0"><code>286e0</code></a>).
+<p>Open in playground: <a href="../../playground/#p=b3V0cHV0IDMwMEAoMTAwMGQxMDApCg"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>In other cases, the <code>dyceum</code> interpreter under-performs anydice.com, sometimes by an order of magnitude or more (e.g., programs <a href="../../playground/#id=26da9"><code>26da9</code></a> and <a href="../../playground/#id=286e0"><code>286e0</code></a>).
 This is usually because the <code>dyceum</code> interpreter attempts to be unhelpfully precise with math, which becomes <strong><em>very</em></strong> laborious as integers become huge.
 That can often be mitigated by selecting a <a href="#proprietary-extensions">lower quantization threshold</a>.
-By way of illustration, trying to run programs <a href="../playground/#id=183b0"><code>183b0</code></a> or <a href="../playground/#id=282d6"><code>282d6</code></a> with <a href="#proprietary-extensions"><code>"dyceum: calculation precision"</code> set to <code>"exact"</code></a> will likely fail to complete within several minutes (if ever).</p>
+By way of illustration, trying to run programs <a href="../../playground/#id=183b0"><code>183b0</code></a> or <a href="../../playground/#id=282d6"><code>282d6</code></a> with <a href="#proprietary-extensions"><code>"dyceum: calculation precision"</code> set to <code>"exact"</code></a> will likely fail to complete within several minutes (if ever).</p>
 <p>The <code>dyceum</code> interpreter and the underlying <a href="https://github.com/posita/dyce/"><code>dyce</code> library</a> on which it is built are very much works in progress, and performance improvements are a high priority item on their road maps, so this is likely to improve as time goes on.</p>
 <h2 id="background-purpose">Background &amp; purpose</h2>
 <p>AnyDice appears to have been around in some form or another since 2009, receiving a handful of updates between then and 2026.
@@ -1585,7 +1566,7 @@ The cause for this partial outage is unknown.</p>
 <p>The purpose of this effort is to provide a publicly-accessible reference implementation to avoid future loss of user investment.
 For convenience, a usable instance resides at <a href="https://dyceum.org/latest/playground/"><code>https://dyceum.org/latest/playground/</code></a>.
 However, merely relying on a single alternate site is insufficient, as no site guarantees access in perpetuity.
-Therefore, users are encouraged to clone <a href="https://github.com/posita/anydyce">this implementation’s source code</a> and run or host instances of their own.</p>
+Therefore, users are encouraged to clone <a href="https://github.com/posita/dyceum">this implementation’s source code</a> and run or host instances of their own.</p>
 <p>The <a href="https://github.com/posita/anydice-data">AnyDice program cache</a> is intended to preserve intellectual property of program authors who assigned no royalties or rights to their programs, and who reasonably relied on the ongoing availability of an interpreter and storage mechanism to preserve each program’s accessibility and value.
 If you are the author of a particular program in the cache that you want removed, please <a href="https://github.com/posita/anydice-data/issues">file an issue</a>.</p>
 <p>Accesses required to create the cache were rate limited and consistent with AnyDice’s longstanding availability and encouraged use.
@@ -1643,7 +1624,7 @@ Order is preserved, as illustrated by the following program:</p>
 <span class="w">  </span><span class="n">output</span><span class="w"> </span><span class="n">N</span><span class="err">@</span><span class="n">S</span><span class="w"> </span><span class="n">named</span><span class="w"> </span><span class="s">"S at position [N]"</span><span class="w">  </span><span class="err">\</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">iteration</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">loop</span><span class="w"> </span>\
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=Uzogey0zLi4tMToyLCB7NC4uNiwgezcsIDh9OjN9fSAgICAgICAgIFwgYXNzaWduIHRoZSBleHBhbmRlZCBhbmQgZmxhdHRlbmVkIHNlcXVlbmNlIHRvIFMgXApsb29wIE4gb3ZlciB7MS4uI1N9IHsgICAgICAgICAgICAgICAgICAgXCBsb29wIG92ZXIgdmFsdWVzIGluIGEgY29udGlndW91cyByYW5nZSBmcm9tIDEsIHRvIHRoZSBsZW5ndGggb2YgUywgaW5jbHVzaXZlLCBhc3NpZ25pbmcgZWFjaCB2YWx1ZSB0byBOIFwKICBvdXRwdXQgTkBTIG5hbWVkICJTIGF0IHBvc2l0aW9uIFtOXSIgIFwgb3V0cHV0IHRoZSB2YWx1ZSBvZiBTIGF0IHBvc2l0aW9uIE4gZm9yIGVhY2ggaXRlcmF0aW9uIG9mIHRoZSBsb29wIFwKfQo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=Uzogey0zLi4tMToyLCB7NC4uNiwgezcsIDh9OjN9fSAgICAgICAgIFwgYXNzaWduIHRoZSBleHBhbmRlZCBhbmQgZmxhdHRlbmVkIHNlcXVlbmNlIHRvIFMgXApsb29wIE4gb3ZlciB7MS4uI1N9IHsgICAgICAgICAgICAgICAgICAgXCBsb29wIG92ZXIgdmFsdWVzIGluIGEgY29udGlndW91cyByYW5nZSBmcm9tIDEsIHRvIHRoZSBsZW5ndGggb2YgUywgaW5jbHVzaXZlLCBhc3NpZ25pbmcgZWFjaCB2YWx1ZSB0byBOIFwKICBvdXRwdXQgTkBTIG5hbWVkICJTIGF0IHBvc2l0aW9uIFtOXSIgIFwgb3V0cHV0IHRoZSB2YWx1ZSBvZiBTIGF0IHBvc2l0aW9uIE4gZm9yIGVhY2ggaXRlcmF0aW9uIG9mIHRoZSBsb29wIFwKfQo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>Dice are created with the <code>d</code> operator, which has both unary and binary forms.
 More complicated forms are explored later, but the simplest forms are <code>d&lt;num&gt;</code>, <code>d&lt;seq&gt;</code>, <code>&lt;num&gt;d&lt;num&gt;</code>, and <code>&lt;num&gt;d&lt;seq&gt;</code>.
 The first and second (unary) forms create a single die.
@@ -1668,7 +1649,7 @@ Rolls are not repeated during expansion.</p>
 For lowest first, they would be: <code>{1, 1}</code>, <code>{1, 2}</code>, <code>{1, 3}</code>, <code>{2, 2}</code>, <code>{2, 3}</code>, <code>{3, 3}</code>.</p>
 <p>Order in sequences is preserved, meaning <code>output 2@{3, 5, 1}</code> yields <code>5</code>.
 Order of the outcomes of a single die are always lowest-to-highest.
-As <a href="#modifications-to-some-expanded-parameters-are-durable-across-expansion-calls">discussed below</a>, where expansion occurs over multiple parameters, ordering is even more subtle, as illustrated by the following program:</p>
+As <a href="#even-modifications-to-some-expanded-parameters-are-durable-visible-across-expansion-calls">discussed below</a>, where expansion occurs over multiple parameters, ordering is even more subtle, as illustrated by the following program:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1683,7 +1664,7 @@ As <a href="#modifications-to-some-expanded-parameters-are-durable-across-expans
 <span class="p">}</span>
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="n">d3</span><span class="w"> </span><span class="mi">2</span><span class="n">d3</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground (best viewed in “Text” mode): <a href="../playground/#p=c2V0ICJwb3NpdGlvbiBvcmRlciIgdG8gImhpZ2hlc3QgZmlyc3QiCk46IDAKZnVuY3Rpb246IE5fRlJPTV9EOm4gU19GUk9NX1A6cyB7CiAgTjogTiArIDEKICByZXN1bHQ6IE5fRlJPTV9EICogMTAgXiAoTiAtIDEpICsgMUBTX0ZST01fUCAqIDEwIF4gTiArIDJAU19GUk9NX1AgKiAxMCBeIChOICsgMSkKfQpvdXRwdXQgWzJkMyAyZDJd"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground (best viewed in “Text” mode): <a href="../../playground/#p=c2V0ICJwb3NpdGlvbiBvcmRlciIgdG8gImhpZ2hlc3QgZmlyc3QiCk46IDAKZnVuY3Rpb246IE5fRlJPTV9EOm4gU19GUk9NX1A6cyB7CiAgTjogTiArIDEKICByZXN1bHQ6IE5fRlJPTV9EICogMTAgXiAoTiAtIDEpICsgMUBTX0ZST01fUCAqIDEwIF4gTiArIDJAU19GUk9NX1AgKiAxMCBeIChOICsgMSkKfQpvdXRwdXQgWzJkMyAyZDJd"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>The <code>dyceum</code> interpreter faithfully reproduces these various ordering behaviors.</p>
 <h3 id="variables">Variables</h3>
 <p>Variables have uppercase letter names, optionally with underscores.
@@ -1701,7 +1682,7 @@ This is illustrated by the following program:</p>
 <span class="nl">I</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="mf">3..5</span><span class="p">}</span><span class="w">  </span><span class="err">\</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">points</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">sequence</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span>\
 <span class="n">output</span><span class="w"> </span><span class="n">J</span><span class="w">   </span><span class="err">\</span><span class="w"> </span><span class="n">J</span><span class="w"> </span><span class="n">still</span><span class="w"> </span><span class="n">points</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">object</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span>\
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=STogMSAgICAgICBcIEkgcG9pbnRzIHRvIGEgbnVtYmVyIG9iamVjdCB3aXRoIHRoZSB2YWx1ZSAxIFwKSjogSSAgICAgICBcIEogcG9pbnRzIHRvIHRoZSBzYW1lIG51bWJlciBvYmplY3QgYXMgSSBcCkk6IHszLi41fSAgXCBJIG5vdyBwb2ludHMgdG8gYSBuZXcgc2VxdWVuY2Ugb2JqZWN0IGNvbnRhaW5pbmcgdGhlIHZhbHVlcyAzLCA0LCBhbmQgNSBcCm91dHB1dCBKICAgXCBKIHN0aWxsIHBvaW50cyB0byB0aGUgbnVtYmVyIG9iamVjdCB3aXRoIHRoZSB2YWx1ZSAxIFwK"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=STogMSAgICAgICBcIEkgcG9pbnRzIHRvIGEgbnVtYmVyIG9iamVjdCB3aXRoIHRoZSB2YWx1ZSAxIFwKSjogSSAgICAgICBcIEogcG9pbnRzIHRvIHRoZSBzYW1lIG51bWJlciBvYmplY3QgYXMgSSBcCkk6IHszLi41fSAgXCBJIG5vdyBwb2ludHMgdG8gYSBuZXcgc2VxdWVuY2Ugb2JqZWN0IGNvbnRhaW5pbmcgdGhlIHZhbHVlcyAzLCA0LCBhbmQgNSBcCm91dHB1dCBKICAgXCBKIHN0aWxsIHBvaW50cyB0byB0aGUgbnVtYmVyIG9iamVjdCB3aXRoIHRoZSB2YWx1ZSAxIFwK"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <h3 id="operators">Operators</h3>
 <p>Similar to other programming languages, AnyDice provides:</p>
 <ul>
@@ -1846,7 +1827,7 @@ To figure out what this does, it is important to understand that the <code>d</co
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="n">roll</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">die</span><span class="w"> </span><span class="mi">4</span><span class="n">d3</span><span class="p">]</span><span class="w">                      </span><span class="n">named</span><span class="w"> </span><span class="s">"same as output 2d(4d3)"</span>
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="n">roll</span><span class="w"> </span><span class="n">d2</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">die</span><span class="w"> </span><span class="mi">4</span><span class="n">d3</span><span class="p">]</span><span class="w">                     </span><span class="n">named</span><span class="w"> </span><span class="s">"same as output d2d(4d3)"</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=ZnVuY3Rpb246IHJvbGwgTjpuIG9mIHRoZSBkaWUgRDpkIHsgcmVzdWx0OiBOZEQgfQpvdXRwdXQgW3JvbGwgNCBvZiB0aGUgZGllIGQzXSAgICAgICAgICAgICAgICAgICAgICAgbmFtZWQgInNhbWUgYXMgb3V0cHV0IDRkMyIKb3V0cHV0IFtyb2xsIGQyIG9mIHRoZSBkaWUgZDNdICAgICAgICAgICAgICAgICAgICAgIG5hbWVkICJzYW1lIGFzIG91dHB1dCBkMmQzIgpvdXRwdXQgW3JvbGwgMmQ0IG9mIHRoZSBkaWUgZDNdICAgICAgICAgICAgICAgICAgICAgbmFtZWQgInNhbWUgYXMgb3V0cHV0IDJkNGQzIgpvdXRwdXQgW3JvbGwgW3JvbGwgZDIgb2YgdGhlIGRpZSBkNF0gb2YgdGhlIGRpZSBkM10gbmFtZWQgInNhbWUgYXMgb3V0cHV0IGQyZDRkMyIKb3V0cHV0IFtyb2xsIDIgb2YgdGhlIGRpZSA0ZDNdICAgICAgICAgICAgICAgICAgICAgIG5hbWVkICJzYW1lIGFzIG91dHB1dCAyZCg0ZDMpIgpvdXRwdXQgW3JvbGwgZDIgb2YgdGhlIGRpZSA0ZDNdICAgICAgICAgICAgICAgICAgICAgbmFtZWQgInNhbWUgYXMgb3V0cHV0IGQyZCg0ZDMpIgo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=ZnVuY3Rpb246IHJvbGwgTjpuIG9mIHRoZSBkaWUgRDpkIHsgcmVzdWx0OiBOZEQgfQpvdXRwdXQgW3JvbGwgNCBvZiB0aGUgZGllIGQzXSAgICAgICAgICAgICAgICAgICAgICAgbmFtZWQgInNhbWUgYXMgb3V0cHV0IDRkMyIKb3V0cHV0IFtyb2xsIGQyIG9mIHRoZSBkaWUgZDNdICAgICAgICAgICAgICAgICAgICAgIG5hbWVkICJzYW1lIGFzIG91dHB1dCBkMmQzIgpvdXRwdXQgW3JvbGwgMmQ0IG9mIHRoZSBkaWUgZDNdICAgICAgICAgICAgICAgICAgICAgbmFtZWQgInNhbWUgYXMgb3V0cHV0IDJkNGQzIgpvdXRwdXQgW3JvbGwgW3JvbGwgZDIgb2YgdGhlIGRpZSBkNF0gb2YgdGhlIGRpZSBkM10gbmFtZWQgInNhbWUgYXMgb3V0cHV0IGQyZDRkMyIKb3V0cHV0IFtyb2xsIDIgb2YgdGhlIGRpZSA0ZDNdICAgICAgICAgICAgICAgICAgICAgIG5hbWVkICJzYW1lIGFzIG91dHB1dCAyZCg0ZDMpIgpvdXRwdXQgW3JvbGwgZDIgb2YgdGhlIGRpZSA0ZDNdICAgICAgICAgICAgICAgICAgICAgbmFtZWQgInNhbWUgYXMgb3V0cHV0IGQyZCg0ZDMpIgo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>In lay terms, where the left-hand operand is a die, this means, “roll a first die, then whatever number comes up, roll that many of a second die, then collapse the whole thing down into a single die.”
 This isn’t incredibly useful in practice, and is often the source of confusion.
 Many authors try this notation as a flawed means to create heterogeneous pools (i.e., pools of dice of different kinds).</p>
@@ -1908,8 +1889,8 @@ This results in leaking a spurious <code>0</code> into the parent distribution.<
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="n">delve</span><span class="w"> </span><span class="n">among</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="n">N</span><span class="p">]</span><span class="w"> </span><span class="n">named</span><span class="w"> </span><span class="s">"delve among [M] [N]"</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<p>Open in playground: <a href="../playground/#p=ZnVuY3Rpb246IGRlbHZlIE46biB7CiAgaWYgTiA8PSAwIHsgcmVzdWx0OiAxMjMgfSBcIEFsd2F5cyByZXR1cm4gMTIzIGF0IHRoZSBib3R0b20gXAogIHJlc3VsdDogW2RlbHZlIE4gLSAxXQp9CmZ1bmN0aW9uOiBkZWx2ZSBib3RoIE06biBOOm4gewogIHJlc3VsdDogW2RlbHZlIE1dICsgW2RlbHZlIE5dICBcIERvZXMgdGhpcyByZXR1cm4gZHt9LCAxMjMsIG9yIDI0Nj8gSXQgZGVwZW5kcyEgXAp9CmZ1bmN0aW9uOiBkZWx2ZSBhbW9uZyBNOm4gTjpuIHsKICByZXN1bHQ6IFtkZWx2ZSBib3RoIE0gTV0gKyBbZGVsdmUgYm90aCBNIE5dICsgW2RlbHZlIGJvdGggTiBNXSArIFtkZWx2ZSBib3RoIE4gTl0KfQpNOiAzIE46IDMKb3V0cHV0IFtkZWx2ZSBhbW9uZyBNIE5dIG5hbWVkICJkZWx2ZSBhbW9uZyBbTV0gW05dIgpNOiAzIE46IDEwCm91dHB1dCBbZGVsdmUgYW1vbmcgTSBOXSBuYW1lZCAiZGVsdmUgYW1vbmcgW01dIFtOXSIKTTogMTAgTjogMTAKb3V0cHV0IFtkZWx2ZSBhbW9uZyBNIE5dIG5hbWVkICJkZWx2ZSBhbW9uZyBbTV0gW05dIgo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
-<p>A much more subtle version of this issue can be found when comparing the second output of <a href="https://anydice.com/program/1065f"><code>https://anydice.com/program/1065f</code></a> to that <a href="../playground/#id=1065f">computed by the <code>dyceum</code> interpreter</a>.
+<p>Open in playground: <a href="../../playground/#p=ZnVuY3Rpb246IGRlbHZlIE46biB7CiAgaWYgTiA8PSAwIHsgcmVzdWx0OiAxMjMgfSBcIEFsd2F5cyByZXR1cm4gMTIzIGF0IHRoZSBib3R0b20gXAogIHJlc3VsdDogW2RlbHZlIE4gLSAxXQp9CmZ1bmN0aW9uOiBkZWx2ZSBib3RoIE06biBOOm4gewogIHJlc3VsdDogW2RlbHZlIE1dICsgW2RlbHZlIE5dICBcIERvZXMgdGhpcyByZXR1cm4gZHt9LCAxMjMsIG9yIDI0Nj8gSXQgZGVwZW5kcyEgXAp9CmZ1bmN0aW9uOiBkZWx2ZSBhbW9uZyBNOm4gTjpuIHsKICByZXN1bHQ6IFtkZWx2ZSBib3RoIE0gTV0gKyBbZGVsdmUgYm90aCBNIE5dICsgW2RlbHZlIGJvdGggTiBNXSArIFtkZWx2ZSBib3RoIE4gTl0KfQpNOiAzIE46IDMKb3V0cHV0IFtkZWx2ZSBhbW9uZyBNIE5dIG5hbWVkICJkZWx2ZSBhbW9uZyBbTV0gW05dIgpNOiAzIE46IDEwCm91dHB1dCBbZGVsdmUgYW1vbmcgTSBOXSBuYW1lZCAiZGVsdmUgYW1vbmcgW01dIFtOXSIKTTogMTAgTjogMTAKb3V0cHV0IFtkZWx2ZSBhbW9uZyBNIE5dIG5hbWVkICJkZWx2ZSBhbW9uZyBbTV0gW05dIgo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>A much more subtle version of this issue can be found when comparing the second output of <a href="https://anydice.com/program/1065f"><code>https://anydice.com/program/1065f</code></a> to that <a href="../../playground/#id=1065f">computed by the <code>dyceum</code> interpreter</a>.
    (See also the section on <a href="#phantom-mass">“phantom” mass</a>.)
    At first glance, the distributions look similar, but a careful inspection will reveal that AnyDice’s results do not sum to 100%, and the values are slightly off.</p>
 <p>Detecting, much less working around this computation error in a real world program is extremely difficult.</p>
@@ -1968,7 +1949,7 @@ Where a sequence is passed as an argument to a function expecting a number or di
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nl">function</span><span class="p">:</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">die</span><span class="w"> </span><span class="n">M</span><span class="o">:</span><span class="n">d</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">die</span><span class="w"> </span><span class="n">N</span><span class="o">:</span><span class="n">d</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">result</span><span class="o">:</span><span class="w"> </span><span class="n">M</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">N</span><span class="w">  </span><span class="err">\</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="p">}</span>
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="n">add</span><span class="w"> </span><span class="n">die</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">die</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span><span class="w">  </span><span class="err">\</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">coercion</span><span class="p">,</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">expansion</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">remains</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">number</span><span class="w"> </span>\
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=ZnVuY3Rpb246IGFkZCBkaWUgTTpkIGFuZCBkaWUgTjpkIHsgcmVzdWx0OiBNICsgTiAgXCBhIG51bWJlciBcIH0Kb3V0cHV0IFthZGQgZGllIDMgYW5kIGRpZSA0XSAgXCBvbmx5IGNvZXJjaW9uLCBubyBleHBhbnNpb24sIHNvIHJlc3VsdCByZW1haW5zIGEgbnVtYmVyIFwK"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=ZnVuY3Rpb246IGFkZCBkaWUgTTpkIGFuZCBkaWUgTjpkIHsgcmVzdWx0OiBNICsgTiAgXCBhIG51bWJlciBcIH0Kb3V0cHV0IFthZGQgZGllIDMgYW5kIGRpZSA0XSAgXCBvbmx5IGNvZXJjaW9uLCBubyBleHBhbnNpb24sIHNvIHJlc3VsdCByZW1haW5zIGEgbnVtYmVyIFwK"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <h4 id="expansion">Expansion</h4>
 <p><em>Expansion</em> happens when a function is called with a die or pool as an argument that has a number or sequence as a its conversion specification.
 Where a parameter expects a number, a single die is expanded into its faces, with the function being called once for each face.
@@ -1990,7 +1971,7 @@ A pool is first flattened to a single die, and that flattened die’s faces are 
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="w"> </span><span class="n">th</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">D</span><span class="p">]</span><span class="w">   </span><span class="err">\</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="n">submitted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="mi">4</span><span class="n">th</span><span class="w"> </span><span class="n">iteration</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">collapsed</span><span class="w"> </span><span class="mi">3</span><span class="n">d6</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">e</span><span class="p">.,</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span>\
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="mi">12</span><span class="w"> </span><span class="n">th</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">D</span><span class="p">]</span><span class="w">  </span><span class="err">\</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="n">submitted</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="mi">12</span><span class="n">th</span><span class="w"> </span><span class="n">iteration</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">collapsed</span><span class="w"> </span><span class="mi">3</span><span class="n">d6</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">e</span><span class="p">.,</span><span class="w"> </span><span class="mi">14</span><span class="p">)</span><span class="w"> </span>\
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=SVRFUl9DT1VOVDogMApmdW5jdGlvbjogTjpuIHRoIGZhY2UgZnJvbSBGQUNFOm4gewogIElURVJfQ09VTlQ6IElURVJfQ09VTlQgKyAxICBcIEdldCBhIGNvcHkgb2YgdGhlIGdsb2JhbCBJVEVSX0NPVU5UIHRoYXQgc3Vydml2ZXMgYWNyb3NzIHRoZSBleHBhbmRlZCBjYWxscyBcCiAgaWYgSVRFUl9DT1VOVCA9IE4geyByZXN1bHQ6IEZBQ0UgfSBcIGVsc2UgeyByZXN1bHQ6IGR7fSB9IFwKfQpEOiAzZDYgb3V0cHV0IEQgICAgICAgICAgICAgXCBUaGUgZGlzdHJpYnV0aW9uIG9mIDNkNiBcCm91dHB1dCBbNCB0aCBmYWNlIGZyb20gRF0gICBcIFRoZSBmYWNlIHN1Ym1pdHRlZCB0byB0aGUgNHRoIGl0ZXJhdGlvbiBvZiB0aGUgZnVuY3Rpb24gZnJvbSB0aGUgY29sbGFwc2VkIDNkNiAoaS5lLiwgNikgXApvdXRwdXQgWzEyIHRoIGZhY2UgZnJvbSBEXSAgXCBUaGUgZmFjZSBzdWJtaXR0ZWQgdG8gdGhlIDEydGggaXRlcmF0aW9uIG9mIHRoZSBmdW5jdGlvbiBmcm9tIHRoZSBjb2xsYXBzZWQgM2Q2IChpLmUuLCAxNCkgXAo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=SVRFUl9DT1VOVDogMApmdW5jdGlvbjogTjpuIHRoIGZhY2UgZnJvbSBGQUNFOm4gewogIElURVJfQ09VTlQ6IElURVJfQ09VTlQgKyAxICBcIEdldCBhIGNvcHkgb2YgdGhlIGdsb2JhbCBJVEVSX0NPVU5UIHRoYXQgc3Vydml2ZXMgYWNyb3NzIHRoZSBleHBhbmRlZCBjYWxscyBcCiAgaWYgSVRFUl9DT1VOVCA9IE4geyByZXN1bHQ6IEZBQ0UgfSBcIGVsc2UgeyByZXN1bHQ6IGR7fSB9IFwKfQpEOiAzZDYgb3V0cHV0IEQgICAgICAgICAgICAgXCBUaGUgZGlzdHJpYnV0aW9uIG9mIDNkNiBcCm91dHB1dCBbNCB0aCBmYWNlIGZyb20gRF0gICBcIFRoZSBmYWNlIHN1Ym1pdHRlZCB0byB0aGUgNHRoIGl0ZXJhdGlvbiBvZiB0aGUgZnVuY3Rpb24gZnJvbSB0aGUgY29sbGFwc2VkIDNkNiAoaS5lLiwgNikgXApvdXRwdXQgWzEyIHRoIGZhY2UgZnJvbSBEXSAgXCBUaGUgZmFjZSBzdWJtaXR0ZWQgdG8gdGhlIDEydGggaXRlcmF0aW9uIG9mIHRoZSBmdW5jdGlvbiBmcm9tIHRoZSBjb2xsYXBzZWQgM2Q2IChpLmUuLCAxNCkgXAo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>As one of its comment suggests, this probe works because of the way that variables are “scoped” in AnyDice, which we’ll <a href="#variable-scope">explore in detail</a> further on.</p>
 <p>Where a parameter expects a sequence, a die or pool is expanded into unique rolls, with the function being called once for each roll.
 The values in each roll are ordered according to the <code>"position order"</code> setting.</p>
@@ -2008,13 +1989,13 @@ The values in each roll are ordered according to the <code>"position order"</cod
 <span class="p">}</span>
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="n">smooshify</span><span class="w"> </span><span class="mi">5</span><span class="n">d3</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=c2V0ICJwb3NpdGlvbiBvcmRlciIgdG8gImxvd2VzdCBmaXJzdCIKZnVuY3Rpb246IHNtb29zaGlmeSBEOnMgewogIE06IDEgXFwgVjogMCAgXCB0aGUgIlxcIiBpcyBwcmVzZW50IHRvIGJyZWFrIHRoaW5ncyB1cCB2aXN1YWxseSBcCiAgbG9vcCBGQUNFIG92ZXIgRCB7IFY6IEZBQ0UgKiBNICsgViBcXCBNOiBNICogMTAwIH0KICByZXN1bHQ6IFYKfQpvdXRwdXQgW3Ntb29zaGlmeSA1ZDNdCg"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=c2V0ICJwb3NpdGlvbiBvcmRlciIgdG8gImxvd2VzdCBmaXJzdCIKZnVuY3Rpb246IHNtb29zaGlmeSBEOnMgewogIE06IDEgXFwgVjogMCAgXCB0aGUgIlxcIiBpcyBwcmVzZW50IHRvIGJyZWFrIHRoaW5ncyB1cCB2aXN1YWxseSBcCiAgbG9vcCBGQUNFIG92ZXIgRCB7IFY6IEZBQ0UgKiBNICsgViBcXCBNOiBNICogMTAwIH0KICByZXN1bHQ6IFYKfQpvdXRwdXQgW3Ntb29zaGlmeSA1ZDNdCg"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>If a function call has more than one parameter to which expansion applies, it will be called with the Cartesian product of those values:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nl">function</span><span class="p">:</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">N</span><span class="o">:</span><span class="n">n</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">V</span><span class="o">:</span><span class="n">n</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">result</span><span class="o">:</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="p">}</span>
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="n">add</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">d6</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="p">(</span><span class="n">d3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">)]</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=ZnVuY3Rpb246IGFkZCBlYWNoIG9mIE46biB0byBlYWNoIG9mIFY6biB7IHJlc3VsdDogTiArIFYgfQpvdXRwdXQgW2FkZCBlYWNoIG9mIGQ2IHRvIGVhY2ggb2YgKGQzICogMTAwKV0K"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=ZnVuY3Rpb246IGFkZCBlYWNoIG9mIE46biB0byBlYWNoIG9mIFY6biB7IHJlc3VsdDogTiArIFYgfQpvdXRwdXQgW2FkZCBlYWNoIG9mIGQ2IHRvIGVhY2ggb2YgKGQzICogMTAwKV0K"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>If any expansion occurs, the result from each function call is weighted in accordance with the face(s) or roll(s) submitted for that call.
 Weighted results are aggregated into a single die, which becomes the final result.
 Where the result from one of the function iterations is a die, that die is “folded in”, taking on the weight associated with that call’s arguments, as demonstrated by the following program:</p>
@@ -2026,7 +2007,7 @@ Where the result from one of the function iterations is a die, that die is “fo
 <span class="p">}</span>
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="n">replace</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">weird</span><span class="w"> </span><span class="n">die</span><span class="w"> </span><span class="n">where</span><span class="w"> </span><span class="n">d10</span><span class="w"> </span><span class="n">shows</span><span class="w"> </span><span class="n">three</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=ZnVuY3Rpb246IHJlcGxhY2Ugd2l0aCB3ZWlyZCBkaWUgd2hlcmUgRkFDRTpuIHNob3dzIHRocmVlIHsKICBpZiBGQUNFID0gMyB7IHJlc3VsdDogZHs0NCwgNDQsIDU1LCA2Nn0gfSBlbHNlIHsgcmVzdWx0OiBGQUNFIH0KfQpvdXRwdXQgW3JlcGxhY2Ugd2l0aCB3ZWlyZCBkaWUgd2hlcmUgZDEwIHNob3dzIHRocmVlXQo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=ZnVuY3Rpb246IHJlcGxhY2Ugd2l0aCB3ZWlyZCBkaWUgd2hlcmUgRkFDRTpuIHNob3dzIHRocmVlIHsKICBpZiBGQUNFID0gMyB7IHJlc3VsdDogZHs0NCwgNDQsIDU1LCA2Nn0gfSBlbHNlIHsgcmVzdWx0OiBGQUNFIH0KfQpvdXRwdXQgW3JlcGxhY2Ugd2l0aCB3ZWlyZCBkaWUgd2hlcmUgZDEwIHNob3dzIHRocmVlXQo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <h4 id="variable-scope">Variable scope</h4>
 <p>AnyDice’s <a href="https://anydice.com/docs/functions/">function documentation</a> notes:</p>
 <blockquote>
@@ -2053,7 +2034,7 @@ Specifically, a function has access to a <strong><em>copies</em></strong> of eac
 <span class="n">output</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">named</span><span class="w"> </span><span class="s">"GLOBAL from function call"</span><span class="w">        </span><span class="err">\</span><span class="w"> </span><span class="mi">110</span><span class="w"> </span>\
 <span class="n">output</span><span class="w"> </span><span class="n">GLOBAL</span><span class="w"> </span><span class="n">named</span><span class="w"> </span><span class="s">"GLOBAL after function call"</span><span class="w">   </span><span class="err">\</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span>\
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=ZnVuY3Rpb246IHsgR0xPQkFMOiBHTE9CQUwgKyAxMCBcXCByZXN1bHQ6IEdMT0JBTCB9CkdMT0JBTDogMApvdXRwdXQgR0xPQkFMIG5hbWVkICJHTE9CQUwgYmVmb3JlIGZ1bmN0aW9uIGNhbGwiICBcICAwIFwKb3V0cHV0IFtdIG5hbWVkICJHTE9CQUwgZnJvbSBmdW5jdGlvbiBjYWxsIiAgICAgICAgXCAxMCBcCm91dHB1dCBHTE9CQUwgbmFtZWQgIkdMT0JBTCBhZnRlciBmdW5jdGlvbiBjYWxsIiAgIFwgKnNwb2lsZXIgYWxlcnQqOiAwIFwKR0xPQkFMOiAxMDAKb3V0cHV0IEdMT0JBTCBuYW1lZCAiR0xPQkFMIGJlZm9yZSBmdW5jdGlvbiBjYWxsIiAgXCAxMDAgXApvdXRwdXQgW10gbmFtZWQgIkdMT0JBTCBmcm9tIGZ1bmN0aW9uIGNhbGwiICAgICAgICBcIDExMCBcCm91dHB1dCBHTE9CQUwgbmFtZWQgIkdMT0JBTCBhZnRlciBmdW5jdGlvbiBjYWxsIiAgIFwgMTAwIFwK"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=ZnVuY3Rpb246IHsgR0xPQkFMOiBHTE9CQUwgKyAxMCBcXCByZXN1bHQ6IEdMT0JBTCB9CkdMT0JBTDogMApvdXRwdXQgR0xPQkFMIG5hbWVkICJHTE9CQUwgYmVmb3JlIGZ1bmN0aW9uIGNhbGwiICBcICAwIFwKb3V0cHV0IFtdIG5hbWVkICJHTE9CQUwgZnJvbSBmdW5jdGlvbiBjYWxsIiAgICAgICAgXCAxMCBcCm91dHB1dCBHTE9CQUwgbmFtZWQgIkdMT0JBTCBhZnRlciBmdW5jdGlvbiBjYWxsIiAgIFwgKnNwb2lsZXIgYWxlcnQqOiAwIFwKR0xPQkFMOiAxMDAKb3V0cHV0IEdMT0JBTCBuYW1lZCAiR0xPQkFMIGJlZm9yZSBmdW5jdGlvbiBjYWxsIiAgXCAxMDAgXApvdXRwdXQgW10gbmFtZWQgIkdMT0JBTCBmcm9tIGZ1bmN0aW9uIGNhbGwiICAgICAgICBcIDExMCBcCm91dHB1dCBHTE9CQUwgbmFtZWQgIkdMT0JBTCBhZnRlciBmdW5jdGlvbiBjYWxsIiAgIFwgMTAwIFwK"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>But there’s another more subtle behavior not mentioned <strong><em>at all</em></strong> in AnyDice’s documentation.</p>
 <div class="admonition warning">
 <p class="admonition-title">Variables are scoped <strong><em>across</em></strong> expansion calls</p>
@@ -2073,7 +2054,7 @@ Specifically, a function has access to a <strong><em>copies</em></strong> of eac
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="n">d6</span><span class="p">]</span>
 <span class="err">\</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="n">d</span><span class="p">{</span><span class="mf">2..6</span><span class="p">}]</span><span class="w"> </span><span class="err">\</span><span class="w">  </span><span class="err">\</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">error</span><span class="w"> </span>\
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=ZnVuY3Rpb246IE46biB7CiAgaWYgTiA9IDEgeyBWQVI6IDEgfSAgICBcIGRvbid0IGNhbGwgdGhpcyB3aGVyZSB0aGUgbG93ZXN0IHZhbHVlIG9mIGEgZGllIGlzIG5vdCAxIFwKICBlbHNlIHsgVkFSOiBWQVIgKiAyIH0gIFwgZG91YmxlIFZBUiBcCiAgcmVzdWx0OiBWQVIKfQpvdXRwdXQgW2Q2XQpcIG91dHB1dCBbZHsyLi42fV0gXCAgXCB0aGlzIHJlc3VsdHMgaW4gYW4gZXJyb3IgXAo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=ZnVuY3Rpb246IE46biB7CiAgaWYgTiA9IDEgeyBWQVI6IDEgfSAgICBcIGRvbid0IGNhbGwgdGhpcyB3aGVyZSB0aGUgbG93ZXN0IHZhbHVlIG9mIGEgZGllIGlzIG5vdCAxIFwKICBlbHNlIHsgVkFSOiBWQVIgKiAyIH0gIFwgZG91YmxlIFZBUiBcCiAgcmVzdWx0OiBWQVIKfQpvdXRwdXQgW2Q2XQpcIG91dHB1dCBbZHsyLi42fV0gXCAgXCB0aGlzIHJlc3VsdHMgaW4gYW4gZXJyb3IgXAo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>That tells us two things:</p>
 <ol>
 <li>As <a href="#on-ordering">mentioned above</a>, faces are provided to function calls from lowest-to-highest, regardless of the setting of <code>"position order"</code>.
@@ -2094,7 +2075,7 @@ The behavior it fails to properly identify is that modifications to a non-expand
 In effect, it means that parameters are passed by-reference from its internal expansion machinery.
 The <code>dyceum</code> interpreter does not reproduce this behavior.</p>
 </div>
-<p>Many users are reasonably and completely unaware of this trap and often fall into it with more complicated programs. Consider the following (simplified from AnyDice program <a href="../playground/#id=9010"><code>9010</code></a>) as an illustration:</p>
+<p>Many users are reasonably and completely unaware of this trap and often fall into it with more complicated programs. Consider the following (simplified from AnyDice program <a href="../../playground/#id=9010"><code>9010</code></a>) as an illustration:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -2111,7 +2092,7 @@ The <code>dyceum</code> interpreter does not reproduce this behavior.</p>
 <span class="p">}</span>
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="n">reroll</span><span class="w"> </span><span class="mi">1</span><span class="n">d6</span><span class="w"> </span><span class="n">less</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">depth</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="n">named</span><span class="w"> </span><span class="s">"reroll under 4, up to 3 tries"</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=ZnVuY3Rpb246IHJlcm9sbCBOOm4gbGVzcyB0aGFuIFRIUkVTSE9MRDpuIGRlcHRoIERFUFRIOm4gewogIGlmIE4gPCBUSFJFU0hPTEQgJiBERVBUSCA-IDAgewogICAgREVQVEg6IERFUFRIIC0gMQogICAgcmVzdWx0OiBbcmVyb2xsIDFkNiBsZXNzIHRoYW4gVEhSRVNIT0xEIGRlcHRoIERFUFRIXQogIH0KICByZXN1bHQ6IE4KfQpvdXRwdXQgW3Jlcm9sbCAxZDYgbGVzcyB0aGFuIDQgZGVwdGggM10gbmFtZWQgInJlcm9sbCB1bmRlciA0LCB1cCB0byAzIHRyaWVzIgo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=ZnVuY3Rpb246IHJlcm9sbCBOOm4gbGVzcyB0aGFuIFRIUkVTSE9MRDpuIGRlcHRoIERFUFRIOm4gewogIGlmIE4gPCBUSFJFU0hPTEQgJiBERVBUSCA-IDAgewogICAgREVQVEg6IERFUFRIIC0gMQogICAgcmVzdWx0OiBbcmVyb2xsIDFkNiBsZXNzIHRoYW4gVEhSRVNIT0xEIGRlcHRoIERFUFRIXQogIH0KICByZXN1bHQ6IE4KfQpvdXRwdXQgW3Jlcm9sbCAxZDYgbGVzcyB0aGFuIDQgZGVwdGggM10gbmFtZWQgInJlcm9sbCB1bmRlciA0LCB1cCB0byAzIHRyaWVzIgo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>The intent of the program is clear:
 Roll a <code>d6</code>, and if it’s under <code>4</code>, re-roll it up to <code>3</code> times.
 The author provides <code>DEPTH</code> to parameterize a recursion cap and decrements it each time the function is called.
@@ -2143,7 +2124,7 @@ The <strong><em>order</em></strong> of those calls iterates the leftmost paramet
 <span class="p">}</span>
 <span class="n">output</span><span class="w"> </span><span class="p">[(</span><span class="n">d6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">d6</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=STogMApmdW5jdGlvbjogQTpuIHRoZW4gQjpuIHsKICBJOiBJICsgMTAwMDAKICBWOiBBICsgQiArIEkKICByZXN1bHQ6IFYKfQpvdXRwdXQgWyhkNiAqIDEwMCkgdGhlbiBkNl0K"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=STogMApmdW5jdGlvbjogQTpuIHRoZW4gQjpuIHsKICBJOiBJICsgMTAwMDAKICBWOiBBICsgQiArIEkKICByZXN1bHQ6IFYKfQpvdXRwdXQgWyhkNiAqIDEwMCkgdGhlbiBkNl0K"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>In that probe, the iteration number occupies the <code>XX0000</code> digits of each outcome, faces from <code>A</code> occupy the <code>00XX00</code> digits of each outcome, and faces from <code>B</code> occupy the <code>0000XX</code> digits of each outcome.
 Because the iteration number is most significant, iteration order is preserved during outcome sorting, and one can see that values of <code>A</code> vary fastest, looping around for each value of <code>B</code>.</p>
 <p>What happens if one writes back to <code>A</code> during expansion?
@@ -2164,7 +2145,7 @@ Consider a small modification to the probe:</p>
 <span class="p">}</span>
 <span class="n">output</span><span class="w"> </span><span class="p">[(</span><span class="n">d6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">d6</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=STogMApmdW5jdGlvbjogQTpuIHRoZW4gQjpuIHsKICBJOiBJICsgMTAwMDAKICBWOiBBICsgQiArIEkKICBBOiBBICsgMQogIHJlc3VsdDogVgp9Cm91dHB1dCBbKGQ2ICogMTAwKSB0aGVuIGQ2XQo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=STogMApmdW5jdGlvbjogQTpuIHRoZW4gQjpuIHsKICBJOiBJICsgMTAwMDAKICBWOiBBICsgQiArIEkKICBBOiBBICsgMQogIHJlc3VsdDogVgp9Cm91dHB1dCBbKGQ2ICogMTAwKSB0aGVuIGQ2XQo"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>Both the <code>dyceum</code> interpreter and anydice.com produce the same output for both of the above programs.
 <code>A</code>’s value is reset to the next value in its inner loop for every iteration.
 But what happens if one writes back to <code>B</code> during expansion?
@@ -2185,7 +2166,7 @@ Consider another small modification to the probe:</p>
 <span class="p">}</span>
 <span class="n">output</span><span class="w"> </span><span class="p">[(</span><span class="n">d6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">d6</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=STogMApmdW5jdGlvbjogQTpuIHRoZW4gQjpuIHsKICBJOiBJICsgMTAwMDAKICBWOiBBICsgQiArIEkKICBCOiBCICsgMSAgXCA8LSBUaGlzIGlzIGRpZmZlcmVudCBcCiAgcmVzdWx0OiBWCn0Kb3V0cHV0IFsoZDYgKiAxMDApIHRoZW4gZDZdCg"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=STogMApmdW5jdGlvbjogQTpuIHRoZW4gQjpuIHsKICBJOiBJICsgMTAwMDAKICBWOiBBICsgQiArIEkKICBCOiBCICsgMSAgXCA8LSBUaGlzIGlzIGRpZmZlcmVudCBcCiAgcmVzdWx0OiBWCn0Kb3V0cHV0IFsoZDYgKiAxMDApIHRoZW4gZDZdCg"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>As expected, the <code>dyceum</code> interpreter produces the same output as the prior two programs.
 On anydice.com, however, the first six outputs are <code>10101</code>, <code>20202</code>, ..., <code>60606</code>.
 The second six outputs are <code>70102</code>, <code>80203</code>, ..., <code>120607</code>.
@@ -2202,7 +2183,7 @@ Consider:</p>
 <span class="p">}</span>
 <span class="n">output</span><span class="w"> </span><span class="p">[</span><span class="n">add</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">hundred</span><span class="w"> </span><span class="n">times</span><span class="w"> </span><span class="n">d3</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">3</span><span class="n">d6</span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=ZnVuY3Rpb246IGFkZCBvbmUgaHVuZHJlZCB0aW1lcyBOOm4gdG8gc3VtIG9mIFM6cyB7CiAgUzogUyArIDAKICByZXN1bHQ6IE4gKiAxMDAgKyBTCn0Kb3V0cHV0IFthZGQgb25lIGh1bmRyZWQgdGltZXMgZDMgdG8gc3VtIG9mIDNkNl0K"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=ZnVuY3Rpb246IGFkZCBvbmUgaHVuZHJlZCB0aW1lcyBOOm4gdG8gc3VtIG9mIFM6cyB7CiAgUzogUyArIDAKICByZXN1bHQ6IE4gKiAxMDAgKyBTCn0Kb3V0cHV0IFthZGQgb25lIGh1bmRyZWQgdGltZXMgZDMgdG8gc3VtIG9mIDNkNl0K"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>The <code>dyceum</code> interpreter produces the expected 54 outcomes: <code>{103-118, 203-218, 303-318}</code>.
 anydice.com, however, perplexingly, only produces three outcomes: <code>{118, 218, 318}</code>.</p>
 <h4 id="diagnosingavoiding-parameter-leaks-on-anydicecom">Diagnosing/avoiding parameter leaks on anydice.com</h4>
@@ -2259,22 +2240,22 @@ It is difficult to predict which programs will trigger this bug, but they are de
 <span class="nl">D</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="n">dD</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">0</span>
 <span class="n">output</span><span class="w"> </span><span class="n">D</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=ZnVuY3Rpb246IGYgSzpuIHsgcmVzdWx0OiBLIH0KZnVuY3Rpb246IGcgRzpuIEQ6ZCB7IGlmIEcgPSAxIHsgcmVzdWx0OiA1IH0gZWxzZSB7IHJlc3VsdDogW2YgRF0gfSB9Cm91dHB1dCBbZyAoZDIpIChkMCldCkQ6IFtnIChkMikgKGR7fSldCm91dHB1dCBECkQ6IDRkRCArIDAKb3V0cHV0IEQ"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=ZnVuY3Rpb246IGYgSzpuIHsgcmVzdWx0OiBLIH0KZnVuY3Rpb246IGcgRzpuIEQ6ZCB7IGlmIEcgPSAxIHsgcmVzdWx0OiA1IH0gZWxzZSB7IHJlc3VsdDogW2YgRF0gfSB9Cm91dHB1dCBbZyAoZDIpIChkMCldCkQ6IFtnIChkMikgKGR7fSldCm91dHB1dCBECkQ6IDRkRCArIDAKb3V0cHV0IEQ"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>The <code>dyceum</code> interpreter produces expected outputs that all sum to 100%.
 anydice.com’s results, however, only sum to 100% for the first output.
 The second output has a phantom that occupies 50% of the total weight.
 That is compounded to 93.75% for the third output, so the phantom is durable over at least some operations.</p>
 <p>Again, the mechanism by which this happens, and the context under which is it triggered is unclear.
-<a href="../playground/#id=140df"><code>140df</code></a> is especially illustrative.
+<a href="../../playground/#id=140df"><code>140df</code></a> is especially illustrative.
 Despite calling the same function with <code>2d6</code>, <code>3d6</code>, ..., <code>6d6</code>, this effect is only visible when the argument is <code>4d6</code>, where the total outcome weight only sums to 90.12%.
-Additional examples include programs <a href="../playground/#id=455"><code>455</code></a> (55.56% on anydice.com), <a href="../playground/#id=11182"><code>11182</code></a> (14.5% on anydice.com).
-<a href="../playground/#id=1065f"><code>1065f</code></a> (also <a href="#certain-operators-and-the-empty-die">making an appearance above</a>) is an even subtler example where the phantom mass in the second output somehow comes from the default result when exhausting recursion depth.</p>
+Additional examples include programs <a href="../../playground/#id=455"><code>455</code></a> (55.56% on anydice.com), <a href="../../playground/#id=11182"><code>11182</code></a> (14.5% on anydice.com).
+<a href="../../playground/#id=1065f"><code>1065f</code></a> (also <a href="#certain-operators-and-the-empty-die">making an appearance above</a>) is an even subtler example where the phantom mass in the second output somehow comes from the default result when exhausting recursion depth.</p>
 <h3 id="overflows">Overflows</h3>
 <p>AnyDice is susceptible to overflow errors in both outcomes and weights.
 A trivial example is as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">output</span><span class="w"> </span><span class="mi">1</span><span class="n">d</span><span class="p">{</span><span class="mi">9</span><span class="p">}</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="n">d10</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=b3V0cHV0IDFkezl9XigxZDEwKjEwKQ"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=b3V0cHV0IDFkezl9XigxZDEwKjEwKQ"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>The <code>dyceum</code> interpreter correctly handles large integer outcomes.
 anydice.com produces four outcomes, two of which are negative, despite being mathematically impossible.</p>
 <p>The following stresses weight accumulation (floating point) errors.</p>
@@ -2300,11 +2281,11 @@ anydice.com produces four outcomes, two of which are negative, despite being mat
 <span class="w">  </span><span class="n">output</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="n">named</span><span class="w"> </span><span class="s">"d{1:9, 0} after loop [N]"</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Open in playground: <a href="../playground/#p=RDogZHsxOjk5LCAwfQpsb29wIE4gb3ZlciB7MS4uNjB9IHsKICBEOiBEICogRAogIG91dHB1dCBEIG5hbWVkICJkezE6OTksIDB9IGFmdGVyIGxvb3AgW05dIgp9Cm91dHB1dCBke30gbmFtZWQgIj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IgpEOiBkezE6OSwgMH0KbG9vcCBOIG92ZXIgezEuLjYwfSB7CiAgRDogRCAqIEQKICBvdXRwdXQgRCBuYW1lZCAiZHsxOjksIDB9IGFmdGVyIGxvb3AgW05dIgp9Cg"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
+<p>Open in playground: <a href="../../playground/#p=RDogZHsxOjk5LCAwfQpsb29wIE4gb3ZlciB7MS4uNjB9IHsKICBEOiBEICogRAogIG91dHB1dCBEIG5hbWVkICJkezE6OTksIDB9IGFmdGVyIGxvb3AgW05dIgp9Cm91dHB1dCBke30gbmFtZWQgIj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IgpEOiBkezE6OSwgMH0KbG9vcCBOIG92ZXIgezEuLjYwfSB7CiAgRDogRCAqIEQKICBvdXRwdXQgRCBuYW1lZCAiZHsxOjksIDB9IGFmdGVyIGxvb3AgW05dIgp9Cg"><img alt="Try the AnyDice-compatible playground" src="../anydice-playground.svg" /></a></p>
 <p>As <a href="#features">described above</a>, the <code>dyceum</code> interpreter handles these calculations reasonably, even with truncation.
 However, on anydice.com, later loops’ cumulative weights fail to sum to 100% (sometimes approaching zero, sometimes approaching infinity).</p>
 <h3 id="legacy-programs">“Legacy” programs</h3>
-<p>anydice.com allows interpretation and execution of an undocumented “legacy” syntax (e.g., <code>output legacy "8d6h4-4"</code> from program <a href="../playground/#id=1f"><code>1f</code></a>).
+<p>anydice.com allows interpretation and execution of an undocumented “legacy” syntax (e.g., <code>output legacy "8d6h4-4"</code> from program <a href="../../playground/#id=1f"><code>1f</code></a>).
 The <code>dyceum</code> interpreter does not recognize the <code>legacy</code> keyword and is incapable of interpreting the corresponding notation.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>The goals of this project are as follows:</p>
@@ -2341,7 +2322,7 @@ If you have any feedback on how this project can better meet these goals, please
   This still affords duplication where, e.g., the only difference is whitespace use or comment text.
   Two programs were considered equivalent if they resulted in the same AST from the parser and transformer.
   De-duping based on AST resulted in a corpus just shy of 160,000 distinct programs.</p>
-<p>As an aside, some of those programs mirrored our own probes (e.g., AnyDice program <a href="../playground/#id=39567"><code>39567</code></a> saved by the author of <a href="https://github.com/Ar-Kareem/PythonDice/">PythonDice</a>), suggesting areas where users tripped over unintuitive “hot spots” of the interpreter, surfacing and resolving questions likely very similar to our own.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<p>As an aside, some of those programs mirrored our own probes (e.g., AnyDice program <a href="../../playground/#id=39567"><code>39567</code></a> saved by the author of <a href="https://github.com/Ar-Kareem/PythonDice/">PythonDice</a>), suggesting areas where users tripped over unintuitive “hot spots” of the interpreter, surfacing and resolving questions likely very similar to our own.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 <li id="fn:6">
 <p>“Boolean” in this context means an operator that evaluates each operand as falsy (the number zero) or truthy (a number other than zero), and which resolves to either <code>0</code> or <code>1</code>.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
@@ -2353,6 +2334,8 @@ If you have any feedback on how this project can better meet these goals, please
 </li>
 </ol>
 </div>
+
+
 
 
 
@@ -2384,10 +2367,10 @@ If you have any feedback on how this project can better meet these goals, please
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
+          <a href="./.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -2412,7 +2395,7 @@ If you have any feedback on how this project can better meet these goals, please
             </div>
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </div>
           </a>
         
@@ -2424,13 +2407,16 @@ If you have any feedback on how this project can better meet these goals, please
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <i>Copyright and other protections apply. Please see the accompanying <tt>LICENSE</tt> file for rights and restrictions governing use of this software. All rights not expressly waived or licensed are reserved. If that file is missing or appears to be modified from its original, then please contact the author before viewing or using this software in any capacity.</i>
+      <i>Copyright and other protections apply.
+  Please see the accompanying <tt>LICENSE</tt> file for rights and restrictions governing use of this software.
+  All rights not expressly waived or licensed are reserved.
+  If that file is missing or appears to be modified from its original, then please contact the author before viewing or using this software in any capacity.</i>
     </div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -2448,10 +2434,14 @@ If you have any feedback on how this project can better meet these goals, please
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "content.tabs.link", "navigation.footer", "navigation.expand", "navigation.sections"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["content.code.annotate","content.tabs.link","navigation.footer","navigation.expand","navigation.sections","search.highlight"],"redirect":null,"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":{"provider":"mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.b7d3f789.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="zensical-0.0.66">
     
     
       
@@ -27,10 +27,15 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.1502b751.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.812a03bb.min.css">
       
       
 
@@ -44,14 +49,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -72,7 +75,7 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
@@ -99,12 +102,12 @@
     <a href="../.." title="dyceum" class="md-header__button md-logo" aria-label="dyceum" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -166,57 +169,30 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
-      <div class="md-header__source">
-        <a href="https://github.com/posita/anydyce/" title="Go to repository" class="md-source" data-md-component="source">
+    <div class="md-header__source">
+      
+        <a href="https://github.com/posita/dyceum/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -245,17 +221,17 @@
     <a href="../.." title="dyceum" class="md-nav__button md-logo" aria-label="dyceum" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     dyceum
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/posita/anydyce/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/posita/dyceum/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -279,8 +255,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
-  
+  Introduction
 
     
   </span>
@@ -306,8 +281,7 @@
   <span class="md-ellipsis">
     
   
-    AnyDice Interpreter
-  
+  AnyDice Interpreter
 
     
   </span>
@@ -333,8 +307,7 @@
   <span class="md-ellipsis">
     
   
-    Release notes
-  
+  Release notes
 
     
   </span>
@@ -360,8 +333,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
-  
+  Contributing
 
     
   </span>
@@ -387,8 +359,7 @@
   <span class="md-ellipsis">
     
   
-    License
-  
+  License
 
     
   </span>
@@ -432,8 +403,7 @@
   <span class="md-ellipsis">
     
   
-    API
-  
+  API
 
     
   </span>
@@ -443,19 +413,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
   
-    API
-  
+  API
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -468,8 +438,7 @@
   <span class="md-ellipsis">
     
   
-    AnyDice
-  
+  AnyDice
 
     
   </span>
@@ -480,10 +449,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -496,8 +465,7 @@
   <span class="md-ellipsis">
     
   
-    Jupyter
-  
+  Jupyter
 
     
   </span>
@@ -508,10 +476,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -527,10 +496,24 @@
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -539,16 +522,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#1-preserved-anydice-idiosyncrasies" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         1. Preserved AnyDice idiosyncrasies
-      
+      </span>
     </span>
   </a>
   
@@ -558,9 +541,9 @@
           <li class="md-nav__item">
   <a href="#type-coercion-and-value-semantics" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Type coercion and value semantics
-      
+      </span>
     </span>
   </a>
   
@@ -569,9 +552,9 @@
           <li class="md-nav__item">
   <a href="#operators" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Operators
-      
+      </span>
     </span>
   </a>
   
@@ -580,9 +563,9 @@
           <li class="md-nav__item">
   <a href="#unary-operators" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Unary operators
-      
+      </span>
     </span>
   </a>
   
@@ -591,9 +574,9 @@
           <li class="md-nav__item">
   <a href="#function-expansion-and-scoping-todo-53-family" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Function expansion and scoping (todo-53 family)
-      
+      </span>
     </span>
   </a>
   
@@ -607,9 +590,9 @@
         <li class="md-nav__item">
   <a href="#2-excluded-anydice-bugs-we-deliberately-do-not-replicate" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         2. Excluded AnyDice bugs (we deliberately do not replicate)
-      
+      </span>
     </span>
   </a>
   
@@ -619,9 +602,9 @@
           <li class="md-nav__item">
   <a href="#parameter-leakage-across-expansion-iterations-per-outcome-slot-mutation" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Parameter leakage across expansion iterations (per-outcome slot mutation)
-      
+      </span>
     </span>
   </a>
   
@@ -630,9 +613,9 @@
           <li class="md-nav__item">
   <a href="#joint-n-expansion-of-two-non-uniformly-weighted-dies" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Joint :n expansion of two non-uniformly-weighted dies
-      
+      <span class="md-typeset">
+        Joint <code>:n</code> expansion of two non-uniformly-weighted dies
+      </span>
     </span>
   </a>
   
@@ -641,9 +624,9 @@
           <li class="md-nav__item">
   <a href="#phantom-mass-empty-divergenceanydice-bugphantom-mass" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Phantom-mass empty (divergence:anydice-bug:phantom-mass)
-      
+      <span class="md-typeset">
+        Phantom-mass empty (<code>divergence:anydice-bug:phantom-mass</code>)
+      </span>
     </span>
   </a>
   
@@ -652,9 +635,9 @@
           <li class="md-nav__item">
   <a href="#lhs-asymmetric-d-arithmetic-bugs" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        LHS-asymmetric d{} arithmetic bugs
-      
+      <span class="md-typeset">
+        LHS-asymmetric <code>d{}</code> arithmetic bugs
+      </span>
     </span>
   </a>
   
@@ -663,9 +646,9 @@
           <li class="md-nav__item">
   <a href="#comparison-against-seq-rhs" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Comparison against seq RHS
-      
+      </span>
     </span>
   </a>
   
@@ -674,9 +657,9 @@
           <li class="md-nav__item">
   <a href="#int64-overflow-on-outcome-values" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         int64 overflow on outcome values
-      
+      </span>
     </span>
   </a>
   
@@ -685,9 +668,9 @@
           <li class="md-nav__item">
   <a href="#int64-overflow-on-h-counts-weights" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         int64 overflow on H counts (weights)
-      
+      </span>
     </span>
   </a>
   
@@ -696,9 +679,9 @@
           <li class="md-nav__item">
   <a href="#_selectionprefix-_selectionsuffix-multiplicity-dyce-side-fixed-upstream" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        _SelectionPrefix / _SelectionSuffix multiplicity (dyce-side, fixed upstream)
-      
+      <span class="md-typeset">
+        <code>_SelectionPrefix</code> / <code>_SelectionSuffix</code> multiplicity (dyce-side, <em>fixed upstream</em>)
+      </span>
     </span>
   </a>
   
@@ -707,9 +690,9 @@
           <li class="md-nav__item">
   <a href="#doubling-amplification-of-precision-error-under-iterated-squaring-recurrences" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Doubling-amplification of precision error under iterated squaring recurrences
-      
+      </span>
     </span>
   </a>
   
@@ -718,9 +701,9 @@
           <li class="md-nav__item">
   <a href="#miscellaneous-one-off-anomalies" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Miscellaneous one-off anomalies
-      
+      </span>
     </span>
   </a>
   
@@ -734,9 +717,9 @@
         <li class="md-nav__item">
   <a href="#3-fixed-our-side-bugs" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         3. Fixed our-side bugs
-      
+      </span>
     </span>
   </a>
   
@@ -746,9 +729,9 @@
           <li class="md-nav__item">
   <a href="#expansion-enumeration-order-little-endian" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Expansion enumeration order (little-endian)
-      
+      </span>
     </span>
   </a>
   
@@ -757,9 +740,9 @@
           <li class="md-nav__item">
   <a href="#pool-preserving-negation" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Pool-preserving negation
-      
+      </span>
     </span>
   </a>
   
@@ -768,9 +751,9 @@
           <li class="md-nav__item">
   <a href="#1dpool-is-a-no-op" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        1d(&lt;pool&gt;) is a no-op
-      
+      <span class="md-typeset">
+        <code>1d(&lt;pool&gt;)</code> is a no-op
+      </span>
     </span>
   </a>
   
@@ -779,9 +762,9 @@
           <li class="md-nav__item">
   <a href="#s-parameter-pool-expansion-outer-iteration-order" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        :s parameter Pool expansion outer iteration order
-      
+      <span class="md-typeset">
+        <code>:s</code> parameter Pool expansion outer iteration order
+      </span>
     </span>
   </a>
   
@@ -790,9 +773,9 @@
           <li class="md-nav__item">
   <a href="#h-h-h-not-0" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        H({}) + H({}) = H({}), not 0
-      
+      <span class="md-typeset">
+        <code>H({}) + H({}) = H({})</code>, not <code>0</code>
+      </span>
     </span>
   </a>
   
@@ -801,9 +784,9 @@
           <li class="md-nav__item">
   <a href="#preserve_zero_counts-in-dyce-core-070rc3" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        preserve_zero_counts in dyce-core (0.7.0rc3)
-      
+      <span class="md-typeset">
+        <code>preserve_zero_counts</code> in dyce-core (0.7.0rc3)
+      </span>
     </span>
   </a>
   
@@ -817,9 +800,9 @@
         <li class="md-nav__item">
   <a href="#4-methodology-the-rename-counterfactual-technique" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         4. Methodology: the rename-counterfactual technique
-      
+      </span>
     </span>
   </a>
   
@@ -829,9 +812,9 @@
           <li class="md-nav__item">
   <a href="#procedure" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Procedure
-      
+      </span>
     </span>
   </a>
   
@@ -840,9 +823,9 @@
           <li class="md-nav__item">
   <a href="#diagnostic-matrix" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Diagnostic matrix
-      
+      </span>
     </span>
   </a>
   
@@ -851,9 +834,9 @@
           <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Limitations
-      
+      </span>
     </span>
   </a>
   
@@ -862,9 +845,9 @@
           <li class="md-nav__item">
   <a href="#example-probe-0x11-in-tmp-probesdb" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Example: probe -0x11 in tmp-probes.db
-      
+      <span class="md-typeset">
+        Example: probe <code>-0x11</code> in <code>tmp-probes.db</code>
+      </span>
     </span>
   </a>
   
@@ -878,9 +861,9 @@
         <li class="md-nav__item">
   <a href="#backlog-of-known-opens" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Backlog of known opens
-      
+      </span>
     </span>
   </a>
   
@@ -900,8 +883,6 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
   
   
 
@@ -909,8 +890,8 @@
 <h1 id="anydice-semantics-what-we-preserve-what-we-dont-and-what-we-fixed">AnyDice semantics: what we preserve, what we don't, and what we fixed</h1>
 <p>A living catalog of:</p>
 <ol>
-<li><strong>Preserved AnyDice idiosyncrasies</strong> -- behaviors that are surprising or inconsistent but appear to be intended, that Dyceum faithfully replicates.</li>
-<li><strong>Excluded AnyDice bugs</strong> -- behaviors we have evidence are unintended defects, that Dyceum deliberately does <em>not</em> replicate (and that we annotate corpus mismatches with so AnyDice is not used as an oracle for them).</li>
+<li><strong>Preserved AnyDice idiosyncrasies</strong> -- behaviors that are surprising or inconsistent but appear to be intended, that <code>dyceum</code> faithfully replicates.</li>
+<li><strong>Excluded AnyDice bugs</strong> -- behaviors we have evidence are unintended defects, that <code>dyceum</code> deliberately does <em>not</em> replicate (and that we annotate corpus mismatches with so AnyDice is not used as an oracle for them).</li>
 <li><strong>Fixed our-side bugs</strong> -- correctness defects we discovered in our own interpreter during corpus triage and have since fixed.</li>
 </ol>
 <p>Each entry should carry a concrete reference (a test name, a probe id, a commit, or a corpus program id) so the claim is verifiable. AnyDice is closed-source; everything here is the result of empirical reverse-engineering against the live <code>anydice.com</code> and the cached corpus output.</p>
@@ -922,7 +903,7 @@
 <ul>
 <li>
 <p><strong>Sequence in numeric / die context is <em>uniform over elements</em>, not the sum.</strong>
-  <code>output {1,2,3}</code> yields <code>{1:33.3%, 2:33.3%, 3:33.3%}</code> (uniform over the three values), <em>not</em> <code>{6:100%}</code> (the sum). Verified by probes -21 / -22 against AnyDice. Both Dyceum and AnyDice produce the uniform distribution.</p>
+  <code>output {1,2,3}</code> yields <code>{1:33.3%, 2:33.3%, 3:33.3%}</code> (uniform over the three values), <em>not</em> <code>{6:100%}</code> (the sum). Verified by probes -21 / -22 against AnyDice. Both <code>dyceum</code> and AnyDice produce the uniform distribution.</p>
 </li>
 <li>
 <p><strong><code>output</code> collapses any pool / H to its sum.</strong>
@@ -1092,7 +1073,7 @@
 <p>A related but distinct class: AnyDice's <code>^</code> is not the only path that produces huge integers. Big damage-calculator-style programs with many independent random sources produce H weight integers (denominators of outcome probabilities) that easily exceed int64. AnyDice truncates the counts, distorting the normalization for the larger outputs. Our exact-bigint counts are mathematically correct.</p>
 <p>Examples: <code>0x19a58</code>, <code>0x25d0d</code> (substantially similar programs by the same author -- different toggles, both overflow). Our counts reach <code>~10^47</code>.</p>
 <h3 id="_selectionprefix-_selectionsuffix-multiplicity-dyce-side-fixed-upstream"><code>_SelectionPrefix</code> / <code>_SelectionSuffix</code> multiplicity (dyce-side, <em>fixed upstream</em>)</h3>
-<p>Listed here for completeness even though the fix is upstream. dyce's <code>P.h(*selectors)</code> previously dropped per-position multiplicity when the duplicate-selection covered only a <em>subset</em> of pool positions (e.g. <code>.h(-2,-2)</code> on a 2-die pool). The Prefix/Suffix selection types were multiplicity-blind; selections with <code>count&gt;1</code> over a partial subset fell through to them, silently de-duplicating. AnyDice preserves multiplicity here; we did not. Fixed in dyce <code>0.7.0rc4</code>; anydyce pinned to that release.</p>
+<p>Listed here for completeness even though the fix is upstream. dyce's <code>P.at(*selectors)</code> previously dropped per-position multiplicity when the duplicate-selection covered only a <em>subset</em> of pool positions (e.g. <code>.at(-2,-2)</code> on a 2-die pool). The Prefix/Suffix selection types were multiplicity-blind; selections with <code>count&gt;1</code> over a partial subset fell through to them, silently de-duplicating. AnyDice preserves multiplicity here; we did not. Fixed in dyce <code>0.7.0rc4</code>; anydyce pinned to that release.</p>
 <p>Evidence: dyce's <code>tests/test_p.py::test_analyze_selection_single_pos</code>; corpus <code>0x11caf</code> cleared by the upstream fix.</p>
 <h3 id="doubling-amplification-of-precision-error-under-iterated-squaring-recurrences">Doubling-amplification of precision error under iterated squaring recurrences</h3>
 <p>Any recurrence whose total-mass invariant has form <code>S' = S²</code> (e.g. joint enumeration that squares the sum-of-counts) amplifies AnyDice's initial float-precision error by 2× per iteration. Mathematically: if AnyDice's stored sum is <code>1 - δ</code> for some tiny precision error δ (positive or negative), then <code>S' = (1 - δ)² ≈ 1 - 2δ</code> — the deviation from 1 doubles per iteration.</p>
@@ -1134,7 +1115,7 @@
 <h3 id="h-h-h-not-0"><code>H({}) + H({}) = H({})</code>, not <code>0</code></h3>
 <p>Our <code>_apply_arith</code>'s "treat empty die as scalar <code>0</code> for <code>+</code>/<code>-</code>" rule was applied independently per operand, so <code>H({}) + H({})</code> collapsed via <code>0 + 0 = 0</code> instead of propagating <code>H({})</code>. The split surfaced on recursion-cap paths in exploding-dice corpus programs (<code>result: 1d[explode dN] + 1d[explode dN]</code> where both inner calls hit the depth cap and returned <code>H({})</code>); our spurious <code>0</code> leaked into the parent distribution and reshaped it broadly across interior outcomes, not just the tail. The truncation warnings on these programs were red herrings -- the dominant divergence wasn't the precision-floor tail, it was this empty+empty coercion. Fix: check both-operand emptiness <em>before</em> the per-operand single-empty rule fires (interpreter.py:467-485). Canonical corpus impact: cleared 16 of 18 truncation-warning residual programs (e.g. <code>0x42f0</code>, <code>0x5d53</code>, <code>0x10517</code>, <code>0x141db</code>) plus 5 additional exact matches (<code>0x142c7</code>, <code>0x28367</code>-<code>9</code>, <code>0x286d1</code>). Verified against the recursion-cap probes <code>-0x2e</code> (smaller-die variant of <code>0x42f0</code>) and <code>-0x30</code> (multi-fallback discriminator). Codified by <code>test_empty_die_&lt;op&gt;_empty_die</code> across the binary-op test classes.</p>
 <h3 id="preserve_zero_counts-in-dyce-core-070rc3"><code>preserve_zero_counts</code> in dyce-core (0.7.0rc3)</h3>
-<p>A dyce-core change re-ported into the dyce-cleanroom branch to support our interpreter's <code>H.lowest_terms(preserve_zero_counts=...)</code> use. Not strictly a Dyceum bug but called out because the integration unblocked the corpus triage.</p>
+<p>A dyce-core change re-ported into the dyce-cleanroom branch to support our interpreter's <code>H.lowest_terms(preserve_zero_counts=...)</code> use. Not strictly a <code>dyceum</code> bug but called out because the integration unblocked the corpus triage.</p>
 <hr />
 <h2 id="4-methodology-the-rename-counterfactual-technique">4. Methodology: the rename-counterfactual technique</h2>
 <p>Most of the bugs in Section 2 — especially the parameter-leakage cluster — were diagnosed using a counterfactual rewrite that exploits AnyDice's <em>correct</em> handling of local-variable mutation as a baseline. The technique is the standard tool for confirming whether a corpus divergence belongs to a known bug class (or surfaces a new one).</p>
@@ -1216,6 +1197,8 @@
 
 
 
+
+
                 
               </article>
             </div>
@@ -1237,13 +1220,16 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <i>Copyright and other protections apply. Please see the accompanying <tt>LICENSE</tt> file for rights and restrictions governing use of this software. All rights not expressly waived or licensed are reserved. If that file is missing or appears to be modified from its original, then please contact the author before viewing or using this software in any capacity.</i>
+      <i>Copyright and other protections apply.
+  Please see the accompanying <tt>LICENSE</tt> file for rights and restrictions governing use of this software.
+  All rights not expressly waived or licensed are reserved.
+  If that file is missing or appears to be modified from its original, then please contact the author before viewing or using this software in any capacity.</i>
     </div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -1261,10 +1247,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.footer", "navigation.expand", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.code.annotate","content.tabs.link","navigation.footer","navigation.expand","navigation.sections","search.highlight"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":{"provider":"mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b7d3f789.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

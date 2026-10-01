@@ -19,18 +19,23 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="zensical-0.0.66">
     
     
       
-        <title>Dyceum interpreter - dyceum</title>
+        <title>dyceum.anydice Interpreter Notes - dyceum</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.1502b751.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.812a03bb.min.css">
       
       
 
@@ -44,14 +49,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -72,11 +75,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
-        <a href="#dyceanydyce-interpreter-notes" class="md-skip">
+        <a href="#dyceumanydice-interpreter-notes" class="md-skip">
           Skip to content
         </a>
       
@@ -99,12 +102,12 @@
     <a href="../.." title="dyceum" class="md-header__button md-logo" aria-label="dyceum" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -116,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dyceum interpreter
+              dyceum.anydice Interpreter Notes
             
           </span>
         </div>
@@ -166,57 +169,30 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
-      <div class="md-header__source">
-        <a href="https://github.com/posita/anydyce/" title="Go to repository" class="md-source" data-md-component="source">
+    <div class="md-header__source">
+      
+        <a href="https://github.com/posita/dyceum/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -245,17 +221,17 @@
     <a href="../.." title="dyceum" class="md-nav__button md-logo" aria-label="dyceum" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     dyceum
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/posita/anydyce/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/posita/dyceum/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -279,8 +255,7 @@
   <span class="md-ellipsis">
     
   
-    Introduction
-  
+  Introduction
 
     
   </span>
@@ -306,8 +281,7 @@
   <span class="md-ellipsis">
     
   
-    AnyDice Interpreter
-  
+  AnyDice Interpreter
 
     
   </span>
@@ -333,8 +307,7 @@
   <span class="md-ellipsis">
     
   
-    Release notes
-  
+  Release notes
 
     
   </span>
@@ -360,8 +333,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
-  
+  Contributing
 
     
   </span>
@@ -387,8 +359,7 @@
   <span class="md-ellipsis">
     
   
-    License
-  
+  License
 
     
   </span>
@@ -432,8 +403,7 @@
   <span class="md-ellipsis">
     
   
-    API
-  
+  API
 
     
   </span>
@@ -443,19 +413,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
   
-    API
-  
+  API
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -468,8 +438,7 @@
   <span class="md-ellipsis">
     
   
-    AnyDice
-  
+  AnyDice
 
     
   </span>
@@ -480,10 +449,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
   
@@ -496,8 +465,7 @@
   <span class="md-ellipsis">
     
   
-    Jupyter
-  
+  Jupyter
 
     
   </span>
@@ -508,10 +476,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -527,10 +496,24 @@
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -539,16 +522,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#what-it-is" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         What it is
-      
+      </span>
     </span>
   </a>
   
@@ -557,9 +540,9 @@
         <li class="md-nav__item">
   <a href="#files" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Files
-      
+      </span>
     </span>
   </a>
   
@@ -568,9 +551,9 @@
         <li class="md-nav__item">
   <a href="#value-domain" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Value domain
-      
+      </span>
     </span>
   </a>
   
@@ -579,9 +562,9 @@
         <li class="md-nav__item">
   <a href="#grammar-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Grammar notes
-      
+      </span>
     </span>
   </a>
   
@@ -590,9 +573,9 @@
         <li class="md-nav__item">
   <a href="#interpreter-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Interpreter structure
-      
+      </span>
     </span>
   </a>
   
@@ -602,9 +585,9 @@
           <li class="md-nav__item">
   <a href="#statement-execution-_exec" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Statement execution (_exec)
-      
+      <span class="md-typeset">
+        Statement execution (<code>_exec</code>)
+      </span>
     </span>
   </a>
   
@@ -613,9 +596,9 @@
           <li class="md-nav__item">
   <a href="#expression-evaluation-_eval" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Expression evaluation (_eval)
-      
+      <span class="md-typeset">
+        Expression evaluation (<code>_eval</code>)
+      </span>
     </span>
   </a>
   
@@ -624,9 +607,9 @@
           <li class="md-nav__item">
   <a href="#the-operator-_eval_at" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        The @ operator (_eval_at)
-      
+      <span class="md-typeset">
+        The @ operator (<code>_eval_at</code>)
+      </span>
     </span>
   </a>
   
@@ -635,9 +618,9 @@
           <li class="md-nav__item">
   <a href="#function-dispatch-and-probabilistic-expansion-_dispatch_coercion" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Function dispatch and probabilistic expansion (_dispatch_coercion)
-      
+      <span class="md-typeset">
+        Function dispatch and probabilistic expansion (<code>_dispatch_coercion</code>)
+      </span>
     </span>
   </a>
   
@@ -646,9 +629,9 @@
           <li class="md-nav__item">
   <a href="#lcm-normalization-_expand_normalized" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        LCM normalization (_expand_normalized)
-      
+      <span class="md-typeset">
+        LCM normalization (<code>_expand_normalized</code>)
+      </span>
     </span>
   </a>
   
@@ -657,9 +640,9 @@
           <li class="md-nav__item">
   <a href="#function-body-execution-_exec_function_body" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Function body execution (_exec_function_body)
-      
+      <span class="md-typeset">
+        Function body execution (<code>_exec_function_body</code>)
+      </span>
     </span>
   </a>
   
@@ -668,9 +651,9 @@
           <li class="md-nav__item">
   <a href="#dynamic-scoping" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Dynamic scoping
-      
+      </span>
     </span>
   </a>
   
@@ -679,9 +662,9 @@
           <li class="md-nav__item">
   <a href="#built-in-expansion-_coerce_args" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Built-in expansion (_coerce_args)
-      
+      <span class="md-typeset">
+        Built-in expansion (<code>_coerce_args</code>)
+      </span>
     </span>
   </a>
   
@@ -690,9 +673,9 @@
           <li class="md-nav__item">
   <a href="#weight-compression-_compress_h" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Weight compression (_compress_h)
-      
+      <span class="md-typeset">
+        Weight compression (<code>_compress_h</code>)
+      </span>
     </span>
   </a>
   
@@ -706,9 +689,9 @@
         <li class="md-nav__item">
   <a href="#corpus-validation" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Corpus validation
-      
+      </span>
     </span>
   </a>
   
@@ -718,9 +701,9 @@
           <li class="md-nav__item">
   <a href="#current-results-2026-04-26" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Current results (2026-04-26)
-      
+      </span>
     </span>
   </a>
   
@@ -729,9 +712,9 @@
           <li class="md-nav__item">
   <a href="#known-remaining-failure-categories" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Known remaining failure categories
-      
+      </span>
     </span>
   </a>
   
@@ -745,21 +728,21 @@
         <li class="md-nav__item">
   <a href="#semantic-decisions-2026-05-04-2026-05-05" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Semantic decisions (2026-05-04 / 2026-05-05)
-      
+      </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Semantic decisions (2026-05-04 / 2026-05-05)">
+    <nav class="md-nav" aria-label="Semantic decisions (2026-05-04 &#x2f; 2026-05-05)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#multi-position-seq-on-left" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Multi-position @ (seq-on-left)
-      
+      <span class="md-typeset">
+        Multi-position <code>@</code> (seq-on-left)
+      </span>
     </span>
   </a>
   
@@ -768,9 +751,9 @@
           <li class="md-nav__item">
   <a href="#n-h-treats-h-as-a-1-element-pool" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        N @ H treats H as a 1-element pool
-      
+      <span class="md-typeset">
+        <code>N @ H</code> treats H as a 1-element pool
+      </span>
     </span>
   </a>
   
@@ -779,9 +762,9 @@
           <li class="md-nav__item">
   <a href="#d-parameter-is-lossless-on-pools" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        :d parameter is lossless on pools
-      
+      <span class="md-typeset">
+        <code>:d</code> parameter is lossless on pools
+      </span>
     </span>
   </a>
   
@@ -790,9 +773,9 @@
           <li class="md-nav__item">
   <a href="#bareuntyped-function-parameters-pass-through-no-coercion" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Bare/untyped function parameters: pass-through, no coercion
-      
+      </span>
     </span>
   </a>
   
@@ -801,9 +784,9 @@
           <li class="md-nav__item">
   <a href="#operator-on-dies-and-pools" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        # operator on dies and pools
-      
+      <span class="md-typeset">
+        <code>#</code> operator on dies and pools
+      </span>
     </span>
   </a>
   
@@ -812,9 +795,9 @@
           <li class="md-nav__item">
   <a href="#chained-d-is-left-associative" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Chained d is left-associative
-      
+      <span class="md-typeset">
+        Chained <code>d</code> is left-associative
+      </span>
     </span>
   </a>
   
@@ -823,9 +806,9 @@
           <li class="md-nav__item">
   <a href="#die-in-seq-block-repeats-outcomes" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Die-in-seq block-repeats outcomes
-      
+      </span>
     </span>
   </a>
   
@@ -834,9 +817,9 @@
           <li class="md-nav__item">
   <a href="#function-body-sequence-returns-under-expansion-sum-coerced" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Function body sequence returns under expansion: sum-coerced
-      
+      </span>
     </span>
   </a>
   
@@ -845,9 +828,9 @@
           <li class="md-nav__item">
   <a href="#per-iteration-lcm-normalization" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Per-iteration LCM normalization
-      
+      </span>
     </span>
   </a>
   
@@ -856,9 +839,9 @@
           <li class="md-nav__item">
   <a href="#sub-sequences-flatten-in-seq-literals" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Sub-sequences flatten in seq literals
-      
+      </span>
     </span>
   </a>
   
@@ -867,9 +850,9 @@
           <li class="md-nav__item">
   <a href="#division-by-zero-substitute-0-per-outcome" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Division by zero: substitute 0 per-outcome
-      
+      </span>
     </span>
   </a>
   
@@ -878,9 +861,9 @@
           <li class="md-nav__item">
   <a href="#builtins-wiring-policy" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Builtins wiring policy
-      
+      </span>
     </span>
   </a>
   
@@ -889,9 +872,9 @@
           <li class="md-nav__item">
   <a href="#sort-seq-direction" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        [sort SEQ] direction
-      
+      <span class="md-typeset">
+        <code>[sort SEQ]</code> direction
+      </span>
     </span>
   </a>
   
@@ -900,9 +883,9 @@
           <li class="md-nav__item">
   <a href="#explode-die-and-the-set-settings-validators" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        [explode DIE] and the set settings validators
-      
+      <span class="md-typeset">
+        <code>[explode DIE]</code> and the <code>set</code> settings validators
+      </span>
     </span>
   </a>
   
@@ -911,9 +894,9 @@
           <li class="md-nav__item">
   <a href="#count-a-in-b-is-multiset-not-set-membership" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        [count A in B] is multiset, not set membership
-      
+      <span class="md-typeset">
+        <code>[count A in B]</code> is multiset, not set membership
+      </span>
     </span>
   </a>
   
@@ -922,9 +905,9 @@
           <li class="md-nav__item">
   <a href="#code-block-inside-function-mirrors-anydices-ebnf" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        code block (inside function) mirrors AnyDice's EBNF
-      
+      <span class="md-typeset">
+        <code>code block (inside function)</code> mirrors AnyDice's EBNF
+      </span>
     </span>
   </a>
   
@@ -933,9 +916,9 @@
           <li class="md-nav__item">
   <a href="#helper-side-defenses-against-anydice-quirks" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Helper-side defenses against AnyDice quirks
-      
+      </span>
     </span>
   </a>
   
@@ -944,9 +927,9 @@
           <li class="md-nav__item">
   <a href="#verify-subcommand" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Verify subcommand
-      
+      </span>
     </span>
   </a>
   
@@ -955,9 +938,9 @@
           <li class="md-nav__item">
   <a href="#compare-subcommand" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Compare subcommand
-      
+      </span>
     </span>
   </a>
   
@@ -966,9 +949,9 @@
           <li class="md-nav__item">
   <a href="#two-stage-_pct_to_counts-recovery" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Two-stage _pct_to_counts recovery
-      
+      <span class="md-typeset">
+        Two-stage <code>_pct_to_counts</code> recovery
+      </span>
     </span>
   </a>
   
@@ -977,9 +960,9 @@
           <li class="md-nav__item">
   <a href="#anydices-joint-n-expansion-bug-for-non-uniform-dies-programs-4123a-42b16-23" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        AnyDice's joint :n-expansion bug for non-uniform dies (programs 4123a / 42b16-23)
-      
+      <span class="md-typeset">
+        AnyDice's joint <code>:n</code>-expansion bug for non-uniform dies (programs 4123a / 42b16-23)
+      </span>
     </span>
   </a>
   
@@ -988,9 +971,9 @@
           <li class="md-nav__item">
   <a href="#implicit-collapse-pile-up-ng-design-driver" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Implicit-collapse pile-up (NG design driver)
-      
+      </span>
     </span>
   </a>
   
@@ -999,9 +982,9 @@
           <li class="md-nav__item">
   <a href="#bareuntyped-function-parameters-pass-through-no-coercion_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Bare/untyped function parameters: pass-through, no coercion
-      
+      </span>
     </span>
   </a>
   
@@ -1010,9 +993,9 @@
           <li class="md-nav__item">
   <a href="#nh-h-is-a-1-element-pool" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        N@H: H is a 1-element pool
-      
+      <span class="md-typeset">
+        <code>N@H</code>: H is a 1-element pool
+      </span>
     </span>
   </a>
   
@@ -1021,9 +1004,9 @@
           <li class="md-nav__item">
   <a href="#function-body-sequence-returns-under-expansion-sum-coerced_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Function body sequence returns under expansion: sum-coerced
-      
+      </span>
     </span>
   </a>
   
@@ -1032,9 +1015,9 @@
           <li class="md-nav__item">
   <a href="#per-iteration-lcm-normalization_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Per-iteration LCM normalization
-      
+      </span>
     </span>
   </a>
   
@@ -1043,9 +1026,9 @@
           <li class="md-nav__item">
   <a href="#division-by-zero-substitute-0-per-outcome_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Division by zero: substitute 0 per-outcome
-      
+      </span>
     </span>
   </a>
   
@@ -1054,9 +1037,9 @@
           <li class="md-nav__item">
   <a href="#power-strict-in-scalar-context-lenient-in-h-context" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        ^ (power): strict in scalar context, lenient in H context
-      
+      <span class="md-typeset">
+        <code>^</code> (power): strict in scalar context, lenient in H context
+      </span>
     </span>
   </a>
   
@@ -1065,9 +1048,9 @@
           <li class="md-nav__item">
   <a href="#builtins-wiring-policy_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Builtins wiring policy
-      
+      </span>
     </span>
   </a>
   
@@ -1076,9 +1059,9 @@
           <li class="md-nav__item">
   <a href="#undocumented-highestlowest-n-of-a-and-b-and-c-builtins" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Undocumented [highest/lowest N of A and B [and C]] builtins
-      
+      <span class="md-typeset">
+        Undocumented <code>[highest/lowest N of A and B [and C]]</code> builtins
+      </span>
     </span>
   </a>
   
@@ -1087,9 +1070,9 @@
           <li class="md-nav__item">
   <a href="#and-share-precedence-level-not-c-style" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        &amp; and | share precedence level (NOT C-style)
-      
+      <span class="md-typeset">
+        <code>&amp;</code> and <code>|</code> share precedence level (NOT C-style)
+      </span>
     </span>
   </a>
   
@@ -1098,9 +1081,9 @@
           <li class="md-nav__item">
   <a href="#verify-subcommand_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Verify subcommand
-      
+      </span>
     </span>
   </a>
   
@@ -1109,9 +1092,9 @@
           <li class="md-nav__item">
   <a href="#performance-gap-on-deep-recursion-programs-2026-05-05" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Performance gap on deep-recursion programs (2026-05-05)
-      
+      </span>
     </span>
   </a>
   
@@ -1121,9 +1104,9 @@
           <li class="md-nav__item">
   <a href="#why-the-truncationwarning-displays-the-source-line-twice" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Why the TruncationWarning displays the source line twice
-      
+      <span class="md-typeset">
+        Why the <code>TruncationWarning</code> displays the source line twice
+      </span>
     </span>
   </a>
   
@@ -1137,9 +1120,9 @@
           <li class="md-nav__item">
   <a href="#two-stage-_pct_to_counts-recovery_1" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Two-stage _pct_to_counts recovery
-      
+      <span class="md-typeset">
+        Two-stage <code>_pct_to_counts</code> recovery
+      </span>
     </span>
   </a>
   
@@ -1148,9 +1131,9 @@
           <li class="md-nav__item">
   <a href="#anydices-empty-die-with-seq-operator-bugs-program-42aa4" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         AnyDice's empty-die-with-seq operator bugs (program 42aa4)
-      
+      </span>
     </span>
   </a>
   
@@ -1164,9 +1147,9 @@
         <li class="md-nav__item">
   <a href="#things-tried-outcomes" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         Things tried, outcomes
-      
+      </span>
     </span>
   </a>
   
@@ -1186,23 +1169,21 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
   
   
 
 
 <!---
-Design and status notes for the dyce.anydyce AnyDice interpreter.
+Design and status notes for the dyceum.anydice AnyDice interpreter.
 Captured from conversations 2026-04-25/26. Ephemeral — not intended for publication.
 -->
 
-<h1 id="dyceanydyce-interpreter-notes">dyce.anydyce Interpreter Notes</h1>
+<h1 id="dyceumanydice-interpreter-notes">dyceum.anydice Interpreter Notes</h1>
 <h2 id="what-it-is">What it is</h2>
 <p>A tree-walking interpreter for the <a href="https://anydice.com">AnyDice</a> language.
 Takes AnyDice source text, returns a list of <code>(name, H)</code> pairs — one per
 <code>output</code> statement in the program.
-Public API: <code>dyce.anydyce.run(source: str) -&gt; list[tuple[str | None, H]]</code>.</p>
+Public API: <code>dyceum.anydice.run(source: str) -&gt; list[tuple[str | None, H]]</code>.</p>
 <h2 id="files">Files</h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1219,7 +1200,7 @@ Public API: <code>dyce.anydyce.run(source: str) -&gt; list[tuple[str | None, H]]
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dyce</span><span class="o">/</span><span class="n">anydyce</span><span class="o">/</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dyceum</span><span class="o">/</span><span class="n">anydice</span><span class="o">/</span>
   <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>        <span class="n">public</span> <span class="n">run</span><span class="p">()</span> <span class="n">entry</span> <span class="n">point</span>
   <span class="n">grammar</span><span class="o">.</span><span class="n">lark</span>       <span class="n">Lark</span> <span class="n">LALR</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">grammar</span>
   <span class="n">ast_</span><span class="o">.</span><span class="n">py</span>            <span class="n">pure</span> <span class="n">dataclass</span> <span class="n">AST</span> <span class="n">nodes</span>
@@ -1319,7 +1300,7 @@ any non-string value.</p>
 <p>Right operand governs dispatch:</p>
 <ul>
 <li><code>P</code> or <code>H</code> → <code>_pool_h_select(pool, positions)</code> → H distribution.
-  Uses <code>pool.h(*selectors)</code> with <code>slice</code> objects built from 1-based positions.
+  Uses <code>pool.at(*selectors)</code> with <code>slice</code> objects built from 1-based positions.
   In highest-first mode position 1 is the highest die (<code>slice(-1, None)</code>),
   position 2 is second-highest (<code>slice(-2, -1)</code>), etc.</li>
 <li><code>tuple</code> (sequence) → deterministic index: position 1 → last element in a
@@ -1441,7 +1422,7 @@ semantic uniformly across right operands:
   positions silently contribute 0.
 - <code>{1, 3} @ 4567</code> = digit-extract at positions 1 and 3, summed.</p>
 <p>Implementation: <code>_at_seq</code> and <code>_at_pool</code> recognize a tuple-left and dispatch
-to multi-position selection (using <code>pool.h(*selectors)</code> for pools so
+to multi-position selection (using <code>pool.at(*selectors)</code> for pools so
 correlated positions are summed jointly, not as independent draws). Verified
 against AnyDice (program 42ad5).</p>
 <h3 id="n-h-treats-h-as-a-1-element-pool"><code>N @ H</code> treats H as a 1-element pool</h3>
@@ -1647,7 +1628,7 @@ against AnyDice's various non-standard response shapes:</p>
 </ul>
 <h3 id="verify-subcommand">Verify subcommand</h3>
 <p><code>helpers/anydice-programs.py verify</code> runs every program through
-<code>dyce.anydyce.run</code>, compares the result to the stored AnyDice JSON, and
+<code>dyceum.anydice.run</code>, compares the result to the stored AnyDice JSON, and
 buckets each row as match / match:approximate / mismatch:<em> / interp-error:</em>
 / interp-timeout / anydice-* / unrun. <code>match:approximate</code> covers
 distributions whose proportions agree within <code>1e-8 %</code> absolute tolerance
@@ -1699,7 +1680,7 @@ AnyDice's aggregate doesn't match the clean Cartesian-product weighting:</p>
 </tr>
 </tbody>
 </table>
-<p>Independently confirmed via a pure-dyce reference implementation (no anydyce
+<p>Independently confirmed via a pure-dyce reference implementation (no dyceum
 interpreter) using <code>expand(callback, 4 @ P(die), 1 @ P(card))</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1714,7 +1695,10 @@ interpreter) using <code>expand(callback, 4 @ P(die), 1 @ P(card))</code>:</p>
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dyce</span><span class="w"> </span><span class="kn">import</span> <span class="n">H</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">PResult</span><span class="p">,</span> <span class="n">expand</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dyce</span><span class="w"> </span><span class="kn">import</span> <span class="n">H</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">PResult</span><span class="p">,</span> <span class="n">expand</span>
+
 
 <span class="k">def</span><span class="w"> </span><span class="nf">alchemist</span><span class="p">(</span><span class="n">dice</span><span class="p">:</span> <span class="n">PResult</span><span class="p">,</span> <span class="n">cards</span><span class="p">:</span> <span class="n">PResult</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">return_which</span><span class="o">=</span><span class="s2">"trump_ctrls"</span><span class="p">):</span>
     <span class="n">dice_</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">+</span> <span class="nb">sum</span><span class="p">(</span><span class="n">dice</span><span class="o">.</span><span class="n">roll</span><span class="p">)</span>
@@ -1724,10 +1708,11 @@ interpreter) using <code>expand(callback, 4 @ P(die), 1 @ P(card))</code>:</p>
     <span class="n">trump_losses</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cards_</span><span class="p">)[</span><span class="mi">3</span><span class="p">])</span>
     <span class="k">return</span> <span class="nb">locals</span><span class="p">()[</span><span class="n">return_which</span><span class="p">]</span>
 
-<span class="n">die</span> <span class="o">=</span> <span class="n">H</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">:</span><span class="mi">3</span><span class="p">})</span>
-<span class="n">card</span> <span class="o">=</span> <span class="n">H</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">:</span><span class="mi">7</span><span class="p">})</span>
+
+<span class="n">die</span> <span class="o">=</span> <span class="n">H</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">:</span> <span class="mi">3</span><span class="p">})</span>
+<span class="n">card</span> <span class="o">=</span> <span class="n">H</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">:</span> <span class="mi">7</span><span class="p">})</span>
 <span class="n">expand</span><span class="p">(</span><span class="n">alchemist</span><span class="p">,</span> <span class="mi">4</span> <span class="o">@</span> <span class="n">P</span><span class="p">(</span><span class="n">die</span><span class="p">),</span> <span class="mi">1</span> <span class="o">@</span> <span class="n">P</span><span class="p">(</span><span class="n">card</span><span class="p">),</span> <span class="n">return_which</span><span class="o">=</span><span class="s2">"trump_ctrls"</span><span class="p">)</span><span class="o">.</span><span class="n">format_short</span><span class="p">()</span>
-<span class="c1"># {avg: 0.14, 0: 85.71%, 1: 14.29%}    -- matches our anydyce interpreter</span>
+<span class="c1"># {avg: 0.14, 0: 85.71%, 1: 14.29%}    -- matches our dyceum interpreter</span>
 </code></pre></div></td></tr></table></div>
 <p>So our interpreter is consistent with the dyce-native reference (which has no
 shared code with the AnyDice interpreter), and AnyDice's output is the
@@ -1858,10 +1843,10 @@ New families should still land under the same TDD pattern when they're added.</p
 <p>AnyDice exposes four undocumented patterns that are NOT user-definable via the function-definition syntax (you can't write <code>function: highest N:n of A:d and B:d</code>; the parser would treat that as a same-shape user function only callable with a specific dispatch shape, but AnyDice's builtin preempts).
 They construct a heterogeneous pool from the listed dice and select the N highest / N lowest:</p>
 <ul>
-<li><code>[highest N of FIRST and SECOND]</code> ≡ <code>P(FIRST, SECOND).h(slice(-N, None))</code></li>
-<li><code>[lowest N of FIRST and SECOND]</code> ≡ <code>P(FIRST, SECOND).h(slice(0, N))</code></li>
-<li><code>[highest N of FIRST and SECOND and THIRD]</code> ≡ <code>P(FIRST, SECOND, THIRD).h(slice(-N, None))</code></li>
-<li><code>[lowest N of FIRST and SECOND and THIRD]</code> ≡ <code>P(FIRST, SECOND, THIRD).h(slice(0, N))</code></li>
+<li><code>[highest N of FIRST and SECOND]</code> ≡ <code>P(FIRST, SECOND).at(slice(-N, None))</code></li>
+<li><code>[lowest N of FIRST and SECOND]</code> ≡ <code>P(FIRST, SECOND).at(slice(0, N))</code></li>
+<li><code>[highest N of FIRST and SECOND and THIRD]</code> ≡ <code>P(FIRST, SECOND, THIRD).at(slice(-N, None))</code></li>
+<li><code>[lowest N of FIRST and SECOND and THIRD]</code> ≡ <code>P(FIRST, SECOND, THIRD).at(slice(0, N))</code></li>
 </ul>
 <p>There is NO four-or-more-die variant; the family is exactly 2-die and 3-die.
 Scalar arguments are valid (coerce to single-face dice via <code>:d</code> semantics) and pool arguments are valid too (dyce's <code>P()</code> flattens nested pools so <code>P(2d6, 1d4)</code> correctly yields a 3-die pool).
@@ -1873,7 +1858,7 @@ So <code>1 | 1 &amp; 0</code> parses as <code>(1 | 1) &amp; 0</code> (= 0), not 
 This is a real semantic divergence from most programming languages and silently affects any corpus program that combines <code>&amp;</code> and <code>|</code> in a single expression with <code>|</code> on the left.</p>
 <h3 id="verify-subcommand_1">Verify subcommand</h3>
 <p><code>helpers/anydice-programs.py verify</code> runs every program through
-<code>dyce.anydyce.run</code>, compares the result to the stored AnyDice JSON, and
+<code>dyceum.anydice.run</code>, compares the result to the stored AnyDice JSON, and
 buckets each row as match / mismatch:values / mismatch:dist-count /
 parse-fail / interp-error:&lt;ExcType&gt; / interp-timeout / anydice-error /
 anydice-empty / anydice-resource / anydice-bad-json / anydice-bad-shape /
@@ -1937,11 +1922,8 @@ user's <code>return expand(...)</code> line:</p>
 </ul>
 <p>Each renders as <code>header\n  source-line\n</code>. Adjacent emissions look like
 the source line is printed twice, but it's two different warnings whose
-tails happen to be the same source. <code>explode_n</code> at <code>evaluation.py:587</code>
-already wraps internal <code>expand</code> calls in
-<code>warnings.catch_warnings()</code> with <code>filterwarnings("ignore",
-category=ExperimentalWarning)</code> to suppress the noise from a public API
-that itself uses <code>expand</code>.</p>
+tails happen to be the same source.
+<code>explode_n</code> is itself experimental, and the <code>@experimental</code> decorator suppresses the nested <code>ExperimentalWarning</code> from its internal <code>expand</code> call.</p>
 <h3 id="two-stage-_pct_to_counts-recovery_1">Two-stage <code>_pct_to_counts</code> recovery</h3>
 <p>Previously, AnyDice's percentage strings were converted to integer counts
 via <code>Fraction.limit_denominator(10**9)</code> per outcome and an LCM combine.
@@ -2182,7 +2164,13 @@ on todo 35's annotation list.</p>
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dice_calc</span><span class="w"> </span><span class="kn">import</span> <span class="n">roll</span><span class="p">,</span> <span class="n">anydice_casting</span><span class="p">,</span> <span class="n">T_N</span><span class="p">,</span> <span class="n">T_S</span><span class="p">,</span> <span class="n">T_D</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dice_calc</span><span class="w"> </span><span class="kn">import</span> <span class="n">roll</span><span class="p">,</span> <span class="n">anydice_casting</span><span class="p">,</span> <span class="n">T_N</span><span class="p">,</span> <span class="n">T_S</span><span class="p">,</span> <span class="n">T_D</span>
+
 
 <span class="c1"># In anydice we have (:N, :S, and :D) which are (T_N, T_S, and T_D) in here</span>
 <span class="c1"># read: https://anydice.com/docs/functions for more information</span>
@@ -2190,7 +2178,7 @@ on todo 35's annotation list.</p>
 <span class="k">def</span><span class="w"> </span><span class="nf">calculate</span><span class="p">(</span><span class="n">to_hit_roll</span><span class="p">:</span> <span class="n">T_N</span><span class="p">,</span> <span class="n">save_roll</span><span class="p">:</span> <span class="n">T_N</span><span class="p">):</span>  <span class="c1"># type hinting as T_N REQUIRED!!!</span>
     <span class="k">if</span> <span class="n">to_hit_roll</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">&lt;</span> <span class="mi">22</span><span class="p">:</span>  <span class="c1"># miss</span>
         <span class="k">return</span> <span class="mi">0</span>
-    <span class="n">is_crit</span> <span class="o">=</span> <span class="p">(</span><span class="n">to_hit_roll</span> <span class="o">==</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="n">is_crit</span> <span class="o">=</span> <span class="n">to_hit_roll</span> <span class="o">==</span> <span class="mi">20</span>
     <span class="n">dmg_die_mult</span> <span class="o">=</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">is_crit</span> <span class="k">else</span> <span class="mi">1</span>
     <span class="n">blung_dmg</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">dmg_die_mult</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4</span>
     <span class="n">thund_dmg</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">dmg_die_mult</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
@@ -2199,12 +2187,16 @@ on todo 35's annotation list.</p>
         <span class="n">radiant_dmg</span> <span class="o">=</span> <span class="n">radiant_dmg</span> <span class="o">//</span> <span class="mi">2</span>
     <span class="k">return</span> <span class="n">blung_dmg</span> <span class="o">+</span> <span class="n">thund_dmg</span> <span class="o">+</span> <span class="n">radiant_dmg</span>
 
+
 <span class="n">X</span> <span class="o">=</span> <span class="n">calculate</span><span class="p">(</span><span class="n">roll</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> <span class="n">roll</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
 
 <span class="c1"># plotting code</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
 <span class="n">vals</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">X</span><span class="o">.</span><span class="n">get_vals_probs</span><span class="p">())</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">vals</span><span class="p">,</span> <span class="n">probs</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Damage'</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Probability'</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">vals</span><span class="p">,</span> <span class="n">probs</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Damage"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Probability"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="png" src="https://github.com/Ar-Kareem/PythonDice/blob/master/README_files/./README_18_0.png" /></p>
 <p>Notice how we used the decorator <code>@anydice_casting</code> to use <code>if</code> conditions on dice inside of a custom function. Typehinting the input to <code>int</code> is required, the engine knows that you want to calculate the function many times based on all possible combinations of the input random variable.</p>
@@ -2244,13 +2236,13 @@ results into a new <code>H</code>.</p>
 <h1 id="design-discussions-2026-04-27">Design discussions (2026-04-27)</h1>
 <p>NOTE: most of the body of this file describes a prior interpreter that was
 subsequently removed and rebuilt; the current implementation lives in
-<code>dyce/anydyce/interpreter.py</code> (no underscore prefix; modules were renamed in a
+<code>dyceum/anydice/interpreter.py</code> (no underscore prefix; modules were renamed in a
 2026-04-27 cleanup pass). Stale sections above (file paths, line counts,
 corpus pass counts, <code>_compress_h</code>/<code>_dispatch_coercion</code> references) describe
 the previous implementation. Treat the notes below as authoritative when they
 conflict.</p>
 <h2 id="current-implementation-summary">Current implementation summary</h2>
-<p>Public API is unchanged: <code>dyce.anydyce.run(source) -&gt; list[(name, H)]</code>.</p>
+<p>Public API is unchanged: <code>dyceum.anydice.run(source) -&gt; list[(name, H)]</code>.</p>
 <p>Module layout after rename:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -2260,7 +2252,7 @@ conflict.</p>
 <span class="normal">6</span>
 <span class="normal">7</span>
 <span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dyce</span><span class="o">/</span><span class="n">anydyce</span><span class="o">/</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dyceum</span><span class="o">/</span><span class="n">anydice</span><span class="o">/</span>
   <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>        <span class="n">public</span> <span class="n">parse</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">unparse</span>
   <span class="n">grammar</span><span class="o">.</span><span class="n">lark</span>       <span class="n">Lark</span> <span class="n">LALR</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">grammar</span>
   <span class="n">ast_</span><span class="o">.</span><span class="n">py</span>            <span class="n">AST</span> <span class="n">dataclasses</span> <span class="p">(</span><span class="n">suffix</span> <span class="n">_</span> <span class="n">to</span> <span class="n">avoid</span> <span class="n">stdlib</span> <span class="err">`</span><span class="n">ast</span><span class="err">`</span><span class="p">)</span>
@@ -2270,7 +2262,7 @@ conflict.</p>
   <span class="n">unparser</span><span class="o">.</span><span class="n">py</span>        <span class="n">AST</span> <span class="o">-&gt;</span> <span class="n">canonical</span> <span class="n">source</span>
   <span class="n">settings</span><span class="o">.</span><span class="n">py</span>        <span class="n">runtime</span> <span class="n">settings</span> <span class="p">(</span><span class="n">position</span> <span class="n">order</span><span class="p">,</span> <span class="nb">max</span> <span class="n">depth</span><span class="p">,</span> <span class="n">explode</span> <span class="n">depth</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Test count: 305+ (<code>tests/anydyce/test_interpreter.py</code>); five type checkers
+<p>Test count: 305+ (<code>tests/anydice/test_interpreter.py</code>); five type checkers
 (mypy, pyright, ty, pyrefly) and ruff all clean.</p>
 <p><code>_Val</code> type alias unions <code>int | H[int] | P[int] | tuple[int,...] | str</code>.
 P retains positional info needed by <code>@</code>-selection on multi-die rolls. Once a
@@ -2291,11 +2283,11 @@ because no real program path produces a bare H in that position.</p>
 <h2 id="naming">Naming</h2>
 <ul>
 <li><strong>AnyDice</strong> -- the AnyDice-compatible variant we have today, in
-  <code>dyce/anydyce/</code>. Accepts AnyDice programs, reproduces AnyDice's outputs
+  <code>dyceum/anydice/</code>. Accepts AnyDice programs, reproduces AnyDice's outputs
   (warts and all). Default name with no qualifier; "AnyDice Legacy" only
   when disambiguation is needed.</li>
 <li><strong>AnyDice NG</strong> -- the new variant being designed, target package
-  <code>dyce/anydyce_ng/</code>. Forked language with strict types, no implicit
+  <code>dyceum/anydice_ng/</code>. Forked language with strict types, no implicit
   coercions, principled error handling. "NG" = Next Generation; it's a
   fork, not a deprecation of AnyDice.</li>
 </ul>
@@ -2305,7 +2297,7 @@ AST, transformer, and unparser.</p>
 <p>Reference for "the (1)/(3) factoring" mentioned earlier:</p>
 <ul>
 <li>
-<p><strong>(1)</strong> <strong>AnyDice NG</strong> -- a sibling interpreter in <code>dyce.anydyce_ng</code>.
+<p><strong>(1)</strong> <strong>AnyDice NG</strong> -- a sibling interpreter in <code>dyceum.anydice_ng</code>.
   Same parser, same AST, same transformer, same unparser. Replacement
   <code>_apply_*</code> dispatch that drops AnyDice's surprising coercions.</p>
 </li>
@@ -2316,7 +2308,7 @@ AST, transformer, and unparser.</p>
 </li>
 </ul>
 <p>(Earlier we sketched <strong>(2)</strong>, an AnyDice-to-dyce-Python <em>transpiler</em>: a new
-<code>_codegen.py</code> plus a <code>dyce.anydyce_runtime</code> helper module containing the
+<code>_codegen.py</code> plus a <code>dyceum.anydice_runtime</code> helper module containing the
 operator dispatch. Whether (1) and (2) coexist is an open question; the
 natural prerequisite is extracting the operator dispatch into a runtime
 helper so both AnyDice NG and any codegen back-end can call it.)</p>
@@ -2333,12 +2325,12 @@ helper so both AnyDice NG and any codegen back-end can call it.)</p>
 <tr>
 <td>AnyDice NG (1)</td>
 <td>grammar, AST, transformer, unparser</td>
-<td><code>dyce.anydyce_ng</code> with replacement <code>_apply_*</code> methods</td>
+<td><code>dyceum.anydice_ng</code> with replacement <code>_apply_*</code> methods</td>
 </tr>
 <tr>
 <td>Transpiler (2)</td>
 <td>grammar, AST, transformer</td>
-<td><code>_codegen.py</code>; runtime helpers in <code>dyce.anydyce_runtime</code></td>
+<td><code>_codegen.py</code>; runtime helpers in <code>dyceum.anydice_runtime</code></td>
 </tr>
 <tr>
 <td>AnyDice (current)</td>
@@ -2503,7 +2495,7 @@ addition to the result. We currently have no story for this -- truncation
 silently returns <code>H({})</code> and propagates per the empty-die rules.</p>
 <p>Proposed sketch:</p>
 <ul>
-<li>Define <code>AnyDiceWarning(UserWarning)</code> in <code>dyce.anydyce</code>.</li>
+<li>Define <code>AnyDiceWarning(UserWarning)</code> in <code>dyceum.anydice</code>.</li>
 <li>Interpreter calls <code>warnings.warn("...", AnyDiceWarning)</code> at guard points
   (recursion-depth exhaustion first; later: explode depth, any other
   truncation).</li>
@@ -2511,7 +2503,7 @@ silently returns <code>H({})</code> and propagates per the empty-die rules.</p>
   suppresses other <code>UserWarning</code>s from dyce's internals (e.g. the
   <code>@experimental</code> decorator) but lets <code>AnyDiceWarning</code> through.</li>
 <li>Users get warnings via standard Python machinery: <code>catch_warnings(record=
-  True)</code> to capture, <code>-W error::dyce.anydyce.AnyDiceWarning</code> to promote.</li>
+  True)</code> to capture, <code>-W error::dyceum.anydice.AnyDiceWarning</code> to promote.</li>
 </ul>
 <p>Keeps the interface tiny, reuses stdlib mechanisms, and cleanly separates
 "the AnyDice program produced a notable behavior" from "dyce internals
@@ -2654,6 +2646,8 @@ explicitly with <code>expand</code> plus a function whose body returns A or B.</
 
 
 
+
+
                 
               </article>
             </div>
@@ -2675,13 +2669,16 @@ explicitly with <code>expand</code> plus a function whose body returns A or B.</
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <i>Copyright and other protections apply. Please see the accompanying <tt>LICENSE</tt> file for rights and restrictions governing use of this software. All rights not expressly waived or licensed are reserved. If that file is missing or appears to be modified from its original, then please contact the author before viewing or using this software in any capacity.</i>
+      <i>Copyright and other protections apply.
+  Please see the accompanying <tt>LICENSE</tt> file for rights and restrictions governing use of this software.
+  All rights not expressly waived or licensed are reserved.
+  If that file is missing or appears to be modified from its original, then please contact the author before viewing or using this software in any capacity.</i>
     </div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -2699,10 +2696,14 @@ explicitly with <code>expand</code> plus a function whose body returns A or B.</
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.annotate", "content.tabs.link", "navigation.footer", "navigation.expand", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["content.code.annotate","content.tabs.link","navigation.footer","navigation.expand","navigation.sections","search.highlight"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":{"provider":"mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b7d3f789.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

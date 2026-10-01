@@ -23,6 +23,14 @@ const _GH_MIRROR_URL_BASE =
   "https://raw.githubusercontent.com/posita/anydice-data/" +
   "refs/heads/main/anydice.com/program/";
 
+const _GH_MIRROR_URL = new URL(_GH_MIRROR_URL_BASE);
+
+// Host and path prefix of every corpus fetch. The playground checks a parsed
+// URL against these before calling fetch, because raw.githubusercontent.com
+// also serves every other public repository.
+export const GH_MIRROR_HOSTNAME = _GH_MIRROR_URL.hostname;
+export const GH_MIRROR_PATH_PREFIX = _GH_MIRROR_URL.pathname;
+
 const _HEX_RE = /^-?[0-9A-Fa-f]+$/;
 
 // Parse a program ID (string or number) to a signed integer. Strings are

@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="zensical-0.0.66">
     
     
       
@@ -29,10 +29,15 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.1502b751.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.812a03bb.min.css">
       
       
 
@@ -46,14 +51,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
-    
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
@@ -74,7 +77,7 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
         
@@ -98,15 +101,15 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="dyceum" class="md-header__button md-logo" aria-label="dyceum" data-md-component="logo">
+    <a href="./.." title="dyceum" class="md-header__button md-logo" aria-label="dyceum" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -168,57 +171,30 @@
     
       
       
-        <label class="md-header__button md-icon" for="__search">
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
         </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
 </div>
       
     
-    
-      <div class="md-header__source">
-        <a href="https://github.com/posita/anydyce/" title="Go to repository" class="md-source" data-md-component="source">
+    <div class="md-header__source">
+      
+        <a href="https://github.com/posita/dyceum/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
+      
+    </div>
   </nav>
   
 </header>
@@ -244,20 +220,20 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="dyceum" class="md-nav__button md-logo" aria-label="dyceum" data-md-component="logo">
+    <a href="./.." title="dyceum" class="md-nav__button md-logo" aria-label="dyceum" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     dyceum
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/posita/anydyce/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/posita/dyceum/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -274,15 +250,14 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="./.." class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Introduction
-  
+  Introduction
 
     
   </span>
@@ -308,8 +283,7 @@
   <span class="md-ellipsis">
     
   
-    AnyDice Interpreter
-  
+  AnyDice Interpreter
 
     
   </span>
@@ -335,8 +309,7 @@
   <span class="md-ellipsis">
     
   
-    Release notes
-  
+  Release notes
 
     
   </span>
@@ -362,8 +335,7 @@
   <span class="md-ellipsis">
     
   
-    Contributing
-  
+  Contributing
 
     
   </span>
@@ -389,8 +361,7 @@
   <span class="md-ellipsis">
     
   
-    License
-  
+  License
 
     
   </span>
@@ -434,8 +405,7 @@
   <span class="md-ellipsis">
     
   
-    API
-  
+  API
 
     
   </span>
@@ -445,19 +415,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+              
   
-    API
-  
+  API
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
   
@@ -470,8 +440,7 @@
   <span class="md-ellipsis">
     
   
-    AnyDice
-  
+  AnyDice
 
     
   </span>
@@ -482,10 +451,10 @@
     </li>
   
 
-              
-            
+                
               
                 
+                  
   
   
     
@@ -494,7 +463,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
       
       
         
@@ -507,8 +476,7 @@
   <span class="md-ellipsis">
     
   
-    Jupyter
-  
+  Jupyter
 
     
   </span>
@@ -518,15 +486,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Jupyter
-  
+  Jupyter
 
     
   </span>
@@ -537,7 +504,8 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -546,16 +514,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#dyceummagic" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        dyceum.magic
-      
+      <span class="md-typeset">
+        <code>dyceum.magic</code>
+      </span>
     </span>
   </a>
   
@@ -564,9 +532,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.magic" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         magic
-      
+      </span>
     </span>
   </a>
   
@@ -575,9 +543,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.magic.anyd" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         anyd
-      
+      </span>
     </span>
   </a>
   
@@ -586,9 +554,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.magic.anyd_load" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         anyd_load
-      
+      </span>
     </span>
   </a>
   
@@ -597,9 +565,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.magic.load_ipython_extension" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         load_ipython_extension
-      
+      </span>
     </span>
   </a>
   
@@ -608,9 +576,9 @@
         <li class="md-nav__item">
   <a href="#dyceumviz" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        dyceum.viz
-      
+      <span class="md-typeset">
+        <code>dyceum.viz</code>
+      </span>
     </span>
   </a>
   
@@ -619,9 +587,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         viz
-      
+      </span>
     </span>
   </a>
   
@@ -630,9 +598,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.BurstHPlotter" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         BurstHPlotter
-      
+      </span>
     </span>
   </a>
   
@@ -641,9 +609,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotter" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         HPlotter
-      
+      </span>
     </span>
   </a>
   
@@ -653,9 +621,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotter.NAME" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         NAME
-      
+      </span>
     </span>
   </a>
   
@@ -664,9 +632,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotter.layout" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         layout
-      
+      </span>
     </span>
   </a>
   
@@ -675,9 +643,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotter.plot" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         plot
-      
+      </span>
     </span>
   </a>
   
@@ -686,9 +654,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotter.transparent" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         transparent
-      
+      </span>
     </span>
   </a>
   
@@ -702,9 +670,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotterChooser" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         HPlotterChooser
-      
+      </span>
     </span>
   </a>
   
@@ -714,9 +682,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotterChooser.__init__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __init__
-      
+      </span>
     </span>
   </a>
   
@@ -725,9 +693,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotterChooser.interact" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         interact
-      
+      </span>
     </span>
   </a>
   
@@ -736,9 +704,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotterChooser.plot" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         plot
-      
+      </span>
     </span>
   </a>
   
@@ -747,9 +715,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotterChooser.update_hs" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         update_hs
-      
+      </span>
     </span>
   </a>
   
@@ -763,9 +731,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.HorizontalBarHPlotter" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         HorizontalBarHPlotter
-      
+      </span>
     </span>
   </a>
   
@@ -774,9 +742,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.LineHPlotter" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         LineHPlotter
-      
+      </span>
     </span>
   </a>
   
@@ -785,9 +753,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.PlotWarning" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         PlotWarning
-      
+      </span>
     </span>
   </a>
   
@@ -796,9 +764,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.PlotWidgets" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         PlotWidgets
-      
+      </span>
     </span>
   </a>
   
@@ -808,9 +776,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.PlotWidgets.plot_updates_suspended" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         plot_updates_suspended
-      
+      </span>
     </span>
   </a>
   
@@ -819,9 +787,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.PlotWidgets.suspend_plot_updates" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         suspend_plot_updates
-      
+      </span>
     </span>
   </a>
   
@@ -835,9 +803,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.jupyter_visualize" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         jupyter_visualize
-      
+      </span>
     </span>
   </a>
   
@@ -846,9 +814,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.limit_for_display" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         limit_for_display
-      
+      </span>
     </span>
   </a>
   
@@ -857,9 +825,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.values_xy_for_graph_type" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         values_xy_for_graph_type
-      
+      </span>
     </span>
   </a>
   
@@ -872,10 +840,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -891,10 +860,24 @@
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -903,16 +886,16 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#dyceummagic" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        dyceum.magic
-      
+      <span class="md-typeset">
+        <code>dyceum.magic</code>
+      </span>
     </span>
   </a>
   
@@ -921,9 +904,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.magic" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         magic
-      
+      </span>
     </span>
   </a>
   
@@ -932,9 +915,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.magic.anyd" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         anyd
-      
+      </span>
     </span>
   </a>
   
@@ -943,9 +926,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.magic.anyd_load" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         anyd_load
-      
+      </span>
     </span>
   </a>
   
@@ -954,9 +937,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.magic.load_ipython_extension" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         load_ipython_extension
-      
+      </span>
     </span>
   </a>
   
@@ -965,9 +948,9 @@
         <li class="md-nav__item">
   <a href="#dyceumviz" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        dyceum.viz
-      
+      <span class="md-typeset">
+        <code>dyceum.viz</code>
+      </span>
     </span>
   </a>
   
@@ -976,9 +959,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         viz
-      
+      </span>
     </span>
   </a>
   
@@ -987,9 +970,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.BurstHPlotter" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         BurstHPlotter
-      
+      </span>
     </span>
   </a>
   
@@ -998,9 +981,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotter" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         HPlotter
-      
+      </span>
     </span>
   </a>
   
@@ -1010,9 +993,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotter.NAME" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         NAME
-      
+      </span>
     </span>
   </a>
   
@@ -1021,9 +1004,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotter.layout" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         layout
-      
+      </span>
     </span>
   </a>
   
@@ -1032,9 +1015,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotter.plot" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         plot
-      
+      </span>
     </span>
   </a>
   
@@ -1043,9 +1026,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotter.transparent" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         transparent
-      
+      </span>
     </span>
   </a>
   
@@ -1059,9 +1042,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotterChooser" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         HPlotterChooser
-      
+      </span>
     </span>
   </a>
   
@@ -1071,9 +1054,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotterChooser.__init__" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         __init__
-      
+      </span>
     </span>
   </a>
   
@@ -1082,9 +1065,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotterChooser.interact" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         interact
-      
+      </span>
     </span>
   </a>
   
@@ -1093,9 +1076,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotterChooser.plot" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         plot
-      
+      </span>
     </span>
   </a>
   
@@ -1104,9 +1087,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.HPlotterChooser.update_hs" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         update_hs
-      
+      </span>
     </span>
   </a>
   
@@ -1120,9 +1103,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.HorizontalBarHPlotter" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         HorizontalBarHPlotter
-      
+      </span>
     </span>
   </a>
   
@@ -1131,9 +1114,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.LineHPlotter" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         LineHPlotter
-      
+      </span>
     </span>
   </a>
   
@@ -1142,9 +1125,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.PlotWarning" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         PlotWarning
-      
+      </span>
     </span>
   </a>
   
@@ -1153,9 +1136,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.PlotWidgets" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         PlotWidgets
-      
+      </span>
     </span>
   </a>
   
@@ -1165,9 +1148,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.PlotWidgets.plot_updates_suspended" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         plot_updates_suspended
-      
+      </span>
     </span>
   </a>
   
@@ -1176,9 +1159,9 @@
           <li class="md-nav__item">
   <a href="#dyceum.viz.PlotWidgets.suspend_plot_updates" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         suspend_plot_updates
-      
+      </span>
     </span>
   </a>
   
@@ -1192,9 +1175,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.jupyter_visualize" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         jupyter_visualize
-      
+      </span>
     </span>
   </a>
   
@@ -1203,9 +1186,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.limit_for_display" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         limit_for_display
-      
+      </span>
     </span>
   </a>
   
@@ -1214,9 +1197,9 @@
         <li class="md-nav__item">
   <a href="#dyceum.viz.values_xy_for_graph_type" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      <span class="md-typeset">
         values_xy_for_graph_type
-      
+      </span>
     </span>
   </a>
   
@@ -1236,8 +1219,6 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
   
   
 
@@ -1329,39 +1310,7 @@ its own doc once things settle down. -->
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/magic.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 61</span>
-<span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
-<span class="normal"> 65</span>
-<span class="normal"> 66</span>
-<span class="normal"> 67</span>
-<span class="normal"> 68</span>
-<span class="normal"> 69</span>
-<span class="normal"> 70</span>
-<span class="normal"> 71</span>
-<span class="normal"> 72</span>
-<span class="normal"> 73</span>
-<span class="normal"> 74</span>
-<span class="normal"> 75</span>
-<span class="normal"> 76</span>
-<span class="normal"> 77</span>
-<span class="normal"> 78</span>
-<span class="normal"> 79</span>
-<span class="normal"> 80</span>
-<span class="normal"> 81</span>
-<span class="normal"> 82</span>
-<span class="normal"> 83</span>
-<span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 93</span>
 <span class="normal"> 94</span>
 <span class="normal"> 95</span>
 <span class="normal"> 96</span>
@@ -1413,8 +1362,40 @@ its own doc once things settle down. -->
 <span class="normal">142</span>
 <span class="normal">143</span>
 <span class="normal">144</span>
-<span class="normal">145</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@magic_arguments</span><span class="p">()</span>
-<span class="nd">@argument</span><span class="p">(</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@_magic_arguments</span><span class="p">()</span>
+<span class="nd">@_argument</span><span class="p">(</span>
     <span class="sa">f</span><span class="s2">"--</span><span class="si">{</span><span class="n">_FORMAT_BAR</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
     <span class="n">action</span><span class="o">=</span><span class="s2">"store_const"</span><span class="p">,</span>
     <span class="n">const</span><span class="o">=</span><span class="n">_FORMAT_BAR</span><span class="p">,</span>
@@ -1422,35 +1403,35 @@ its own doc once things settle down. -->
     <span class="n">dest</span><span class="o">=</span><span class="n">_OUTPUT_FORMAT</span><span class="p">,</span>
     <span class="n">help</span><span class="o">=</span><span class="sa">f</span><span class="s1">'use interactive visual formatting with "</span><span class="si">{</span><span class="n">_PLOTTER_NAMES_BY_FORMAT</span><span class="p">[</span><span class="n">_FORMAT_BAR</span><span class="p">]</span><span class="si">}</span><span class="s1">" selected'</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="nd">@argument</span><span class="p">(</span>
+<span class="nd">@_argument</span><span class="p">(</span>
     <span class="sa">f</span><span class="s2">"--</span><span class="si">{</span><span class="n">_FORMAT_BURST</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
     <span class="n">action</span><span class="o">=</span><span class="s2">"store_const"</span><span class="p">,</span>
     <span class="n">const</span><span class="o">=</span><span class="n">_FORMAT_BURST</span><span class="p">,</span>
     <span class="n">dest</span><span class="o">=</span><span class="n">_OUTPUT_FORMAT</span><span class="p">,</span>
     <span class="n">help</span><span class="o">=</span><span class="sa">f</span><span class="s1">'use interactive visual formatting with "</span><span class="si">{</span><span class="n">_PLOTTER_NAMES_BY_FORMAT</span><span class="p">[</span><span class="n">_FORMAT_BURST</span><span class="p">]</span><span class="si">}</span><span class="s1">" selected'</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="nd">@argument</span><span class="p">(</span>
+<span class="nd">@_argument</span><span class="p">(</span>
     <span class="sa">f</span><span class="s2">"--</span><span class="si">{</span><span class="n">_FORMAT_LINE</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
     <span class="n">action</span><span class="o">=</span><span class="s2">"store_const"</span><span class="p">,</span>
     <span class="n">const</span><span class="o">=</span><span class="n">_FORMAT_LINE</span><span class="p">,</span>
     <span class="n">dest</span><span class="o">=</span><span class="n">_OUTPUT_FORMAT</span><span class="p">,</span>
     <span class="n">help</span><span class="o">=</span><span class="sa">f</span><span class="s1">'use interactive visual formatting with "</span><span class="si">{</span><span class="n">_PLOTTER_NAMES_BY_FORMAT</span><span class="p">[</span><span class="n">_FORMAT_LINE</span><span class="p">]</span><span class="si">}</span><span class="s1">" selected'</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="nd">@argument</span><span class="p">(</span>
+<span class="nd">@_argument</span><span class="p">(</span>
     <span class="sa">f</span><span class="s2">"--</span><span class="si">{</span><span class="n">_FORMAT_TEXT</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
     <span class="n">action</span><span class="o">=</span><span class="s2">"store_const"</span><span class="p">,</span>
     <span class="n">const</span><span class="o">=</span><span class="n">_FORMAT_TEXT</span><span class="p">,</span>
     <span class="n">dest</span><span class="o">=</span><span class="n">_OUTPUT_FORMAT</span><span class="p">,</span>
     <span class="n">help</span><span class="o">=</span><span class="s2">"format each output as multi-line text"</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="nd">@argument</span><span class="p">(</span>
+<span class="nd">@_argument</span><span class="p">(</span>
     <span class="sa">f</span><span class="s2">"--</span><span class="si">{</span><span class="n">_FORMAT_TEXT_SHORT</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
     <span class="n">action</span><span class="o">=</span><span class="s2">"store_const"</span><span class="p">,</span>
     <span class="n">const</span><span class="o">=</span><span class="n">_FORMAT_TEXT_SHORT</span><span class="p">,</span>
     <span class="n">dest</span><span class="o">=</span><span class="n">_OUTPUT_FORMAT</span><span class="p">,</span>
     <span class="n">help</span><span class="o">=</span><span class="s2">"format each output as single-line text"</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="nd">@argument</span><span class="p">(</span>
+<span class="nd">@_argument</span><span class="p">(</span>
     <span class="s2">"--precision"</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
     <span class="n">default</span><span class="o">=</span><span class="n">DEFAULT_PRECISION</span><span class="p">,</span>
@@ -1471,14 +1452,14 @@ its own doc once things settle down. -->
 <span class="sd">        %%anyd --short --precision 32</span>
 <span class="sd">        output 1d100</span>
 <span class="sd">    """</span>
-    <span class="n">args</span> <span class="o">=</span> <span class="n">parse_argstring</span><span class="p">(</span><span class="n">anyd</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">_parse_argstring</span><span class="p">(</span><span class="n">anyd</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
 
     <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
         <span class="c1"># Everything other than a DeprecationWarning or ExperimentalWarning (e.g.,</span>
         <span class="c1"># TruncationWarning, etc.) should bubble up so Jupyter renders it next to the</span>
         <span class="c1"># cell output</span>
-        <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">)</span>
-        <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">ExperimentalWarning</span><span class="p">)</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">,</span> <span class="ne">DeprecationWarning</span><span class="p">)</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">,</span> <span class="n">ExperimentalWarning</span><span class="p">)</span>
         <span class="c1"># Seed the display precision from the CLI flag; `set "dyceum: display</span>
         <span class="c1"># precision"` inside the cell can override (the run() call mutates</span>
         <span class="c1"># settings in place). format_results then reads the final value.</span>
@@ -1530,39 +1511,7 @@ left in place.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/magic.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span>
-<span class="normal">179</span>
-<span class="normal">180</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">180</span>
 <span class="normal">181</span>
 <span class="normal">182</span>
 <span class="normal">183</span>
@@ -1580,8 +1529,40 @@ left in place.</p>
 <span class="normal">195</span>
 <span class="normal">196</span>
 <span class="normal">197</span>
-<span class="normal">198</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@magic_arguments</span><span class="p">()</span>
-<span class="nd">@argument</span><span class="p">(</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@_magic_arguments</span><span class="p">()</span>
+<span class="nd">@_argument</span><span class="p">(</span>
     <span class="s2">"location_or_id"</span><span class="p">,</span>
     <span class="n">help</span><span class="o">=</span><span class="s2">"an AnyDice program ID or URL"</span><span class="p">,</span>
 <span class="p">)</span>
@@ -1600,7 +1581,7 @@ left in place.</p>
 <span class="sd">    etc.), the exception propagates to Jupyter and the original `%anyd_load` line is</span>
 <span class="sd">    left in place.</span>
 <span class="sd">    """</span>
-    <span class="n">args</span> <span class="o">=</span> <span class="n">parse_argstring</span><span class="p">(</span><span class="n">anyd_load</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">_parse_argstring</span><span class="p">(</span><span class="n">anyd_load</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
     <span class="n">program_id_hex</span><span class="p">,</span> <span class="n">initial_url</span><span class="p">,</span> <span class="n">_final_url</span><span class="p">,</span> <span class="n">program</span> <span class="o">=</span> <span class="n">fetch_anydice_program</span><span class="p">(</span>
         <span class="n">args</span><span class="o">.</span><span class="n">location_or_id</span>
     <span class="p">)</span>
@@ -1654,26 +1635,26 @@ left in place.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/magic.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">225</span>
-<span class="normal">226</span>
-<span class="normal">227</span>
-<span class="normal">228</span>
-<span class="normal">229</span>
-<span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
-<span class="normal">233</span>
-<span class="normal">234</span>
-<span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span>
-<span class="normal">238</span>
-<span class="normal">239</span>
-<span class="normal">240</span>
-<span class="normal">241</span>
-<span class="normal">242</span>
-<span class="normal">243</span>
-<span class="normal">244</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">load_ipython_extension</span><span class="p">(</span><span class="n">ipy</span><span class="p">:</span> <span class="n">InteractiveShell</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">load_ipython_extension</span><span class="p">(</span><span class="n">ipy</span><span class="p">:</span> <span class="n">InteractiveShell</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    IPython extension entry point. Registers Magics.</span>
 
@@ -1747,7 +1728,7 @@ left in place.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="HPlotter (dyceum.viz.HPlotter)" href="#dyceum.viz.HPlotter">HPlotter</a></code></p>
+              Bases: <code><a class="autorefs autorefs-internal" title="HPlotter (dyceum.viz.HPlotter)" href="./#dyceum.viz.HPlotter">HPlotter</a></code></p>
 
 
 
@@ -1768,35 +1749,7 @@ secondary histograms are used for the outer rings.</p>
 
               <details class="mkdocstrings-source">
                 <summary>Source code in <code>dyceum/viz.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">672</span>
-<span class="normal">673</span>
-<span class="normal">674</span>
-<span class="normal">675</span>
-<span class="normal">676</span>
-<span class="normal">677</span>
-<span class="normal">678</span>
-<span class="normal">679</span>
-<span class="normal">680</span>
-<span class="normal">681</span>
-<span class="normal">682</span>
-<span class="normal">683</span>
-<span class="normal">684</span>
-<span class="normal">685</span>
-<span class="normal">686</span>
-<span class="normal">687</span>
-<span class="normal">688</span>
-<span class="normal">689</span>
-<span class="normal">690</span>
-<span class="normal">691</span>
-<span class="normal">692</span>
-<span class="normal">693</span>
-<span class="normal">694</span>
-<span class="normal">695</span>
-<span class="normal">696</span>
-<span class="normal">697</span>
-<span class="normal">698</span>
-<span class="normal">699</span>
-<span class="normal">700</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">700</span>
 <span class="normal">701</span>
 <span class="normal">702</span>
 <span class="normal">703</span>
@@ -1897,7 +1850,46 @@ secondary histograms are used for the outer rings.</p>
 <span class="normal">798</span>
 <span class="normal">799</span>
 <span class="normal">800</span>
-<span class="normal">801</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">BurstHPlotter</span><span class="p">(</span><span class="n">HPlotter</span><span class="p">):</span>
+<span class="normal">801</span>
+<span class="normal">802</span>
+<span class="normal">803</span>
+<span class="normal">804</span>
+<span class="normal">805</span>
+<span class="normal">806</span>
+<span class="normal">807</span>
+<span class="normal">808</span>
+<span class="normal">809</span>
+<span class="normal">810</span>
+<span class="normal">811</span>
+<span class="normal">812</span>
+<span class="normal">813</span>
+<span class="normal">814</span>
+<span class="normal">815</span>
+<span class="normal">816</span>
+<span class="normal">817</span>
+<span class="normal">818</span>
+<span class="normal">819</span>
+<span class="normal">820</span>
+<span class="normal">821</span>
+<span class="normal">822</span>
+<span class="normal">823</span>
+<span class="normal">824</span>
+<span class="normal">825</span>
+<span class="normal">826</span>
+<span class="normal">827</span>
+<span class="normal">828</span>
+<span class="normal">829</span>
+<span class="normal">830</span>
+<span class="normal">831</span>
+<span class="normal">832</span>
+<span class="normal">833</span>
+<span class="normal">834</span>
+<span class="normal">835</span>
+<span class="normal">836</span>
+<span class="normal">837</span>
+<span class="normal">838</span>
+<span class="normal">839</span>
+<span class="normal">840</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">BurstHPlotter</span><span class="p">(</span><span class="n">HPlotter</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    !!! warning "Experimental"</span>
 
@@ -1910,19 +1902,19 @@ secondary histograms are used for the outer rings.</p>
 
     <span class="n">NAME</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"Burst Plots"</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_widgets</span><span class="p">:</span> <span class="n">PlotWidgets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Widget</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_widgets</span><span class="p">:</span> <span class="n">PlotWidgets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Widget</span><span class="p">:</span>
         <span class="n">cutoff_layout_widget</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">layout</span><span class="p">(</span><span class="n">plot_widgets</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+        <span class="k">return</span> <span class="n">VBox</span><span class="p">(</span>
             <span class="p">[</span>
-                <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">(</span>
+                <span class="n">HBox</span><span class="p">(</span>
                     <span class="p">[</span>
-                        <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+                        <span class="n">VBox</span><span class="p">(</span>
                             <span class="p">[</span>
                                 <span class="n">cutoff_layout_widget</span><span class="p">,</span>
                             <span class="p">]</span>
                         <span class="p">),</span>
-                        <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+                        <span class="n">VBox</span><span class="p">(</span>
                             <span class="p">[</span>
                                 <span class="n">plot_widgets</span><span class="o">.</span><span class="n">burst_swap</span><span class="p">,</span>
                                 <span class="n">plot_widgets</span><span class="o">.</span><span class="n">burst_zero_fill_normalize</span><span class="p">,</span>
@@ -1932,7 +1924,7 @@ secondary histograms are used for the outer rings.</p>
                                 <span class="n">plot_widgets</span><span class="o">.</span><span class="n">burst_cmap_link</span><span class="p">,</span>
                             <span class="p">]</span>
                         <span class="p">),</span>
-                        <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+                        <span class="n">VBox</span><span class="p">(</span>
                             <span class="p">[</span>
                                 <span class="n">plot_widgets</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span>
                                 <span class="n">plot_widgets</span><span class="o">.</span><span class="n">plot_style</span><span class="p">,</span>
@@ -1949,7 +1941,7 @@ secondary histograms are used for the outer rings.</p>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">hs</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">H</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span>
+        <span class="n">hs</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span>
         <span class="n">settings</span><span class="p">:</span> <span class="n">SettingsDict</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">cols</span> <span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s2">"burst_columns"</span><span class="p">]</span>
@@ -1973,7 +1965,7 @@ secondary histograms are used for the outer rings.</p>
             <span class="n">logical_rows</span> <span class="o">*</span> <span class="n">actual_rows_per_fig</span> <span class="o">+</span> <span class="n">total_gaps</span> <span class="o">*</span> <span class="n">actual_rows_per_gap</span>
         <span class="p">)</span>
 
-        <span class="k">def</span><span class="w"> </span><span class="nf">_zero_fill_normalize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">H</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]]:</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_zero_fill_normalize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]]:</span>
             <span class="n">unique_outcomes</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
             <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">first_h</span><span class="p">,</span> <span class="n">second_h</span> <span class="ow">in</span> <span class="n">hs</span><span class="p">:</span>
                 <span class="n">unique_outcomes</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">first_h</span><span class="p">)</span>
@@ -1982,14 +1974,24 @@ secondary histograms are used for the outer rings.</p>
             <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">first_h</span><span class="p">,</span> <span class="n">second_h</span> <span class="ow">in</span> <span class="n">hs</span><span class="p">:</span>
                 <span class="k">yield</span> <span class="p">(</span>
                     <span class="n">label</span><span class="p">,</span>
-                    <span class="n">first_h</span><span class="o">.</span><span class="n">zero_fill</span><span class="p">(</span><span class="n">unique_outcomes</span><span class="p">),</span>
-                    <span class="kc">None</span> <span class="k">if</span> <span class="n">second_h</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">second_h</span><span class="o">.</span><span class="n">zero_fill</span><span class="p">(</span><span class="n">unique_outcomes</span><span class="p">),</span>
+                    <span class="n">H</span><span class="o">.</span><span class="n">from_counts</span><span class="p">(</span>
+                        <span class="n">first_h</span><span class="p">,</span>
+                        <span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">unique_outcomes</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                        <span class="n">preserve_zero_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="p">),</span>
+                    <span class="kc">None</span>
+                    <span class="k">if</span> <span class="n">second_h</span> <span class="ow">is</span> <span class="kc">None</span>
+                    <span class="k">else</span> <span class="n">H</span><span class="o">.</span><span class="n">from_counts</span><span class="p">(</span>
+                        <span class="n">second_h</span><span class="p">,</span>
+                        <span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">unique_outcomes</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                        <span class="n">preserve_zero_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="p">),</span>
                 <span class="p">)</span>
 
         <span class="k">if</span> <span class="n">settings</span><span class="p">[</span><span class="s2">"burst_zero_fill_normalize"</span><span class="p">]:</span>
             <span class="n">hs</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">_zero_fill_normalize</span><span class="p">())</span>
-        <span class="n">h_inner</span><span class="p">:</span> <span class="n">H</span>
-        <span class="n">h_outer</span><span class="p">:</span> <span class="n">H</span> <span class="o">|</span> <span class="kc">None</span>
+        <span class="n">h_inner</span><span class="p">:</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span>
+        <span class="n">h_outer</span><span class="p">:</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span>
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">h_inner</span><span class="p">,</span> <span class="n">h_outer</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">hs</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">h_outer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">settings</span><span class="p">[</span><span class="s2">"burst_swap"</span><span class="p">]:</span>
                 <span class="n">h_inner</span><span class="p">,</span> <span class="n">h_outer</span> <span class="o">=</span> <span class="n">h_outer</span><span class="p">,</span> <span class="n">h_inner</span>  <span class="c1"># ruff: ignore[redefined-loop-name]</span>
@@ -2000,7 +2002,8 @@ secondary histograms are used for the outer rings.</p>
                 <span class="p">(</span><span class="n">actual_row_start</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="n">cols</span><span class="p">),</span>
                 <span class="n">rowspan</span><span class="o">=</span><span class="n">actual_rows_per_fig</span><span class="p">,</span>
             <span class="p">)</span>
-            <span class="n">plot_burst</span><span class="p">(</span>
+            <span class="c1"># TODO(@posita): &lt;https://github.com/zubanls/zuban/issues/591&gt;</span>
+            <span class="n">plot_burst</span><span class="p">(</span>  <span class="c1"># zuban: ignore[call-overload]</span>
                 <span class="n">h_inner</span><span class="p">,</span>
                 <span class="n">h_outer</span><span class="p">,</span>
                 <span class="n">alpha</span><span class="o">=</span><span class="n">settings</span><span class="p">[</span><span class="s2">"alpha"</span><span class="p">],</span>
@@ -2073,11 +2076,11 @@ future versions.</p>
 </div>
 <p>A plotter responsible for laying out control widgets and visualizing data provided
 by primary and optional secondary histograms. (See the
-<a class="autorefs autorefs-internal" title="plot(hs: Sequence[tuple[str, H, H | None]], settings: SettingsDict) -> None
+<a class="autorefs autorefs-internal" title="plot(hs: Sequence[tuple[str, H[Any], H[Any] | None]], settings: SettingsDict) -&gt; None
 
   
       abstractmethod
-  " href="#dyceum.viz.HPlotter.plot"><em>plot</em> method</a>.)</p>
+  " href="./#dyceum.viz.HPlotter.plot"><em>plot</em> method</a>.)</p>
 
 
 
@@ -2088,35 +2091,7 @@ by primary and optional secondary histograms. (See the
 
               <details class="mkdocstrings-source">
                 <summary>Source code in <code>dyceum/viz.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">614</span>
-<span class="normal">615</span>
-<span class="normal">616</span>
-<span class="normal">617</span>
-<span class="normal">618</span>
-<span class="normal">619</span>
-<span class="normal">620</span>
-<span class="normal">621</span>
-<span class="normal">622</span>
-<span class="normal">623</span>
-<span class="normal">624</span>
-<span class="normal">625</span>
-<span class="normal">626</span>
-<span class="normal">627</span>
-<span class="normal">628</span>
-<span class="normal">629</span>
-<span class="normal">630</span>
-<span class="normal">631</span>
-<span class="normal">632</span>
-<span class="normal">633</span>
-<span class="normal">634</span>
-<span class="normal">635</span>
-<span class="normal">636</span>
-<span class="normal">637</span>
-<span class="normal">638</span>
-<span class="normal">639</span>
-<span class="normal">640</span>
-<span class="normal">641</span>
-<span class="normal">642</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">642</span>
 <span class="normal">643</span>
 <span class="normal">644</span>
 <span class="normal">645</span>
@@ -2143,7 +2118,35 @@ by primary and optional secondary histograms. (See the
 <span class="normal">666</span>
 <span class="normal">667</span>
 <span class="normal">668</span>
-<span class="normal">669</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">HPlotter</span><span class="p">:</span>
+<span class="normal">669</span>
+<span class="normal">670</span>
+<span class="normal">671</span>
+<span class="normal">672</span>
+<span class="normal">673</span>
+<span class="normal">674</span>
+<span class="normal">675</span>
+<span class="normal">676</span>
+<span class="normal">677</span>
+<span class="normal">678</span>
+<span class="normal">679</span>
+<span class="normal">680</span>
+<span class="normal">681</span>
+<span class="normal">682</span>
+<span class="normal">683</span>
+<span class="normal">684</span>
+<span class="normal">685</span>
+<span class="normal">686</span>
+<span class="normal">687</span>
+<span class="normal">688</span>
+<span class="normal">689</span>
+<span class="normal">690</span>
+<span class="normal">691</span>
+<span class="normal">692</span>
+<span class="normal">693</span>
+<span class="normal">694</span>
+<span class="normal">695</span>
+<span class="normal">696</span>
+<span class="normal">697</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">HPlotter</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    !!! warning "Experimental"</span>
 
@@ -2163,12 +2166,12 @@ by primary and optional secondary histograms. (See the
 <span class="sd">        """</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_widgets</span><span class="p">:</span> <span class="n">PlotWidgets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Widget</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_widgets</span><span class="p">:</span> <span class="n">PlotWidgets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Widget</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">        Takes a set of widgets (*plot_widgets*) and returns a container (layout) widget</span>
 <span class="sd">        selecting those needed by the plotter.</span>
 <span class="sd">        """</span>
-        <span class="k">return</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+        <span class="k">return</span> <span class="n">VBox</span><span class="p">(</span>
             <span class="p">[</span>
                 <span class="n">plot_widgets</span><span class="o">.</span><span class="n">enable_cutoff</span><span class="p">,</span>
                 <span class="n">plot_widgets</span><span class="o">.</span><span class="n">cutoff</span><span class="p">,</span>
@@ -2179,7 +2182,7 @@ by primary and optional secondary histograms. (See the
     <span class="nd">@abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">hs</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">H</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span>
+        <span class="n">hs</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span>
         <span class="n">settings</span><span class="p">:</span> <span class="n">SettingsDict</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">"""</span>
@@ -2242,7 +2245,7 @@ by primary and optional secondary histograms. (See the
 
 
 <h3 id="dyceum.viz.HPlotter.layout" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">layout</span><span class="p">(</span><span class="n">plot_widgets</span><span class="p">:</span> <span class="n">PlotWidgets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Widget</span></code>
+            <code class="highlight language-python"><span class="n">layout</span><span class="p">(</span><span class="n">plot_widgets</span><span class="p">:</span> <span class="n">PlotWidgets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Widget</span></code>
 
 </h3>
 
@@ -2255,23 +2258,23 @@ selecting those needed by the plotter.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/viz.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">634</span>
-<span class="normal">635</span>
-<span class="normal">636</span>
-<span class="normal">637</span>
-<span class="normal">638</span>
-<span class="normal">639</span>
-<span class="normal">640</span>
-<span class="normal">641</span>
-<span class="normal">642</span>
-<span class="normal">643</span>
-<span class="normal">644</span>
-<span class="normal">645</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_widgets</span><span class="p">:</span> <span class="n">PlotWidgets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Widget</span><span class="p">:</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">662</span>
+<span class="normal">663</span>
+<span class="normal">664</span>
+<span class="normal">665</span>
+<span class="normal">666</span>
+<span class="normal">667</span>
+<span class="normal">668</span>
+<span class="normal">669</span>
+<span class="normal">670</span>
+<span class="normal">671</span>
+<span class="normal">672</span>
+<span class="normal">673</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_widgets</span><span class="p">:</span> <span class="n">PlotWidgets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Widget</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    Takes a set of widgets (*plot_widgets*) and returns a container (layout) widget</span>
 <span class="sd">    selecting those needed by the plotter.</span>
 <span class="sd">    """</span>
-    <span class="k">return</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+    <span class="k">return</span> <span class="n">VBox</span><span class="p">(</span>
         <span class="p">[</span>
             <span class="n">plot_widgets</span><span class="o">.</span><span class="n">enable_cutoff</span><span class="p">,</span>
             <span class="n">plot_widgets</span><span class="o">.</span><span class="n">cutoff</span><span class="p">,</span>
@@ -2288,7 +2291,7 @@ selecting those needed by the plotter.</p>
 
 
 <h3 id="dyceum.viz.HPlotter.plot" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">plot</span><span class="p">(</span><span class="n">hs</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">H</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span> <span class="n">settings</span><span class="p">:</span> <span class="n">SettingsDict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
+            <code class="highlight language-python"><span class="n">plot</span><span class="p">(</span><span class="n">hs</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span> <span class="n">settings</span><span class="p">:</span> <span class="n">SettingsDict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
@@ -2309,25 +2312,25 @@ display at least the primary histogram and visually associate it with the name.<
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/viz.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">647</span>
-<span class="normal">648</span>
-<span class="normal">649</span>
-<span class="normal">650</span>
-<span class="normal">651</span>
-<span class="normal">652</span>
-<span class="normal">653</span>
-<span class="normal">654</span>
-<span class="normal">655</span>
-<span class="normal">656</span>
-<span class="normal">657</span>
-<span class="normal">658</span>
-<span class="normal">659</span>
-<span class="normal">660</span>
-<span class="normal">661</span>
-<span class="normal">662</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">675</span>
+<span class="normal">676</span>
+<span class="normal">677</span>
+<span class="normal">678</span>
+<span class="normal">679</span>
+<span class="normal">680</span>
+<span class="normal">681</span>
+<span class="normal">682</span>
+<span class="normal">683</span>
+<span class="normal">684</span>
+<span class="normal">685</span>
+<span class="normal">686</span>
+<span class="normal">687</span>
+<span class="normal">688</span>
+<span class="normal">689</span>
+<span class="normal">690</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
-    <span class="n">hs</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">H</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span>
+    <span class="n">hs</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span>
     <span class="n">settings</span><span class="p">:</span> <span class="n">SettingsDict</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
@@ -2363,12 +2366,12 @@ display at least the primary histogram and visually associate it with the name.<
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/viz.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">664</span>
-<span class="normal">665</span>
-<span class="normal">666</span>
-<span class="normal">667</span>
-<span class="normal">668</span>
-<span class="normal">669</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">transparent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">requested</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>  <span class="c1"># ruff: ignore[unused-method-argument]</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">692</span>
+<span class="normal">693</span>
+<span class="normal">694</span>
+<span class="normal">695</span>
+<span class="normal">696</span>
+<span class="normal">697</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">transparent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">requested</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>  <span class="c1"># ruff: ignore[unused-method-argument]</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    Returns whether this plotter produces plots which support transparency if</span>
 <span class="sd">    *requested*. The default implementation always returns `False`.</span>
@@ -2410,7 +2413,7 @@ future versions.</p>
 </div>
 <p>A controller for coordinating the display of a histogram data set and selection of
 one or more plotters as well as triggering updates in response to either control or
-data changes. All parameters for the [initializer][dyceum.HPlotterChooser.__init__]
+data changes. All parameters for the <a class="autorefs autorefs-internal" title="__init__(histogram_specs: Iterable[HLikeT | tuple[str, HLikeT] | tuple[str, HLikeT, HLikeT | None] | None] = (), *, controls_expanded: bool = False, plot_widgets: PlotWidgets | None = None, plotters_or_factories: Iterable[HPlotter | HPlotterFactoryT] = (BurstHPlotter, LineHPlotter, HorizontalBarHPlotter), selected_name: str | None = None) -&gt; None" href="./#dyceum.viz.HPlotterChooser.__init__">initializer</a>
 are optional.</p>
 <p><em>histogram_specs</em> is the histogram data set which defaults to an empty tuple. If
 provided, each item therein can be a <code>dyce.H</code> object, a 2-tuple, or a
@@ -2423,13 +2426,13 @@ it does not advance the automatic naming counter. This can be useful as “blank
 filler to achieve a desired layout (e.g., where one wants to compare across burst
 graphs that don't neatly fit into a particular row size).</p>
 <p>The histogram data set can also be replaced via
-<a class="autorefs autorefs-internal" title="update_hs(histogram_specs: Iterable[HLikeT | tuple[str, HLikeT] | tuple[str, HLikeT, HLikeT | None] | None]) -> None" href="#dyceum.viz.HPlotterChooser.update_hs"><code>update_hs</code></a>.</p>
+<a class="autorefs autorefs-internal" title="update_hs(histogram_specs: Iterable[HLikeT | tuple[str, HLikeT] | tuple[str, HLikeT, HLikeT | None] | None]) -&gt; None" href="./#dyceum.viz.HPlotterChooser.update_hs"><code>update_hs</code></a>.</p>
 <p>Plotter controls (including the selection tabs) are contained within an accordion
 interface. If <em>controls_expanded</em> is <code>True</code>, the accordion is initially
 expanded for the user. If it is <code>False</code>, it is initially collapsed.</p>
 <p><em>plot_widgets</em> allows object creators to customize the available control widgets,
 including their initial values. It defaults to <code>None</code> which results in a
-fresh <a class="autorefs autorefs-internal" href="#dyceum.viz.PlotWidgets"><code>PlotWidgets</code></a> object being created during
+fresh <a class="autorefs autorefs-internal" href="./#dyceum.viz.PlotWidgets"><code>PlotWidgets</code></a> object being created during
 construction.</p>
 <p><em>plotters_or_factories</em> allows overriding which plotters are available. The default
 is to provide factories for all plotters currently available in <code>dyceum</code>.</p>
@@ -2446,46 +2449,7 @@ the <code>NAME</code> property of an available plotter provided by the
 
               <details class="mkdocstrings-source">
                 <summary>Source code in <code>dyceum/viz.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 961</span>
-<span class="normal"> 962</span>
-<span class="normal"> 963</span>
-<span class="normal"> 964</span>
-<span class="normal"> 965</span>
-<span class="normal"> 966</span>
-<span class="normal"> 967</span>
-<span class="normal"> 968</span>
-<span class="normal"> 969</span>
-<span class="normal"> 970</span>
-<span class="normal"> 971</span>
-<span class="normal"> 972</span>
-<span class="normal"> 973</span>
-<span class="normal"> 974</span>
-<span class="normal"> 975</span>
-<span class="normal"> 976</span>
-<span class="normal"> 977</span>
-<span class="normal"> 978</span>
-<span class="normal"> 979</span>
-<span class="normal"> 980</span>
-<span class="normal"> 981</span>
-<span class="normal"> 982</span>
-<span class="normal"> 983</span>
-<span class="normal"> 984</span>
-<span class="normal"> 985</span>
-<span class="normal"> 986</span>
-<span class="normal"> 987</span>
-<span class="normal"> 988</span>
-<span class="normal"> 989</span>
-<span class="normal"> 990</span>
-<span class="normal"> 991</span>
-<span class="normal"> 992</span>
-<span class="normal"> 993</span>
-<span class="normal"> 994</span>
-<span class="normal"> 995</span>
-<span class="normal"> 996</span>
-<span class="normal"> 997</span>
-<span class="normal"> 998</span>
-<span class="normal"> 999</span>
-<span class="normal">1000</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1000</span>
 <span class="normal">1001</span>
 <span class="normal">1002</span>
 <span class="normal">1003</span>
@@ -2690,7 +2654,48 @@ the <code>NAME</code> property of an available plotter provided by the
 <span class="normal">1202</span>
 <span class="normal">1203</span>
 <span class="normal">1204</span>
-<span class="normal">1205</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">HPlotterChooser</span><span class="p">:</span>
+<span class="normal">1205</span>
+<span class="normal">1206</span>
+<span class="normal">1207</span>
+<span class="normal">1208</span>
+<span class="normal">1209</span>
+<span class="normal">1210</span>
+<span class="normal">1211</span>
+<span class="normal">1212</span>
+<span class="normal">1213</span>
+<span class="normal">1214</span>
+<span class="normal">1215</span>
+<span class="normal">1216</span>
+<span class="normal">1217</span>
+<span class="normal">1218</span>
+<span class="normal">1219</span>
+<span class="normal">1220</span>
+<span class="normal">1221</span>
+<span class="normal">1222</span>
+<span class="normal">1223</span>
+<span class="normal">1224</span>
+<span class="normal">1225</span>
+<span class="normal">1226</span>
+<span class="normal">1227</span>
+<span class="normal">1228</span>
+<span class="normal">1229</span>
+<span class="normal">1230</span>
+<span class="normal">1231</span>
+<span class="normal">1232</span>
+<span class="normal">1233</span>
+<span class="normal">1234</span>
+<span class="normal">1235</span>
+<span class="normal">1236</span>
+<span class="normal">1237</span>
+<span class="normal">1238</span>
+<span class="normal">1239</span>
+<span class="normal">1240</span>
+<span class="normal">1241</span>
+<span class="normal">1242</span>
+<span class="normal">1243</span>
+<span class="normal">1244</span>
+<span class="normal">1245</span>
+<span class="normal">1246</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">HPlotterChooser</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    !!! warning "Experimental"</span>
 
@@ -2699,7 +2704,7 @@ the <code>NAME</code> property of an available plotter provided by the
 
 <span class="sd">    A controller for coordinating the display of a histogram data set and selection of</span>
 <span class="sd">    one or more plotters as well as triggering updates in response to either control or</span>
-<span class="sd">    data changes. All parameters for the [initializer][dyceum.HPlotterChooser.__init__]</span>
+<span class="sd">    data changes. All parameters for the [initializer][dyceum.viz.HPlotterChooser.__init__]</span>
 <span class="sd">    are optional.</span>
 
 <span class="sd">    *histogram_specs* is the histogram data set which defaults to an empty tuple. If</span>
@@ -2790,20 +2795,20 @@ the <code>NAME</code> property of an available plotter provided by the
             <span class="n">plot_widgets</span> <span class="o">=</span> <span class="n">PlotWidgets</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widgets</span> <span class="o">=</span> <span class="n">plot_widgets</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_layouts_by_name</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Widget</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_layouts_by_name</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Widget</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">plotter_name</span><span class="p">,</span> <span class="n">plotter</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plotters_by_name</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_layouts_by_name</span><span class="p">[</span><span class="n">plotter_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">layout</span><span class="p">(</span><span class="n">plot_widgets</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">hs</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">H</span> <span class="o">|</span> <span class="kc">None</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_hs_culled</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">H</span> <span class="o">|</span> <span class="kc">None</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hs</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_hs_culled</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_csv_download_link_html</span> <span class="o">=</span> <span class="s2">""</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">update_hs</span><span class="p">(</span><span class="n">histogram_specs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_selected_plotter</span><span class="p">:</span> <span class="n">HPlotter</span> <span class="o">|</span> <span class="kc">None</span>
         <span class="n">tab_names</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_plotters_by_name</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 
-        <span class="n">chooser_tab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Tab</span><span class="p">(</span>
+        <span class="n">chooser_tab</span> <span class="o">=</span> <span class="n">Tab</span><span class="p">(</span>
             <span class="n">children</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_layouts_by_name</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span>
             <span class="n">selected_index</span><span class="o">=</span><span class="p">(</span>
                 <span class="mi">0</span> <span class="k">if</span> <span class="n">selected_name</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">tab_names</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">selected_name</span><span class="p">)</span>
@@ -2811,7 +2816,7 @@ the <code>NAME</code> property of an available plotter provided by the
         <span class="p">)</span>
 
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">tab_name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tab_names</span><span class="p">):</span>
-            <span class="n">chooser_tab</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">tab_name</span><span class="p">)</span>
+            <span class="n">chooser_tab</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">tab_name</span><span class="p">)</span>  <span class="c1"># zuban: ignore[no-untyped-call]</span>
 
         <span class="k">def</span><span class="w"> </span><span class="nf">_handle_tab</span><span class="p">(</span><span class="n">change</span><span class="p">:</span> <span class="n">_ChangeT</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">assert</span> <span class="n">change</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"selected_index"</span>
@@ -2826,9 +2831,9 @@ the <code>NAME</code> property of an available plotter provided by the
             <span class="n">islice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_plotters_by_name</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">chooser_tab</span><span class="o">.</span><span class="n">selected_index</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
         <span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_out</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_out</span> <span class="o">=</span> <span class="n">VBox</span><span class="p">(</span>
             <span class="p">[</span>
-                <span class="n">widgets</span><span class="o">.</span><span class="n">Accordion</span><span class="p">(</span>
+                <span class="n">Accordion</span><span class="p">(</span>
                     <span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="n">chooser_tab</span><span class="p">],</span>
                     <span class="n">titles</span><span class="o">=</span><span class="p">[</span><span class="s2">"Plot Controls"</span><span class="p">],</span>
                     <span class="n">selected_index</span><span class="o">=</span><span class="mi">0</span> <span class="k">if</span> <span class="n">controls_expanded</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
@@ -2838,7 +2843,9 @@ the <code>NAME</code> property of an available plotter provided by the
                 <span class="c1"># _handle_plot_style. See the matching note there. Do not reorder these</span>
                 <span class="c1"># so that interactive_output observes plot_style before</span>
                 <span class="c1"># _handle_plot_style.</span>
-                <span class="n">widgets</span><span class="o">.</span><span class="n">interactive_output</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widgets</span><span class="o">.</span><span class="n">asdict</span><span class="p">()),</span>
+                <span class="n">interactive_output</span><span class="p">(</span>  <span class="c1"># zuban: ignore[no-untyped-call]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widgets</span><span class="o">.</span><span class="n">asdict</span><span class="p">()</span>
+                <span class="p">),</span>
             <span class="p">]</span>
         <span class="p">)</span>
 
@@ -2846,11 +2853,11 @@ the <code>NAME</code> property of an available plotter provided by the
 <span class="w">        </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">        Displays the container responsible for selecting which plotter is used.</span>
 <span class="sd">        """</span>
-        <span class="n">display</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_out</span><span class="p">)</span>
+        <span class="n">_display</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_out</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="o">**</span><span class="n">kw</span><span class="p">,</span>  <span class="c1"># ruff: ignore[missing-type-kwargs]</span>
+        <span class="o">**</span><span class="n">kw</span><span class="p">:</span> <span class="n">Unpack</span><span class="p">[</span><span class="n">SettingsDict</span><span class="p">],</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">        Callback for updating the visualization in response to configuration or data</span>
@@ -2859,7 +2866,7 @@ the <code>NAME</code> property of an available plotter provided by the
 <span class="sd">        """</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widgets</span><span class="o">.</span><span class="n">plot_updates_suspended</span><span class="p">:</span>
             <span class="k">return</span>
-        <span class="n">settings</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="s2">"SettingsDict"</span><span class="p">,</span> <span class="n">kw</span><span class="p">)</span>
+        <span class="n">settings</span> <span class="o">=</span> <span class="n">kw</span>
         <span class="n">cutoff</span> <span class="o">=</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widgets</span><span class="o">.</span><span class="n">cutoff</span><span class="o">.</span><span class="n">value</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widgets</span><span class="o">.</span><span class="n">enable_cutoff</span><span class="o">.</span><span class="n">value</span>
@@ -2890,16 +2897,16 @@ the <code>NAME</code> property of an available plotter provided by the
             <span class="p">)</span>
             <span class="n">img_name</span> <span class="o">=</span> <span class="s2">"-"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">label</span> <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">hs</span><span class="p">)</span>
             <span class="n">svg_raw</span> <span class="o">=</span> <span class="n">buf</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
-            <span class="n">display</span><span class="p">(</span>
-                <span class="n">HTML</span><span class="p">(</span>
+            <span class="n">_display</span><span class="p">(</span>
+                <span class="n">_html</span><span class="p">(</span>
                     <span class="sa">rf</span><span class="s2">"""</span>
 <span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_csv_download_link_html</span><span class="si">}</span><span class="s2"> |</span>
 <span class="s2">&lt;a download="</span><span class="si">{</span><span class="n">img_name</span><span class="si">}</span><span class="s2">.svg" href="data:image/svg+xml,</span><span class="si">{</span><span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">svg_raw</span><span class="p">)</span><span class="si">}</span><span class="s2">" target="_blank"&gt;Download SVG image&lt;/a&gt;</span>
 <span class="s2">                """</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
                 <span class="p">)</span>
             <span class="p">)</span>
-            <span class="n">display</span><span class="p">(</span>
-                <span class="n">widgets</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span>
+            <span class="n">_display</span><span class="p">(</span>
+                <span class="n">Image</span><span class="p">(</span>
                     <span class="n">value</span><span class="o">=</span><span class="n">svg_raw</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">),</span>
                     <span class="nb">format</span><span class="o">=</span><span class="s2">"svg+xml"</span><span class="p">,</span>
                     <span class="n">width</span><span class="o">=</span><span class="s2">"100%"</span><span class="p">,</span>
@@ -2967,46 +2974,7 @@ the <code>NAME</code> property of an available plotter provided by the
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/viz.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1005</span>
-<span class="normal">1006</span>
-<span class="normal">1007</span>
-<span class="normal">1008</span>
-<span class="normal">1009</span>
-<span class="normal">1010</span>
-<span class="normal">1011</span>
-<span class="normal">1012</span>
-<span class="normal">1013</span>
-<span class="normal">1014</span>
-<span class="normal">1015</span>
-<span class="normal">1016</span>
-<span class="normal">1017</span>
-<span class="normal">1018</span>
-<span class="normal">1019</span>
-<span class="normal">1020</span>
-<span class="normal">1021</span>
-<span class="normal">1022</span>
-<span class="normal">1023</span>
-<span class="normal">1024</span>
-<span class="normal">1025</span>
-<span class="normal">1026</span>
-<span class="normal">1027</span>
-<span class="normal">1028</span>
-<span class="normal">1029</span>
-<span class="normal">1030</span>
-<span class="normal">1031</span>
-<span class="normal">1032</span>
-<span class="normal">1033</span>
-<span class="normal">1034</span>
-<span class="normal">1035</span>
-<span class="normal">1036</span>
-<span class="normal">1037</span>
-<span class="normal">1038</span>
-<span class="normal">1039</span>
-<span class="normal">1040</span>
-<span class="normal">1041</span>
-<span class="normal">1042</span>
-<span class="normal">1043</span>
-<span class="normal">1044</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1044</span>
 <span class="normal">1045</span>
 <span class="normal">1046</span>
 <span class="normal">1047</span>
@@ -3073,7 +3041,48 @@ the <code>NAME</code> property of an available plotter provided by the
 <span class="normal">1108</span>
 <span class="normal">1109</span>
 <span class="normal">1110</span>
-<span class="normal">1111</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">1111</span>
+<span class="normal">1112</span>
+<span class="normal">1113</span>
+<span class="normal">1114</span>
+<span class="normal">1115</span>
+<span class="normal">1116</span>
+<span class="normal">1117</span>
+<span class="normal">1118</span>
+<span class="normal">1119</span>
+<span class="normal">1120</span>
+<span class="normal">1121</span>
+<span class="normal">1122</span>
+<span class="normal">1123</span>
+<span class="normal">1124</span>
+<span class="normal">1125</span>
+<span class="normal">1126</span>
+<span class="normal">1127</span>
+<span class="normal">1128</span>
+<span class="normal">1129</span>
+<span class="normal">1130</span>
+<span class="normal">1131</span>
+<span class="normal">1132</span>
+<span class="normal">1133</span>
+<span class="normal">1134</span>
+<span class="normal">1135</span>
+<span class="normal">1136</span>
+<span class="normal">1137</span>
+<span class="normal">1138</span>
+<span class="normal">1139</span>
+<span class="normal">1140</span>
+<span class="normal">1141</span>
+<span class="normal">1142</span>
+<span class="normal">1143</span>
+<span class="normal">1144</span>
+<span class="normal">1145</span>
+<span class="normal">1146</span>
+<span class="normal">1147</span>
+<span class="normal">1148</span>
+<span class="normal">1149</span>
+<span class="normal">1150</span>
+<span class="normal">1151</span>
+<span class="normal">1152</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">histogram_specs</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span>
         <span class="n">HLikeT</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">HLikeT</span><span class="p">]</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">HLikeT</span><span class="p">,</span> <span class="n">HLikeT</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span>
@@ -3129,20 +3138,20 @@ the <code>NAME</code> property of an available plotter provided by the
         <span class="n">plot_widgets</span> <span class="o">=</span> <span class="n">PlotWidgets</span><span class="p">()</span>
 
     <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widgets</span> <span class="o">=</span> <span class="n">plot_widgets</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_layouts_by_name</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Widget</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_layouts_by_name</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Widget</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="k">for</span> <span class="n">plotter_name</span><span class="p">,</span> <span class="n">plotter</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plotters_by_name</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_layouts_by_name</span><span class="p">[</span><span class="n">plotter_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">layout</span><span class="p">(</span><span class="n">plot_widgets</span><span class="p">)</span>
 
-    <span class="bp">self</span><span class="o">.</span><span class="n">hs</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">H</span> <span class="o">|</span> <span class="kc">None</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_hs_culled</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">H</span> <span class="o">|</span> <span class="kc">None</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">hs</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_hs_culled</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">],</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">()</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_cutoff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_csv_download_link_html</span> <span class="o">=</span> <span class="s2">""</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">update_hs</span><span class="p">(</span><span class="n">histogram_specs</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_selected_plotter</span><span class="p">:</span> <span class="n">HPlotter</span> <span class="o">|</span> <span class="kc">None</span>
     <span class="n">tab_names</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_plotters_by_name</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 
-    <span class="n">chooser_tab</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Tab</span><span class="p">(</span>
+    <span class="n">chooser_tab</span> <span class="o">=</span> <span class="n">Tab</span><span class="p">(</span>
         <span class="n">children</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_layouts_by_name</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span>
         <span class="n">selected_index</span><span class="o">=</span><span class="p">(</span>
             <span class="mi">0</span> <span class="k">if</span> <span class="n">selected_name</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">tab_names</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">selected_name</span><span class="p">)</span>
@@ -3150,7 +3159,7 @@ the <code>NAME</code> property of an available plotter provided by the
     <span class="p">)</span>
 
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">tab_name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tab_names</span><span class="p">):</span>
-        <span class="n">chooser_tab</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">tab_name</span><span class="p">)</span>
+        <span class="n">chooser_tab</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">tab_name</span><span class="p">)</span>  <span class="c1"># zuban: ignore[no-untyped-call]</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_handle_tab</span><span class="p">(</span><span class="n">change</span><span class="p">:</span> <span class="n">_ChangeT</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">assert</span> <span class="n">change</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"selected_index"</span>
@@ -3165,9 +3174,9 @@ the <code>NAME</code> property of an available plotter provided by the
         <span class="n">islice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_plotters_by_name</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">chooser_tab</span><span class="o">.</span><span class="n">selected_index</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
     <span class="p">)</span>
 
-    <span class="bp">self</span><span class="o">.</span><span class="n">_out</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_out</span> <span class="o">=</span> <span class="n">VBox</span><span class="p">(</span>
         <span class="p">[</span>
-            <span class="n">widgets</span><span class="o">.</span><span class="n">Accordion</span><span class="p">(</span>
+            <span class="n">Accordion</span><span class="p">(</span>
                 <span class="n">children</span><span class="o">=</span><span class="p">[</span><span class="n">chooser_tab</span><span class="p">],</span>
                 <span class="n">titles</span><span class="o">=</span><span class="p">[</span><span class="s2">"Plot Controls"</span><span class="p">],</span>
                 <span class="n">selected_index</span><span class="o">=</span><span class="mi">0</span> <span class="k">if</span> <span class="n">controls_expanded</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
@@ -3177,7 +3186,9 @@ the <code>NAME</code> property of an available plotter provided by the
             <span class="c1"># _handle_plot_style. See the matching note there. Do not reorder these</span>
             <span class="c1"># so that interactive_output observes plot_style before</span>
             <span class="c1"># _handle_plot_style.</span>
-            <span class="n">widgets</span><span class="o">.</span><span class="n">interactive_output</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widgets</span><span class="o">.</span><span class="n">asdict</span><span class="p">()),</span>
+            <span class="n">interactive_output</span><span class="p">(</span>  <span class="c1"># zuban: ignore[no-untyped-call]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">plot</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widgets</span><span class="o">.</span><span class="n">asdict</span><span class="p">()</span>
+            <span class="p">),</span>
         <span class="p">]</span>
     <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -3202,15 +3213,15 @@ the <code>NAME</code> property of an available plotter provided by the
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/viz.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1113</span>
-<span class="normal">1114</span>
-<span class="normal">1115</span>
-<span class="normal">1116</span>
-<span class="normal">1117</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">interact</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1154</span>
+<span class="normal">1155</span>
+<span class="normal">1156</span>
+<span class="normal">1157</span>
+<span class="normal">1158</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">interact</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    Displays the container responsible for selecting which plotter is used.</span>
 <span class="sd">    """</span>
-    <span class="n">display</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_out</span><span class="p">)</span>
+    <span class="n">_display</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_out</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -3221,7 +3232,7 @@ the <code>NAME</code> property of an available plotter provided by the
 
 
 <h3 id="dyceum.viz.HPlotterChooser.plot" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">plot</span><span class="p">(</span><span class="o">**</span><span class="n">kw</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
+            <code class="highlight language-python"><span class="n">plot</span><span class="p">(</span><span class="o">**</span><span class="n">kw</span><span class="p">:</span> <span class="n">Unpack</span><span class="p">[</span><span class="n">SettingsDict</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
 
 </h3>
 
@@ -3230,53 +3241,12 @@ the <code>NAME</code> property of an available plotter provided by the
 
         <p>Callback for updating the visualization in response to configuration or data
 changes. <em>settings</em> are the current values from all control widgets. (See
-<a class="autorefs autorefs-internal" href="#dyceum.viz.PlotWidgets"><code>PlotWidgets</code></a>.)</p>
+<a class="autorefs autorefs-internal" href="./#dyceum.viz.PlotWidgets"><code>PlotWidgets</code></a>.)</p>
 
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/viz.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1119</span>
-<span class="normal">1120</span>
-<span class="normal">1121</span>
-<span class="normal">1122</span>
-<span class="normal">1123</span>
-<span class="normal">1124</span>
-<span class="normal">1125</span>
-<span class="normal">1126</span>
-<span class="normal">1127</span>
-<span class="normal">1128</span>
-<span class="normal">1129</span>
-<span class="normal">1130</span>
-<span class="normal">1131</span>
-<span class="normal">1132</span>
-<span class="normal">1133</span>
-<span class="normal">1134</span>
-<span class="normal">1135</span>
-<span class="normal">1136</span>
-<span class="normal">1137</span>
-<span class="normal">1138</span>
-<span class="normal">1139</span>
-<span class="normal">1140</span>
-<span class="normal">1141</span>
-<span class="normal">1142</span>
-<span class="normal">1143</span>
-<span class="normal">1144</span>
-<span class="normal">1145</span>
-<span class="normal">1146</span>
-<span class="normal">1147</span>
-<span class="normal">1148</span>
-<span class="normal">1149</span>
-<span class="normal">1150</span>
-<span class="normal">1151</span>
-<span class="normal">1152</span>
-<span class="normal">1153</span>
-<span class="normal">1154</span>
-<span class="normal">1155</span>
-<span class="normal">1156</span>
-<span class="normal">1157</span>
-<span class="normal">1158</span>
-<span class="normal">1159</span>
-<span class="normal">1160</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1160</span>
 <span class="normal">1161</span>
 <span class="normal">1162</span>
 <span class="normal">1163</span>
@@ -3294,9 +3264,50 @@ changes. <em>settings</em> are the current values from all control widgets. (See
 <span class="normal">1175</span>
 <span class="normal">1176</span>
 <span class="normal">1177</span>
-<span class="normal">1178</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span>
+<span class="normal">1178</span>
+<span class="normal">1179</span>
+<span class="normal">1180</span>
+<span class="normal">1181</span>
+<span class="normal">1182</span>
+<span class="normal">1183</span>
+<span class="normal">1184</span>
+<span class="normal">1185</span>
+<span class="normal">1186</span>
+<span class="normal">1187</span>
+<span class="normal">1188</span>
+<span class="normal">1189</span>
+<span class="normal">1190</span>
+<span class="normal">1191</span>
+<span class="normal">1192</span>
+<span class="normal">1193</span>
+<span class="normal">1194</span>
+<span class="normal">1195</span>
+<span class="normal">1196</span>
+<span class="normal">1197</span>
+<span class="normal">1198</span>
+<span class="normal">1199</span>
+<span class="normal">1200</span>
+<span class="normal">1201</span>
+<span class="normal">1202</span>
+<span class="normal">1203</span>
+<span class="normal">1204</span>
+<span class="normal">1205</span>
+<span class="normal">1206</span>
+<span class="normal">1207</span>
+<span class="normal">1208</span>
+<span class="normal">1209</span>
+<span class="normal">1210</span>
+<span class="normal">1211</span>
+<span class="normal">1212</span>
+<span class="normal">1213</span>
+<span class="normal">1214</span>
+<span class="normal">1215</span>
+<span class="normal">1216</span>
+<span class="normal">1217</span>
+<span class="normal">1218</span>
+<span class="normal">1219</span></pre></div></td><td class="code"><div><pre><span></span><code>    <span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="o">**</span><span class="n">kw</span><span class="p">,</span>  <span class="c1"># ruff: ignore[missing-type-kwargs]</span>
+        <span class="o">**</span><span class="n">kw</span><span class="p">:</span> <span class="n">Unpack</span><span class="p">[</span><span class="n">SettingsDict</span><span class="p">],</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">        Callback for updating the visualization in response to configuration or data</span>
@@ -3305,7 +3316,7 @@ changes. <em>settings</em> are the current values from all control widgets. (See
 <span class="sd">        """</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widgets</span><span class="o">.</span><span class="n">plot_updates_suspended</span><span class="p">:</span>
             <span class="k">return</span>
-        <span class="n">settings</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="s2">"SettingsDict"</span><span class="p">,</span> <span class="n">kw</span><span class="p">)</span>
+        <span class="n">settings</span> <span class="o">=</span> <span class="n">kw</span>
         <span class="n">cutoff</span> <span class="o">=</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widgets</span><span class="o">.</span><span class="n">cutoff</span><span class="o">.</span><span class="n">value</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_widgets</span><span class="o">.</span><span class="n">enable_cutoff</span><span class="o">.</span><span class="n">value</span>
@@ -3336,16 +3347,16 @@ changes. <em>settings</em> are the current values from all control widgets. (See
             <span class="p">)</span>
             <span class="n">img_name</span> <span class="o">=</span> <span class="s2">"-"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">label</span> <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">hs</span><span class="p">)</span>
             <span class="n">svg_raw</span> <span class="o">=</span> <span class="n">buf</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
-            <span class="n">display</span><span class="p">(</span>
-                <span class="n">HTML</span><span class="p">(</span>
+            <span class="n">_display</span><span class="p">(</span>
+                <span class="n">_html</span><span class="p">(</span>
                     <span class="sa">rf</span><span class="s2">"""</span>
 <span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_csv_download_link_html</span><span class="si">}</span><span class="s2"> |</span>
 <span class="s2">&lt;a download="</span><span class="si">{</span><span class="n">img_name</span><span class="si">}</span><span class="s2">.svg" href="data:image/svg+xml,</span><span class="si">{</span><span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">svg_raw</span><span class="p">)</span><span class="si">}</span><span class="s2">" target="_blank"&gt;Download SVG image&lt;/a&gt;</span>
 <span class="s2">                """</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
                 <span class="p">)</span>
             <span class="p">)</span>
-            <span class="n">display</span><span class="p">(</span>
-                <span class="n">widgets</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span>
+            <span class="n">_display</span><span class="p">(</span>
+                <span class="n">Image</span><span class="p">(</span>
                     <span class="n">value</span><span class="o">=</span><span class="n">svg_raw</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">),</span>
                     <span class="nb">format</span><span class="o">=</span><span class="s2">"svg+xml"</span><span class="p">,</span>
                     <span class="n">width</span><span class="o">=</span><span class="s2">"100%"</span><span class="p">,</span>
@@ -3372,32 +3383,32 @@ changes. <em>settings</em> are the current values from all control widgets. (See
     <div class="doc doc-contents ">
 
         <p>Triggers an update to the histogram data. See
-<a class="autorefs autorefs-internal" href="#dyceum.viz.HPlotterChooser"><code>HPlotterChooser</code></a> for a more detailed
+<a class="autorefs autorefs-internal" href="./#dyceum.viz.HPlotterChooser"><code>HPlotterChooser</code></a> for a more detailed
 explanation of <em>histogram_specs</em>.</p>
 
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/viz.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1180</span>
-<span class="normal">1181</span>
-<span class="normal">1182</span>
-<span class="normal">1183</span>
-<span class="normal">1184</span>
-<span class="normal">1185</span>
-<span class="normal">1186</span>
-<span class="normal">1187</span>
-<span class="normal">1188</span>
-<span class="normal">1189</span>
-<span class="normal">1190</span>
-<span class="normal">1191</span>
-<span class="normal">1192</span>
-<span class="normal">1193</span>
-<span class="normal">1194</span>
-<span class="normal">1195</span>
-<span class="normal">1196</span>
-<span class="normal">1197</span>
-<span class="normal">1198</span>
-<span class="normal">1199</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">update_hs</span><span class="p">(</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1221</span>
+<span class="normal">1222</span>
+<span class="normal">1223</span>
+<span class="normal">1224</span>
+<span class="normal">1225</span>
+<span class="normal">1226</span>
+<span class="normal">1227</span>
+<span class="normal">1228</span>
+<span class="normal">1229</span>
+<span class="normal">1230</span>
+<span class="normal">1231</span>
+<span class="normal">1232</span>
+<span class="normal">1233</span>
+<span class="normal">1234</span>
+<span class="normal">1235</span>
+<span class="normal">1236</span>
+<span class="normal">1237</span>
+<span class="normal">1238</span>
+<span class="normal">1239</span>
+<span class="normal">1240</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">update_hs</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">histogram_specs</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span>
         <span class="n">HLikeT</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">HLikeT</span><span class="p">]</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">HLikeT</span><span class="p">,</span> <span class="n">HLikeT</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span>
@@ -3444,7 +3455,7 @@ explanation of <em>histogram_specs</em>.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="HPlotter (dyceum.viz.HPlotter)" href="#dyceum.viz.HPlotter">HPlotter</a></code></p>
+              Bases: <code><a class="autorefs autorefs-internal" title="HPlotter (dyceum.viz.HPlotter)" href="./#dyceum.viz.HPlotter">HPlotter</a></code></p>
 
 
 
@@ -3465,46 +3476,7 @@ histograms are ignored.</p>
 
               <details class="mkdocstrings-source">
                 <summary>Source code in <code>dyceum/viz.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">804</span>
-<span class="normal">805</span>
-<span class="normal">806</span>
-<span class="normal">807</span>
-<span class="normal">808</span>
-<span class="normal">809</span>
-<span class="normal">810</span>
-<span class="normal">811</span>
-<span class="normal">812</span>
-<span class="normal">813</span>
-<span class="normal">814</span>
-<span class="normal">815</span>
-<span class="normal">816</span>
-<span class="normal">817</span>
-<span class="normal">818</span>
-<span class="normal">819</span>
-<span class="normal">820</span>
-<span class="normal">821</span>
-<span class="normal">822</span>
-<span class="normal">823</span>
-<span class="normal">824</span>
-<span class="normal">825</span>
-<span class="normal">826</span>
-<span class="normal">827</span>
-<span class="normal">828</span>
-<span class="normal">829</span>
-<span class="normal">830</span>
-<span class="normal">831</span>
-<span class="normal">832</span>
-<span class="normal">833</span>
-<span class="normal">834</span>
-<span class="normal">835</span>
-<span class="normal">836</span>
-<span class="normal">837</span>
-<span class="normal">838</span>
-<span class="normal">839</span>
-<span class="normal">840</span>
-<span class="normal">841</span>
-<span class="normal">842</span>
-<span class="normal">843</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">843</span>
 <span class="normal">844</span>
 <span class="normal">845</span>
 <span class="normal">846</span>
@@ -3559,7 +3531,46 @@ histograms are ignored.</p>
 <span class="normal">895</span>
 <span class="normal">896</span>
 <span class="normal">897</span>
-<span class="normal">898</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">HorizontalBarHPlotter</span><span class="p">(</span><span class="n">HPlotter</span><span class="p">):</span>
+<span class="normal">898</span>
+<span class="normal">899</span>
+<span class="normal">900</span>
+<span class="normal">901</span>
+<span class="normal">902</span>
+<span class="normal">903</span>
+<span class="normal">904</span>
+<span class="normal">905</span>
+<span class="normal">906</span>
+<span class="normal">907</span>
+<span class="normal">908</span>
+<span class="normal">909</span>
+<span class="normal">910</span>
+<span class="normal">911</span>
+<span class="normal">912</span>
+<span class="normal">913</span>
+<span class="normal">914</span>
+<span class="normal">915</span>
+<span class="normal">916</span>
+<span class="normal">917</span>
+<span class="normal">918</span>
+<span class="normal">919</span>
+<span class="normal">920</span>
+<span class="normal">921</span>
+<span class="normal">922</span>
+<span class="normal">923</span>
+<span class="normal">924</span>
+<span class="normal">925</span>
+<span class="normal">926</span>
+<span class="normal">927</span>
+<span class="normal">928</span>
+<span class="normal">929</span>
+<span class="normal">930</span>
+<span class="normal">931</span>
+<span class="normal">932</span>
+<span class="normal">933</span>
+<span class="normal">934</span>
+<span class="normal">935</span>
+<span class="normal">936</span>
+<span class="normal">937</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">HorizontalBarHPlotter</span><span class="p">(</span><span class="n">HPlotter</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    !!! warning "Experimental"</span>
 
@@ -3572,16 +3583,16 @@ histograms are ignored.</p>
 
     <span class="n">NAME</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"Horizontal Bar Plots"</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_widgets</span><span class="p">:</span> <span class="n">PlotWidgets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Widget</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_widgets</span><span class="p">:</span> <span class="n">PlotWidgets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Widget</span><span class="p">:</span>
         <span class="n">cutoff_layout_widget</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">layout</span><span class="p">(</span><span class="n">plot_widgets</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+        <span class="k">return</span> <span class="n">VBox</span><span class="p">(</span>
             <span class="p">[</span>
-                <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">(</span>
+                <span class="n">HBox</span><span class="p">(</span>
                     <span class="p">[</span>
                         <span class="n">cutoff_layout_widget</span><span class="p">,</span>
                         <span class="n">plot_widgets</span><span class="o">.</span><span class="n">graph_type</span><span class="p">,</span>
-                        <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+                        <span class="n">VBox</span><span class="p">(</span>
                             <span class="p">[</span>
                                 <span class="n">plot_widgets</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span>
                                 <span class="n">plot_widgets</span><span class="o">.</span><span class="n">plot_style</span><span class="p">,</span>
@@ -3594,7 +3605,7 @@ histograms are ignored.</p>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">hs</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">H</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span>
+        <span class="n">hs</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span>
         <span class="n">settings</span><span class="p">:</span> <span class="n">SettingsDict</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">total_outcomes</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">hs</span><span class="p">)</span>
@@ -3691,7 +3702,7 @@ histograms are ignored.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="HPlotter (dyceum.viz.HPlotter)" href="#dyceum.viz.HPlotter">HPlotter</a></code></p>
+              Bases: <code><a class="autorefs autorefs-internal" title="HPlotter (dyceum.viz.HPlotter)" href="./#dyceum.viz.HPlotter">HPlotter</a></code></p>
 
 
 
@@ -3712,46 +3723,7 @@ Secondary histograms are ignored.</p>
 
               <details class="mkdocstrings-source">
                 <summary>Source code in <code>dyceum/viz.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">901</span>
-<span class="normal">902</span>
-<span class="normal">903</span>
-<span class="normal">904</span>
-<span class="normal">905</span>
-<span class="normal">906</span>
-<span class="normal">907</span>
-<span class="normal">908</span>
-<span class="normal">909</span>
-<span class="normal">910</span>
-<span class="normal">911</span>
-<span class="normal">912</span>
-<span class="normal">913</span>
-<span class="normal">914</span>
-<span class="normal">915</span>
-<span class="normal">916</span>
-<span class="normal">917</span>
-<span class="normal">918</span>
-<span class="normal">919</span>
-<span class="normal">920</span>
-<span class="normal">921</span>
-<span class="normal">922</span>
-<span class="normal">923</span>
-<span class="normal">924</span>
-<span class="normal">925</span>
-<span class="normal">926</span>
-<span class="normal">927</span>
-<span class="normal">928</span>
-<span class="normal">929</span>
-<span class="normal">930</span>
-<span class="normal">931</span>
-<span class="normal">932</span>
-<span class="normal">933</span>
-<span class="normal">934</span>
-<span class="normal">935</span>
-<span class="normal">936</span>
-<span class="normal">937</span>
-<span class="normal">938</span>
-<span class="normal">939</span>
-<span class="normal">940</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">940</span>
 <span class="normal">941</span>
 <span class="normal">942</span>
 <span class="normal">943</span>
@@ -3769,7 +3741,46 @@ Secondary histograms are ignored.</p>
 <span class="normal">955</span>
 <span class="normal">956</span>
 <span class="normal">957</span>
-<span class="normal">958</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">LineHPlotter</span><span class="p">(</span><span class="n">HPlotter</span><span class="p">):</span>
+<span class="normal">958</span>
+<span class="normal">959</span>
+<span class="normal">960</span>
+<span class="normal">961</span>
+<span class="normal">962</span>
+<span class="normal">963</span>
+<span class="normal">964</span>
+<span class="normal">965</span>
+<span class="normal">966</span>
+<span class="normal">967</span>
+<span class="normal">968</span>
+<span class="normal">969</span>
+<span class="normal">970</span>
+<span class="normal">971</span>
+<span class="normal">972</span>
+<span class="normal">973</span>
+<span class="normal">974</span>
+<span class="normal">975</span>
+<span class="normal">976</span>
+<span class="normal">977</span>
+<span class="normal">978</span>
+<span class="normal">979</span>
+<span class="normal">980</span>
+<span class="normal">981</span>
+<span class="normal">982</span>
+<span class="normal">983</span>
+<span class="normal">984</span>
+<span class="normal">985</span>
+<span class="normal">986</span>
+<span class="normal">987</span>
+<span class="normal">988</span>
+<span class="normal">989</span>
+<span class="normal">990</span>
+<span class="normal">991</span>
+<span class="normal">992</span>
+<span class="normal">993</span>
+<span class="normal">994</span>
+<span class="normal">995</span>
+<span class="normal">996</span>
+<span class="normal">997</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">LineHPlotter</span><span class="p">(</span><span class="n">HPlotter</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    !!! warning "Experimental"</span>
 
@@ -3782,16 +3793,16 @@ Secondary histograms are ignored.</p>
 
     <span class="n">NAME</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"Line Plot"</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_widgets</span><span class="p">:</span> <span class="n">PlotWidgets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Widget</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot_widgets</span><span class="p">:</span> <span class="n">PlotWidgets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Widget</span><span class="p">:</span>
         <span class="n">cutoff_layout_widget</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">layout</span><span class="p">(</span><span class="n">plot_widgets</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+        <span class="k">return</span> <span class="n">VBox</span><span class="p">(</span>
             <span class="p">[</span>
-                <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">(</span>
+                <span class="n">HBox</span><span class="p">(</span>
                     <span class="p">[</span>
                         <span class="n">cutoff_layout_widget</span><span class="p">,</span>
                         <span class="n">plot_widgets</span><span class="o">.</span><span class="n">graph_type</span><span class="p">,</span>
-                        <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">(</span>
+                        <span class="n">VBox</span><span class="p">(</span>
                             <span class="p">[</span>
                                 <span class="n">plot_widgets</span><span class="o">.</span><span class="n">alpha</span><span class="p">,</span>
                                 <span class="n">plot_widgets</span><span class="o">.</span><span class="n">plot_style</span><span class="p">,</span>
@@ -3805,7 +3816,7 @@ Secondary histograms are ignored.</p>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">hs</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">H</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span>
+        <span class="n">hs</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span>
         <span class="n">settings</span><span class="p">:</span> <span class="n">SettingsDict</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
@@ -3879,10 +3890,10 @@ Secondary histograms are ignored.</p>
 
               <details class="mkdocstrings-source">
                 <summary>Source code in <code>dyceum/viz.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PlotWarning</span><span class="p">(</span><span class="ne">UserWarning</span><span class="p">):</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PlotWarning</span><span class="p">(</span><span class="ne">UserWarning</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    Issued when a plotter encounters unusual but non-fatal circumstances.</span>
 <span class="sd">    """</span>
@@ -3915,8 +3926,8 @@ Secondary histograms are ignored.</p>
 <p>This class should be considered experimental and may change or disappear in
 future versions.</p>
 </div>
-<p>Class to encapsulate interactive plot control widgets. All parameters for the
-[initializer][dyceum.viz.PlotWidgets.__init__] are optional.</p>
+<p>Class to encapsulate interactive plot control widgets. All initializer
+parameters are optional.</p>
 <ul>
 <li>
 <p><em>initial_alpha</em> is the starting alpha value for graphs (defaults to <code class="highlight"><span class="mf">0.75</span></code>).</p>
@@ -3993,32 +4004,7 @@ future versions.</p>
 
               <details class="mkdocstrings-source">
                 <summary>Source code in <code>dyceum/viz.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">423</span>
-<span class="normal">424</span>
-<span class="normal">425</span>
-<span class="normal">426</span>
-<span class="normal">427</span>
-<span class="normal">428</span>
-<span class="normal">429</span>
-<span class="normal">430</span>
-<span class="normal">431</span>
-<span class="normal">432</span>
-<span class="normal">433</span>
-<span class="normal">434</span>
-<span class="normal">435</span>
-<span class="normal">436</span>
-<span class="normal">437</span>
-<span class="normal">438</span>
-<span class="normal">439</span>
-<span class="normal">440</span>
-<span class="normal">441</span>
-<span class="normal">442</span>
-<span class="normal">443</span>
-<span class="normal">444</span>
-<span class="normal">445</span>
-<span class="normal">446</span>
-<span class="normal">447</span>
-<span class="normal">448</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">448</span>
 <span class="normal">449</span>
 <span class="normal">450</span>
 <span class="normal">451</span>
@@ -4181,15 +4167,43 @@ future versions.</p>
 <span class="normal">608</span>
 <span class="normal">609</span>
 <span class="normal">610</span>
-<span class="normal">611</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PlotWidgets</span><span class="p">(</span><span class="n">_PlotWidgetsDataclass</span><span class="p">):</span>
+<span class="normal">611</span>
+<span class="normal">612</span>
+<span class="normal">613</span>
+<span class="normal">614</span>
+<span class="normal">615</span>
+<span class="normal">616</span>
+<span class="normal">617</span>
+<span class="normal">618</span>
+<span class="normal">619</span>
+<span class="normal">620</span>
+<span class="normal">621</span>
+<span class="normal">622</span>
+<span class="normal">623</span>
+<span class="normal">624</span>
+<span class="normal">625</span>
+<span class="normal">626</span>
+<span class="normal">627</span>
+<span class="normal">628</span>
+<span class="normal">629</span>
+<span class="normal">630</span>
+<span class="normal">631</span>
+<span class="normal">632</span>
+<span class="normal">633</span>
+<span class="normal">634</span>
+<span class="normal">635</span>
+<span class="normal">636</span>
+<span class="normal">637</span>
+<span class="normal">638</span>
+<span class="normal">639</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PlotWidgets</span><span class="p">(</span><span class="n">_PlotWidgetsDataclass</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    !!! warning "Experimental"</span>
 
 <span class="sd">        This class should be considered experimental and may change or disappear in</span>
 <span class="sd">        future versions.</span>
 
-<span class="sd">    Class to encapsulate interactive plot control widgets. All parameters for the</span>
-<span class="sd">    [initializer][dyceum.viz.PlotWidgets.__init__] are optional.</span>
+<span class="sd">    Class to encapsulate interactive plot control widgets. All initializer</span>
+<span class="sd">    parameters are optional.</span>
 
 <span class="sd">    - *initial_alpha* is the starting alpha value for graphs (defaults to `#!python</span>
 <span class="sd">       0.75`).</span>
@@ -4345,7 +4359,10 @@ future versions.</p>
         <span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">asdict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="p">{</span><span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">(</span><span class="bp">self</span><span class="p">)}</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">(</span><span class="n">cast</span><span class="p">(</span><span class="s2">"_PlotWidgetsDataclass"</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span>
+        <span class="p">}</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">plot_updates_suspended</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -4400,7 +4417,7 @@ future versions.</p>
     <div class="doc doc-contents ">
 
         <p>Whether plot redraws are currently being suppressed by an active
-<a class="autorefs autorefs-internal" title="suspend_plot_updates() -> Generator[None]" href="#dyceum.viz.PlotWidgets.suspend_plot_updates"><code>suspend_plot_updates</code></a> block.</p>
+<a class="autorefs autorefs-internal" title="suspend_plot_updates() -&gt; Generator[None]" href="./#dyceum.viz.PlotWidgets.suspend_plot_updates"><code>suspend_plot_updates</code></a> block.</p>
 
     </div>
 
@@ -4427,27 +4444,27 @@ duration of the block.</p>
 
   
       property
-  " href="#dyceum.viz.PlotWidgets.plot_updates_suspended"><code>plot_updates_suspended</code></a>. No
+  " href="./#dyceum.viz.PlotWidgets.plot_updates_suspended"><code>plot_updates_suspended</code></a>. No
 suppression or redraw logic is contained here.</p>
 
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/viz.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">597</span>
-<span class="normal">598</span>
-<span class="normal">599</span>
-<span class="normal">600</span>
-<span class="normal">601</span>
-<span class="normal">602</span>
-<span class="normal">603</span>
-<span class="normal">604</span>
-<span class="normal">605</span>
-<span class="normal">606</span>
-<span class="normal">607</span>
-<span class="normal">608</span>
-<span class="normal">609</span>
-<span class="normal">610</span>
-<span class="normal">611</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@contextmanager</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">625</span>
+<span class="normal">626</span>
+<span class="normal">627</span>
+<span class="normal">628</span>
+<span class="normal">629</span>
+<span class="normal">630</span>
+<span class="normal">631</span>
+<span class="normal">632</span>
+<span class="normal">633</span>
+<span class="normal">634</span>
+<span class="normal">635</span>
+<span class="normal">636</span>
+<span class="normal">637</span>
+<span class="normal">638</span>
+<span class="normal">639</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@contextmanager</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">suspend_plot_updates</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="kc">None</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    Nesting-safe context manager to allow suppression of plot redraws for the</span>
@@ -4504,54 +4521,13 @@ goodies.</p>
 give an idea of the effect. (See <a href="../#interactive-quick-start">Interactive quick
 start</a>.)</p>
 <p>Parameters have the same meanings as with
-<a class="autorefs autorefs-internal" href="#dyceum.viz.HPlotterChooser"><code>HPlotterChooser</code></a> and
-<a class="autorefs autorefs-internal" href="#dyceum.viz.PlotWidgets"><code>PlotWidgets</code></a>.</p>
+<a class="autorefs autorefs-internal" href="./#dyceum.viz.HPlotterChooser"><code>HPlotterChooser</code></a> and
+<a class="autorefs autorefs-internal" href="./#dyceum.viz.PlotWidgets"><code>PlotWidgets</code></a>.</p>
 
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/viz.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1288</span>
-<span class="normal">1289</span>
-<span class="normal">1290</span>
-<span class="normal">1291</span>
-<span class="normal">1292</span>
-<span class="normal">1293</span>
-<span class="normal">1294</span>
-<span class="normal">1295</span>
-<span class="normal">1296</span>
-<span class="normal">1297</span>
-<span class="normal">1298</span>
-<span class="normal">1299</span>
-<span class="normal">1300</span>
-<span class="normal">1301</span>
-<span class="normal">1302</span>
-<span class="normal">1303</span>
-<span class="normal">1304</span>
-<span class="normal">1305</span>
-<span class="normal">1306</span>
-<span class="normal">1307</span>
-<span class="normal">1308</span>
-<span class="normal">1309</span>
-<span class="normal">1310</span>
-<span class="normal">1311</span>
-<span class="normal">1312</span>
-<span class="normal">1313</span>
-<span class="normal">1314</span>
-<span class="normal">1315</span>
-<span class="normal">1316</span>
-<span class="normal">1317</span>
-<span class="normal">1318</span>
-<span class="normal">1319</span>
-<span class="normal">1320</span>
-<span class="normal">1321</span>
-<span class="normal">1322</span>
-<span class="normal">1323</span>
-<span class="normal">1324</span>
-<span class="normal">1325</span>
-<span class="normal">1326</span>
-<span class="normal">1327</span>
-<span class="normal">1328</span>
-<span class="normal">1329</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1329</span>
 <span class="normal">1330</span>
 <span class="normal">1331</span>
 <span class="normal">1332</span>
@@ -4577,7 +4553,48 @@ start</a>.)</p>
 <span class="normal">1352</span>
 <span class="normal">1353</span>
 <span class="normal">1354</span>
-<span class="normal">1355</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@experimental</span>
+<span class="normal">1355</span>
+<span class="normal">1356</span>
+<span class="normal">1357</span>
+<span class="normal">1358</span>
+<span class="normal">1359</span>
+<span class="normal">1360</span>
+<span class="normal">1361</span>
+<span class="normal">1362</span>
+<span class="normal">1363</span>
+<span class="normal">1364</span>
+<span class="normal">1365</span>
+<span class="normal">1366</span>
+<span class="normal">1367</span>
+<span class="normal">1368</span>
+<span class="normal">1369</span>
+<span class="normal">1370</span>
+<span class="normal">1371</span>
+<span class="normal">1372</span>
+<span class="normal">1373</span>
+<span class="normal">1374</span>
+<span class="normal">1375</span>
+<span class="normal">1376</span>
+<span class="normal">1377</span>
+<span class="normal">1378</span>
+<span class="normal">1379</span>
+<span class="normal">1380</span>
+<span class="normal">1381</span>
+<span class="normal">1382</span>
+<span class="normal">1383</span>
+<span class="normal">1384</span>
+<span class="normal">1385</span>
+<span class="normal">1386</span>
+<span class="normal">1387</span>
+<span class="normal">1388</span>
+<span class="normal">1389</span>
+<span class="normal">1390</span>
+<span class="normal">1391</span>
+<span class="normal">1392</span>
+<span class="normal">1393</span>
+<span class="normal">1394</span>
+<span class="normal">1395</span>
+<span class="normal">1396</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@experimental</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">jupyter_visualize</span><span class="p">(</span>
     <span class="n">histogram_specs</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span>
         <span class="n">HLikeT</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">HLikeT</span><span class="p">]</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">HLikeT</span><span class="p">,</span> <span class="n">HLikeT</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span>
@@ -4655,7 +4672,7 @@ start</a>.)</p>
 
 
 <h2 id="dyceum.viz.limit_for_display" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">limit_for_display</span><span class="p">(</span><span class="n">h</span><span class="p">:</span> <span class="n">H</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span> <span class="n">cutoff</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">H</span></code>
+            <code class="highlight language-python"><span class="n">limit_for_display</span><span class="p">(</span><span class="n">h</span><span class="p">:</span> <span class="n">H</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span> <span class="n">cutoff</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">H</span><span class="p">[</span><span class="n">_T</span><span class="p">]</span></code>
 
 </h2>
 
@@ -4699,49 +4716,49 @@ probabilities.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/viz.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1211</span>
-<span class="normal">1212</span>
-<span class="normal">1213</span>
-<span class="normal">1214</span>
-<span class="normal">1215</span>
-<span class="normal">1216</span>
-<span class="normal">1217</span>
-<span class="normal">1218</span>
-<span class="normal">1219</span>
-<span class="normal">1220</span>
-<span class="normal">1221</span>
-<span class="normal">1222</span>
-<span class="normal">1223</span>
-<span class="normal">1224</span>
-<span class="normal">1225</span>
-<span class="normal">1226</span>
-<span class="normal">1227</span>
-<span class="normal">1228</span>
-<span class="normal">1229</span>
-<span class="normal">1230</span>
-<span class="normal">1231</span>
-<span class="normal">1232</span>
-<span class="normal">1233</span>
-<span class="normal">1234</span>
-<span class="normal">1235</span>
-<span class="normal">1236</span>
-<span class="normal">1237</span>
-<span class="normal">1238</span>
-<span class="normal">1239</span>
-<span class="normal">1240</span>
-<span class="normal">1241</span>
-<span class="normal">1242</span>
-<span class="normal">1243</span>
-<span class="normal">1244</span>
-<span class="normal">1245</span>
-<span class="normal">1246</span>
-<span class="normal">1247</span>
-<span class="normal">1248</span>
-<span class="normal">1249</span>
-<span class="normal">1250</span>
-<span class="normal">1251</span>
-<span class="normal">1252</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@experimental</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">limit_for_display</span><span class="p">(</span><span class="n">h</span><span class="p">:</span> <span class="n">H</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span> <span class="n">cutoff</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">H</span><span class="p">:</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1252</span>
+<span class="normal">1253</span>
+<span class="normal">1254</span>
+<span class="normal">1255</span>
+<span class="normal">1256</span>
+<span class="normal">1257</span>
+<span class="normal">1258</span>
+<span class="normal">1259</span>
+<span class="normal">1260</span>
+<span class="normal">1261</span>
+<span class="normal">1262</span>
+<span class="normal">1263</span>
+<span class="normal">1264</span>
+<span class="normal">1265</span>
+<span class="normal">1266</span>
+<span class="normal">1267</span>
+<span class="normal">1268</span>
+<span class="normal">1269</span>
+<span class="normal">1270</span>
+<span class="normal">1271</span>
+<span class="normal">1272</span>
+<span class="normal">1273</span>
+<span class="normal">1274</span>
+<span class="normal">1275</span>
+<span class="normal">1276</span>
+<span class="normal">1277</span>
+<span class="normal">1278</span>
+<span class="normal">1279</span>
+<span class="normal">1280</span>
+<span class="normal">1281</span>
+<span class="normal">1282</span>
+<span class="normal">1283</span>
+<span class="normal">1284</span>
+<span class="normal">1285</span>
+<span class="normal">1286</span>
+<span class="normal">1287</span>
+<span class="normal">1288</span>
+<span class="normal">1289</span>
+<span class="normal">1290</span>
+<span class="normal">1291</span>
+<span class="normal">1292</span>
+<span class="normal">1293</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@experimental</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">limit_for_display</span><span class="p">(</span><span class="n">h</span><span class="p">:</span> <span class="n">H</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span> <span class="n">cutoff</span><span class="p">:</span> <span class="n">Fraction</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">H</span><span class="p">[</span><span class="n">_T</span><span class="p">]:</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">"""</span>
 <span class="sd">    !!! warning "Experimental"</span>
 
@@ -4807,37 +4824,37 @@ probabilities.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>dyceum/viz.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1255</span>
-<span class="normal">1256</span>
-<span class="normal">1257</span>
-<span class="normal">1258</span>
-<span class="normal">1259</span>
-<span class="normal">1260</span>
-<span class="normal">1261</span>
-<span class="normal">1262</span>
-<span class="normal">1263</span>
-<span class="normal">1264</span>
-<span class="normal">1265</span>
-<span class="normal">1266</span>
-<span class="normal">1267</span>
-<span class="normal">1268</span>
-<span class="normal">1269</span>
-<span class="normal">1270</span>
-<span class="normal">1271</span>
-<span class="normal">1272</span>
-<span class="normal">1273</span>
-<span class="normal">1274</span>
-<span class="normal">1275</span>
-<span class="normal">1276</span>
-<span class="normal">1277</span>
-<span class="normal">1278</span>
-<span class="normal">1279</span>
-<span class="normal">1280</span>
-<span class="normal">1281</span>
-<span class="normal">1282</span>
-<span class="normal">1283</span>
-<span class="normal">1284</span>
-<span class="normal">1285</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@experimental</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1296</span>
+<span class="normal">1297</span>
+<span class="normal">1298</span>
+<span class="normal">1299</span>
+<span class="normal">1300</span>
+<span class="normal">1301</span>
+<span class="normal">1302</span>
+<span class="normal">1303</span>
+<span class="normal">1304</span>
+<span class="normal">1305</span>
+<span class="normal">1306</span>
+<span class="normal">1307</span>
+<span class="normal">1308</span>
+<span class="normal">1309</span>
+<span class="normal">1310</span>
+<span class="normal">1311</span>
+<span class="normal">1312</span>
+<span class="normal">1313</span>
+<span class="normal">1314</span>
+<span class="normal">1315</span>
+<span class="normal">1316</span>
+<span class="normal">1317</span>
+<span class="normal">1318</span>
+<span class="normal">1319</span>
+<span class="normal">1320</span>
+<span class="normal">1321</span>
+<span class="normal">1322</span>
+<span class="normal">1323</span>
+<span class="normal">1324</span>
+<span class="normal">1325</span>
+<span class="normal">1326</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@experimental</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">values_xy_for_graph_type</span><span class="p">(</span>
     <span class="n">h</span><span class="p">:</span> <span class="n">H</span><span class="p">[</span><span class="n">_T</span><span class="p">],</span>
     <span class="n">graph_type</span><span class="p">:</span> <span class="n">GraphType</span><span class="p">,</span>
@@ -4893,6 +4910,8 @@ probabilities.</p>
 
 
 
+
+
                 
               </article>
             </div>
@@ -4915,7 +4934,7 @@ probabilities.</p>
           <a href="../dyceum.anydice/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AnyDice">
             <div class="md-footer__button md-icon">
               
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
@@ -4936,13 +4955,16 @@ probabilities.</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      <i>Copyright and other protections apply. Please see the accompanying <tt>LICENSE</tt> file for rights and restrictions governing use of this software. All rights not expressly waived or licensed are reserved. If that file is missing or appears to be modified from its original, then please contact the author before viewing or using this software in any capacity.</i>
+      <i>Copyright and other protections apply.
+  Please see the accompanying <tt>LICENSE</tt> file for rights and restrictions governing use of this software.
+  All rights not expressly waived or licensed are reserved.
+  If that file is missing or appears to be modified from its original, then please contact the author before viewing or using this software in any capacity.</i>
     </div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
     </a>
   
 </div>
@@ -4960,10 +4982,14 @@ probabilities.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "content.tabs.link", "navigation.footer", "navigation.expand", "navigation.sections"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["content.code.annotate","content.tabs.link","navigation.footer","navigation.expand","navigation.sections","search.highlight"],"redirect":null,"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":{"provider":"mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.b7d3f789.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
