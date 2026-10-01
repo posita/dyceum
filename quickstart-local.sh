@@ -21,4 +21,5 @@ QS_UV_CMD="${QS_VENV_DIR}/bin/uv"
     || "${QS_VENV_DIR}/bin/pip" install uv
 source "${QS_VENV_DIR}/bin/activate"
 "${QS_UV_CMD}" sync --active --only-group quickstart --no-dev
-exec "${QS_UV_CMD}" run mkdocs serve "${@}"
+"${QS_UV_CMD}" run make -C "${PROG_DIR}/docs-src" -j 4
+exec "${QS_UV_CMD}" run zensical serve "${@}"

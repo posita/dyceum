@@ -71,9 +71,8 @@ uv run pytest --cov --cov-report=term-missing
 uv run tox -e py313
 uv run pre-commit run --all-files --hook-stage pre-push
 uv run make -C docs-src
-uv run mkdocs build
-uv run zensical build
-uv run zensical serve
+uv run zensical build --strict
+uv run zensical serve --strict
 ```
 
 The pre-push hooks run Ruff, doctest normalization checks, and all four static type checkers: mypy, pyright, ty, and zuban.

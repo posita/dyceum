@@ -18,7 +18,7 @@ htmlcov/
 # Sqlite
 *.db
 
-# MkDocs
+# Zensical
 .ipynb_checkpoints/
 site/
 

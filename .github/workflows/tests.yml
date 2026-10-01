@@ -80,8 +80,6 @@ jobs:
         with:
           cache-python: true
       - run: uv run --no-dev --group docs make -C docs-src -j 4
-        # Both builders must succeed while mkdocs remains.
-      - run: uv run --no-dev --group docs mkdocs build
       - run: uv run --no-dev --group docs zensical build --strict
         # Files can be excluded by adding, e.g.
         # ':(exclude)docs-src/perf_*.txt' to the pathspecs

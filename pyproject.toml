@@ -63,7 +63,7 @@ dev = [
     {include-group = "test"},
     {include-group = "tox"},
 ]
-# Only what's needed for uv run mkdocs build
+# Only what's needed for uv run zensical build
 docs = [
     "griffe-warnings-deprecated",
     "jupyter-server",
@@ -74,8 +74,6 @@ docs = [
     "jupyterlite-pyodide-kernel",
     "markdown-pycon",  # syntax highlighting for doctests
     "mike @ git+https://github.com/squidfunk/mike.git",
-    "mkdocs",
-    "mkdocs-material",
     "mkdocstrings[python]",
     "pandas",
     "pandas-stubs",

@@ -16,7 +16,7 @@
 
 `dyceum` now includes an Open Source, pure-Python, cleanroom implementation of [Jasper Flick](https://catlikecoding.com/jasper-flick/)’s [AnyDice Dice Probability Calculator](https://anydice.com/).
 
-An interactive version can be found here: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/)
+An interactive version can be found here: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/)
 
 You can also [host your own or run it locally](index.md#running-locally).
 
@@ -98,7 +98,7 @@ output 20d6 named "20d6 without any quantization"
 set "dyceum: display precision" to "exact"
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=XCBUaGlzIGlsbHVzdHJhdGVzIHF1YW5pdHphdGlvbiBpbiBhY3Rpb24uIE5vdGUgZXNwZWNpYWxseSB0aGUgdGFpbHMKICBvZiB0aGUgZGlzdHJpYnV0aW9uLiBNb3JlIGRldGFpbCBjYW4gYmUgc2VlIGluIHRoZSB0ZXh0IG91dHB1dC4gXApsb29wIFAgb3ZlciB7NCwgOH0gewogIHNldCAiZHljZXVtOiBjYWxjdWxhdGlvbiBwcmVjaXNpb24iIHRvIFAKICBvdXRwdXQgMjBkNiBuYW1lZCAiMjBkNiB3aXRoIGNvbXB1dGF0aW9ucyBxdWFudGl6ZWQgYXQgW1BdIGJpdHMiCn0Kc2V0ICJkeWNldW06IGNhbGN1bGF0aW9uIHByZWNpc2lvbiIgdG8gImV4YWN0IgpvdXRwdXQgMjBkNiBuYW1lZCAiMjBkNiB3aXRob3V0IGFueSBxdWFudGl6YXRpb24iCnNldCAiZHljZXVtOiBkaXNwbGF5IHByZWNpc2lvbiIgdG8gImV4YWN0Igo)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=XCBUaGlzIGlsbHVzdHJhdGVzIHF1YW5pdHphdGlvbiBpbiBhY3Rpb24uIE5vdGUgZXNwZWNpYWxseSB0aGUgdGFpbHMKICBvZiB0aGUgZGlzdHJpYnV0aW9uLiBNb3JlIGRldGFpbCBjYW4gYmUgc2VlIGluIHRoZSB0ZXh0IG91dHB1dC4gXApsb29wIFAgb3ZlciB7NCwgOH0gewogIHNldCAiZHljZXVtOiBjYWxjdWxhdGlvbiBwcmVjaXNpb24iIHRvIFAKICBvdXRwdXQgMjBkNiBuYW1lZCAiMjBkNiB3aXRoIGNvbXB1dGF0aW9ucyBxdWFudGl6ZWQgYXQgW1BdIGJpdHMiCn0Kc2V0ICJkeWNldW06IGNhbGN1bGF0aW9uIHByZWNpc2lvbiIgdG8gImV4YWN0IgpvdXRwdXQgMjBkNiBuYW1lZCAiMjBkNiB3aXRob3V0IGFueSBxdWFudGl6YXRpb24iCnNldCAiZHljZXVtOiBkaXNwbGF5IHByZWNpc2lvbiIgdG8gImV4YWN0Igo)
 
 [^2]: Deliberately omitted is AnyDice’s [“legacy” syntax](#legacy-programs).
 
@@ -142,12 +142,12 @@ For example, on modest hardware, the following program completes in under 2s in 
 output 300@(1000d100)
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=b3V0cHV0IDMwMEAoMTAwMGQxMDApCg)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=b3V0cHV0IDMwMEAoMTAwMGQxMDApCg)
 
-In other cases, the `dyceum` interpreter under-performs anydice.com, sometimes by an order of magnitude or more (e.g., programs [`26da9`](../playground/#id=26da9) and [`286e0`](../playground/#id=286e0)).
+In other cases, the `dyceum` interpreter under-performs anydice.com, sometimes by an order of magnitude or more (e.g., programs [`26da9`](playground/#id=26da9) and [`286e0`](playground/#id=286e0)).
 This is usually because the `dyceum` interpreter attempts to be unhelpfully precise with math, which becomes ***very*** laborious as integers become huge.
 That can often be mitigated by selecting a [lower quantization threshold](#proprietary-extensions).
-By way of illustration, trying to run programs [`183b0`](../playground/#id=183b0) or [`282d6`](../playground/#id=282d6) with [`"dyceum: calculation precision"` set to `"exact"`](#proprietary-extensions) will likely fail to complete within several minutes (if ever).
+By way of illustration, trying to run programs [`183b0`](playground/#id=183b0) or [`282d6`](playground/#id=282d6) with [`"dyceum: calculation precision"` set to `"exact"`](#proprietary-extensions) will likely fail to complete within several minutes (if ever).
 
 The `dyceum` interpreter and the underlying [`dyce` library](https://github.com/posita/dyce/) on which it is built are very much works in progress, and performance improvements are a high priority item on their road maps, so this is likely to improve as time goes on.
 
@@ -212,7 +212,7 @@ Where AnyDice’s behavioral inconsistencies or bugs produce incorrect results, 
       Two programs were considered equivalent if they resulted in the same AST from the parser and transformer.
       De-duping based on AST resulted in a corpus just shy of 160,000 distinct programs.
 
-      As an aside, some of those programs mirrored our own probes (e.g., AnyDice program [`39567`](../playground/#id=39567) saved by the author of [PythonDice](https://github.com/Ar-Kareem/PythonDice/)), suggesting areas where users tripped over unintuitive “hot spots” of the interpreter, surfacing and resolving questions likely very similar to our own.
+      As an aside, some of those programs mirrored our own probes (e.g., AnyDice program [`39567`](playground/#id=39567) saved by the author of [PythonDice](https://github.com/Ar-Kareem/PythonDice/)), suggesting areas where users tripped over unintuitive “hot spots” of the interpreter, surfacing and resolving questions likely very similar to our own.
 
 ### Prior art
 
@@ -255,7 +255,7 @@ loop N over {1..#S} {                   \ loop over values in a contiguous range
 }
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=Uzogey0zLi4tMToyLCB7NC4uNiwgezcsIDh9OjN9fSAgICAgICAgIFwgYXNzaWduIHRoZSBleHBhbmRlZCBhbmQgZmxhdHRlbmVkIHNlcXVlbmNlIHRvIFMgXApsb29wIE4gb3ZlciB7MS4uI1N9IHsgICAgICAgICAgICAgICAgICAgXCBsb29wIG92ZXIgdmFsdWVzIGluIGEgY29udGlndW91cyByYW5nZSBmcm9tIDEsIHRvIHRoZSBsZW5ndGggb2YgUywgaW5jbHVzaXZlLCBhc3NpZ25pbmcgZWFjaCB2YWx1ZSB0byBOIFwKICBvdXRwdXQgTkBTIG5hbWVkICJTIGF0IHBvc2l0aW9uIFtOXSIgIFwgb3V0cHV0IHRoZSB2YWx1ZSBvZiBTIGF0IHBvc2l0aW9uIE4gZm9yIGVhY2ggaXRlcmF0aW9uIG9mIHRoZSBsb29wIFwKfQo)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=Uzogey0zLi4tMToyLCB7NC4uNiwgezcsIDh9OjN9fSAgICAgICAgIFwgYXNzaWduIHRoZSBleHBhbmRlZCBhbmQgZmxhdHRlbmVkIHNlcXVlbmNlIHRvIFMgXApsb29wIE4gb3ZlciB7MS4uI1N9IHsgICAgICAgICAgICAgICAgICAgXCBsb29wIG92ZXIgdmFsdWVzIGluIGEgY29udGlndW91cyByYW5nZSBmcm9tIDEsIHRvIHRoZSBsZW5ndGggb2YgUywgaW5jbHVzaXZlLCBhc3NpZ25pbmcgZWFjaCB2YWx1ZSB0byBOIFwKICBvdXRwdXQgTkBTIG5hbWVkICJTIGF0IHBvc2l0aW9uIFtOXSIgIFwgb3V0cHV0IHRoZSB2YWx1ZSBvZiBTIGF0IHBvc2l0aW9uIE4gZm9yIGVhY2ggaXRlcmF0aW9uIG9mIHRoZSBsb29wIFwKfQo)
 
 Dice are created with the `d` operator, which has both unary and binary forms.
 More complicated forms are explored later, but the simplest forms are `d<num>`, `d<seq>`, `<num>d<num>`, and `<num>d<seq>`.
@@ -302,7 +302,7 @@ function: N_FROM_D:n S_FROM_P:s {
 output [2d3 2d3]
 ```
 
-Open in playground (best viewed in “Text” mode): [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=c2V0ICJwb3NpdGlvbiBvcmRlciIgdG8gImhpZ2hlc3QgZmlyc3QiCk46IDAKZnVuY3Rpb246IE5fRlJPTV9EOm4gU19GUk9NX1A6cyB7CiAgTjogTiArIDEKICByZXN1bHQ6IE5fRlJPTV9EICogMTAgXiAoTiAtIDEpICsgMUBTX0ZST01fUCAqIDEwIF4gTiArIDJAU19GUk9NX1AgKiAxMCBeIChOICsgMSkKfQpvdXRwdXQgWzJkMyAyZDJd)
+Open in playground (best viewed in “Text” mode): [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=c2V0ICJwb3NpdGlvbiBvcmRlciIgdG8gImhpZ2hlc3QgZmlyc3QiCk46IDAKZnVuY3Rpb246IE5fRlJPTV9EOm4gU19GUk9NX1A6cyB7CiAgTjogTiArIDEKICByZXN1bHQ6IE5fRlJPTV9EICogMTAgXiAoTiAtIDEpICsgMUBTX0ZST01fUCAqIDEwIF4gTiArIDJAU19GUk9NX1AgKiAxMCBeIChOICsgMSkKfQpvdXRwdXQgWzJkMyAyZDJd)
 
 The `dyceum` interpreter faithfully reproduces these various ordering behaviors.
 
@@ -324,7 +324,7 @@ I: {3..5}  \ I now points to a new sequence object containing the values 3, 4, a
 output J   \ J still points to the number object with the value 1 \
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=STogMSAgICAgICBcIEkgcG9pbnRzIHRvIGEgbnVtYmVyIG9iamVjdCB3aXRoIHRoZSB2YWx1ZSAxIFwKSjogSSAgICAgICBcIEogcG9pbnRzIHRvIHRoZSBzYW1lIG51bWJlciBvYmplY3QgYXMgSSBcCkk6IHszLi41fSAgXCBJIG5vdyBwb2ludHMgdG8gYSBuZXcgc2VxdWVuY2Ugb2JqZWN0IGNvbnRhaW5pbmcgdGhlIHZhbHVlcyAzLCA0LCBhbmQgNSBcCm91dHB1dCBKICAgXCBKIHN0aWxsIHBvaW50cyB0byB0aGUgbnVtYmVyIG9iamVjdCB3aXRoIHRoZSB2YWx1ZSAxIFwK)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=STogMSAgICAgICBcIEkgcG9pbnRzIHRvIGEgbnVtYmVyIG9iamVjdCB3aXRoIHRoZSB2YWx1ZSAxIFwKSjogSSAgICAgICBcIEogcG9pbnRzIHRvIHRoZSBzYW1lIG51bWJlciBvYmplY3QgYXMgSSBcCkk6IHszLi41fSAgXCBJIG5vdyBwb2ludHMgdG8gYSBuZXcgc2VxdWVuY2Ugb2JqZWN0IGNvbnRhaW5pbmcgdGhlIHZhbHVlcyAzLCA0LCBhbmQgNSBcCm91dHB1dCBKICAgXCBKIHN0aWxsIHBvaW50cyB0byB0aGUgbnVtYmVyIG9iamVjdCB3aXRoIHRoZSB2YWx1ZSAxIFwK)
 
 ### Operators
 
@@ -434,7 +434,7 @@ The expression `0d1000` resolves to `d0`.
     output [roll d2 of the die 4d3]                     named "same as output d2d(4d3)"
     ```
 
-    Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=ZnVuY3Rpb246IHJvbGwgTjpuIG9mIHRoZSBkaWUgRDpkIHsgcmVzdWx0OiBOZEQgfQpvdXRwdXQgW3JvbGwgNCBvZiB0aGUgZGllIGQzXSAgICAgICAgICAgICAgICAgICAgICAgbmFtZWQgInNhbWUgYXMgb3V0cHV0IDRkMyIKb3V0cHV0IFtyb2xsIGQyIG9mIHRoZSBkaWUgZDNdICAgICAgICAgICAgICAgICAgICAgIG5hbWVkICJzYW1lIGFzIG91dHB1dCBkMmQzIgpvdXRwdXQgW3JvbGwgMmQ0IG9mIHRoZSBkaWUgZDNdICAgICAgICAgICAgICAgICAgICAgbmFtZWQgInNhbWUgYXMgb3V0cHV0IDJkNGQzIgpvdXRwdXQgW3JvbGwgW3JvbGwgZDIgb2YgdGhlIGRpZSBkNF0gb2YgdGhlIGRpZSBkM10gbmFtZWQgInNhbWUgYXMgb3V0cHV0IGQyZDRkMyIKb3V0cHV0IFtyb2xsIDIgb2YgdGhlIGRpZSA0ZDNdICAgICAgICAgICAgICAgICAgICAgIG5hbWVkICJzYW1lIGFzIG91dHB1dCAyZCg0ZDMpIgpvdXRwdXQgW3JvbGwgZDIgb2YgdGhlIGRpZSA0ZDNdICAgICAgICAgICAgICAgICAgICAgbmFtZWQgInNhbWUgYXMgb3V0cHV0IGQyZCg0ZDMpIgo)
+    Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=ZnVuY3Rpb246IHJvbGwgTjpuIG9mIHRoZSBkaWUgRDpkIHsgcmVzdWx0OiBOZEQgfQpvdXRwdXQgW3JvbGwgNCBvZiB0aGUgZGllIGQzXSAgICAgICAgICAgICAgICAgICAgICAgbmFtZWQgInNhbWUgYXMgb3V0cHV0IDRkMyIKb3V0cHV0IFtyb2xsIGQyIG9mIHRoZSBkaWUgZDNdICAgICAgICAgICAgICAgICAgICAgIG5hbWVkICJzYW1lIGFzIG91dHB1dCBkMmQzIgpvdXRwdXQgW3JvbGwgMmQ0IG9mIHRoZSBkaWUgZDNdICAgICAgICAgICAgICAgICAgICAgbmFtZWQgInNhbWUgYXMgb3V0cHV0IDJkNGQzIgpvdXRwdXQgW3JvbGwgW3JvbGwgZDIgb2YgdGhlIGRpZSBkNF0gb2YgdGhlIGRpZSBkM10gbmFtZWQgInNhbWUgYXMgb3V0cHV0IGQyZDRkMyIKb3V0cHV0IFtyb2xsIDIgb2YgdGhlIGRpZSA0ZDNdICAgICAgICAgICAgICAgICAgICAgIG5hbWVkICJzYW1lIGFzIG91dHB1dCAyZCg0ZDMpIgpvdXRwdXQgW3JvbGwgZDIgb2YgdGhlIGRpZSA0ZDNdICAgICAgICAgICAgICAgICAgICAgbmFtZWQgInNhbWUgYXMgb3V0cHV0IGQyZCg0ZDMpIgo)
 
     In lay terms, where the left-hand operand is a die, this means, “roll a first die, then whatever number comes up, roll that many of a second die, then collapse the whole thing down into a single die.”
     This isn’t incredibly useful in practice, and is often the source of confusion.
@@ -491,9 +491,9 @@ AnyDice follows this convention, but only ***some*** of the time, and inconsiste
     output [delve among M N] named "delve among [M] [N]"
     ```
 
-   Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=ZnVuY3Rpb246IGRlbHZlIE46biB7CiAgaWYgTiA8PSAwIHsgcmVzdWx0OiAxMjMgfSBcIEFsd2F5cyByZXR1cm4gMTIzIGF0IHRoZSBib3R0b20gXAogIHJlc3VsdDogW2RlbHZlIE4gLSAxXQp9CmZ1bmN0aW9uOiBkZWx2ZSBib3RoIE06biBOOm4gewogIHJlc3VsdDogW2RlbHZlIE1dICsgW2RlbHZlIE5dICBcIERvZXMgdGhpcyByZXR1cm4gZHt9LCAxMjMsIG9yIDI0Nj8gSXQgZGVwZW5kcyEgXAp9CmZ1bmN0aW9uOiBkZWx2ZSBhbW9uZyBNOm4gTjpuIHsKICByZXN1bHQ6IFtkZWx2ZSBib3RoIE0gTV0gKyBbZGVsdmUgYm90aCBNIE5dICsgW2RlbHZlIGJvdGggTiBNXSArIFtkZWx2ZSBib3RoIE4gTl0KfQpNOiAzIE46IDMKb3V0cHV0IFtkZWx2ZSBhbW9uZyBNIE5dIG5hbWVkICJkZWx2ZSBhbW9uZyBbTV0gW05dIgpNOiAzIE46IDEwCm91dHB1dCBbZGVsdmUgYW1vbmcgTSBOXSBuYW1lZCAiZGVsdmUgYW1vbmcgW01dIFtOXSIKTTogMTAgTjogMTAKb3V0cHV0IFtkZWx2ZSBhbW9uZyBNIE5dIG5hbWVkICJkZWx2ZSBhbW9uZyBbTV0gW05dIgo)
+   Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=ZnVuY3Rpb246IGRlbHZlIE46biB7CiAgaWYgTiA8PSAwIHsgcmVzdWx0OiAxMjMgfSBcIEFsd2F5cyByZXR1cm4gMTIzIGF0IHRoZSBib3R0b20gXAogIHJlc3VsdDogW2RlbHZlIE4gLSAxXQp9CmZ1bmN0aW9uOiBkZWx2ZSBib3RoIE06biBOOm4gewogIHJlc3VsdDogW2RlbHZlIE1dICsgW2RlbHZlIE5dICBcIERvZXMgdGhpcyByZXR1cm4gZHt9LCAxMjMsIG9yIDI0Nj8gSXQgZGVwZW5kcyEgXAp9CmZ1bmN0aW9uOiBkZWx2ZSBhbW9uZyBNOm4gTjpuIHsKICByZXN1bHQ6IFtkZWx2ZSBib3RoIE0gTV0gKyBbZGVsdmUgYm90aCBNIE5dICsgW2RlbHZlIGJvdGggTiBNXSArIFtkZWx2ZSBib3RoIE4gTl0KfQpNOiAzIE46IDMKb3V0cHV0IFtkZWx2ZSBhbW9uZyBNIE5dIG5hbWVkICJkZWx2ZSBhbW9uZyBbTV0gW05dIgpNOiAzIE46IDEwCm91dHB1dCBbZGVsdmUgYW1vbmcgTSBOXSBuYW1lZCAiZGVsdmUgYW1vbmcgW01dIFtOXSIKTTogMTAgTjogMTAKb3V0cHV0IFtkZWx2ZSBhbW9uZyBNIE5dIG5hbWVkICJkZWx2ZSBhbW9uZyBbTV0gW05dIgo)
 
-   A much more subtle version of this issue can be found when comparing the second output of [`https://anydice.com/program/1065f`](https://anydice.com/program/1065f) to that [computed by the `dyceum` interpreter](../playground/#id=1065f).
+   A much more subtle version of this issue can be found when comparing the second output of [`https://anydice.com/program/1065f`](https://anydice.com/program/1065f) to that [computed by the `dyceum` interpreter](playground/#id=1065f).
    (See also the section on [“phantom” mass](#phantom-mass).)
    At first glance, the distributions look similar, but a careful inspection will reveal that AnyDice’s results do not sum to 100%, and the values are slightly off.
 
@@ -573,7 +573,7 @@ function: add die M:d and die N:d { result: M + N  \ a number \ }
 output [add die 3 and die 4]  \ only coercion, no expansion, so result remains a number \
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=ZnVuY3Rpb246IGFkZCBkaWUgTTpkIGFuZCBkaWUgTjpkIHsgcmVzdWx0OiBNICsgTiAgXCBhIG51bWJlciBcIH0Kb3V0cHV0IFthZGQgZGllIDMgYW5kIGRpZSA0XSAgXCBvbmx5IGNvZXJjaW9uLCBubyBleHBhbnNpb24sIHNvIHJlc3VsdCByZW1haW5zIGEgbnVtYmVyIFwK)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=ZnVuY3Rpb246IGFkZCBkaWUgTTpkIGFuZCBkaWUgTjpkIHsgcmVzdWx0OiBNICsgTiAgXCBhIG51bWJlciBcIH0Kb3V0cHV0IFthZGQgZGllIDMgYW5kIGRpZSA0XSAgXCBvbmx5IGNvZXJjaW9uLCBubyBleHBhbnNpb24sIHNvIHJlc3VsdCByZW1haW5zIGEgbnVtYmVyIFwK)
 
 #### Expansion
 
@@ -594,7 +594,7 @@ output [4 th face from D]   \ The face submitted to the 4th iteration of the fun
 output [12 th face from D]  \ The face submitted to the 12th iteration of the function from the collapsed 3d6 (i.e., 14) \
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=SVRFUl9DT1VOVDogMApmdW5jdGlvbjogTjpuIHRoIGZhY2UgZnJvbSBGQUNFOm4gewogIElURVJfQ09VTlQ6IElURVJfQ09VTlQgKyAxICBcIEdldCBhIGNvcHkgb2YgdGhlIGdsb2JhbCBJVEVSX0NPVU5UIHRoYXQgc3Vydml2ZXMgYWNyb3NzIHRoZSBleHBhbmRlZCBjYWxscyBcCiAgaWYgSVRFUl9DT1VOVCA9IE4geyByZXN1bHQ6IEZBQ0UgfSBcIGVsc2UgeyByZXN1bHQ6IGR7fSB9IFwKfQpEOiAzZDYgb3V0cHV0IEQgICAgICAgICAgICAgXCBUaGUgZGlzdHJpYnV0aW9uIG9mIDNkNiBcCm91dHB1dCBbNCB0aCBmYWNlIGZyb20gRF0gICBcIFRoZSBmYWNlIHN1Ym1pdHRlZCB0byB0aGUgNHRoIGl0ZXJhdGlvbiBvZiB0aGUgZnVuY3Rpb24gZnJvbSB0aGUgY29sbGFwc2VkIDNkNiAoaS5lLiwgNikgXApvdXRwdXQgWzEyIHRoIGZhY2UgZnJvbSBEXSAgXCBUaGUgZmFjZSBzdWJtaXR0ZWQgdG8gdGhlIDEydGggaXRlcmF0aW9uIG9mIHRoZSBmdW5jdGlvbiBmcm9tIHRoZSBjb2xsYXBzZWQgM2Q2IChpLmUuLCAxNCkgXAo)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=SVRFUl9DT1VOVDogMApmdW5jdGlvbjogTjpuIHRoIGZhY2UgZnJvbSBGQUNFOm4gewogIElURVJfQ09VTlQ6IElURVJfQ09VTlQgKyAxICBcIEdldCBhIGNvcHkgb2YgdGhlIGdsb2JhbCBJVEVSX0NPVU5UIHRoYXQgc3Vydml2ZXMgYWNyb3NzIHRoZSBleHBhbmRlZCBjYWxscyBcCiAgaWYgSVRFUl9DT1VOVCA9IE4geyByZXN1bHQ6IEZBQ0UgfSBcIGVsc2UgeyByZXN1bHQ6IGR7fSB9IFwKfQpEOiAzZDYgb3V0cHV0IEQgICAgICAgICAgICAgXCBUaGUgZGlzdHJpYnV0aW9uIG9mIDNkNiBcCm91dHB1dCBbNCB0aCBmYWNlIGZyb20gRF0gICBcIFRoZSBmYWNlIHN1Ym1pdHRlZCB0byB0aGUgNHRoIGl0ZXJhdGlvbiBvZiB0aGUgZnVuY3Rpb24gZnJvbSB0aGUgY29sbGFwc2VkIDNkNiAoaS5lLiwgNikgXApvdXRwdXQgWzEyIHRoIGZhY2UgZnJvbSBEXSAgXCBUaGUgZmFjZSBzdWJtaXR0ZWQgdG8gdGhlIDEydGggaXRlcmF0aW9uIG9mIHRoZSBmdW5jdGlvbiBmcm9tIHRoZSBjb2xsYXBzZWQgM2Q2IChpLmUuLCAxNCkgXAo)
 
 As one of its comment suggests, this probe works because of the way that variables are “scoped” in AnyDice, which we’ll [explore in detail](#variable-scope) further on.
 
@@ -611,7 +611,7 @@ function: smooshify D:s {
 output [smooshify 5d3]
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=c2V0ICJwb3NpdGlvbiBvcmRlciIgdG8gImxvd2VzdCBmaXJzdCIKZnVuY3Rpb246IHNtb29zaGlmeSBEOnMgewogIE06IDEgXFwgVjogMCAgXCB0aGUgIlxcIiBpcyBwcmVzZW50IHRvIGJyZWFrIHRoaW5ncyB1cCB2aXN1YWxseSBcCiAgbG9vcCBGQUNFIG92ZXIgRCB7IFY6IEZBQ0UgKiBNICsgViBcXCBNOiBNICogMTAwIH0KICByZXN1bHQ6IFYKfQpvdXRwdXQgW3Ntb29zaGlmeSA1ZDNdCg)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=c2V0ICJwb3NpdGlvbiBvcmRlciIgdG8gImxvd2VzdCBmaXJzdCIKZnVuY3Rpb246IHNtb29zaGlmeSBEOnMgewogIE06IDEgXFwgVjogMCAgXCB0aGUgIlxcIiBpcyBwcmVzZW50IHRvIGJyZWFrIHRoaW5ncyB1cCB2aXN1YWxseSBcCiAgbG9vcCBGQUNFIG92ZXIgRCB7IFY6IEZBQ0UgKiBNICsgViBcXCBNOiBNICogMTAwIH0KICByZXN1bHQ6IFYKfQpvdXRwdXQgW3Ntb29zaGlmeSA1ZDNdCg)
 
 If a function call has more than one parameter to which expansion applies, it will be called with the Cartesian product of those values:
 
@@ -620,7 +620,7 @@ function: add each of N:n to each of V:n { result: N + V }
 output [add each of d6 to each of (d3 * 100)]
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=ZnVuY3Rpb246IGFkZCBlYWNoIG9mIE46biB0byBlYWNoIG9mIFY6biB7IHJlc3VsdDogTiArIFYgfQpvdXRwdXQgW2FkZCBlYWNoIG9mIGQ2IHRvIGVhY2ggb2YgKGQzICogMTAwKV0K)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=ZnVuY3Rpb246IGFkZCBlYWNoIG9mIE46biB0byBlYWNoIG9mIFY6biB7IHJlc3VsdDogTiArIFYgfQpvdXRwdXQgW2FkZCBlYWNoIG9mIGQ2IHRvIGVhY2ggb2YgKGQzICogMTAwKV0K)
 
 If any expansion occurs, the result from each function call is weighted in accordance with the face(s) or roll(s) submitted for that call.
 Weighted results are aggregated into a single die, which becomes the final result.
@@ -633,7 +633,7 @@ function: replace with weird die where FACE:n shows three {
 output [replace with weird die where d10 shows three]
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=ZnVuY3Rpb246IHJlcGxhY2Ugd2l0aCB3ZWlyZCBkaWUgd2hlcmUgRkFDRTpuIHNob3dzIHRocmVlIHsKICBpZiBGQUNFID0gMyB7IHJlc3VsdDogZHs0NCwgNDQsIDU1LCA2Nn0gfSBlbHNlIHsgcmVzdWx0OiBGQUNFIH0KfQpvdXRwdXQgW3JlcGxhY2Ugd2l0aCB3ZWlyZCBkaWUgd2hlcmUgZDEwIHNob3dzIHRocmVlXQo)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=ZnVuY3Rpb246IHJlcGxhY2Ugd2l0aCB3ZWlyZCBkaWUgd2hlcmUgRkFDRTpuIHNob3dzIHRocmVlIHsKICBpZiBGQUNFID0gMyB7IHJlc3VsdDogZHs0NCwgNDQsIDU1LCA2Nn0gfSBlbHNlIHsgcmVzdWx0OiBGQUNFIH0KfQpvdXRwdXQgW3JlcGxhY2Ugd2l0aCB3ZWlyZCBkaWUgd2hlcmUgZDEwIHNob3dzIHRocmVlXQo)
 
 [^7]: Note that for outputs ***only***, a sequence is coerced to a die.
       `output {1, 1, 1, 2, 2, 3}` is equivalent to `output d{1, 1, 1, 2, 2, 3}`, ***not*** `output 10`.
@@ -661,7 +661,7 @@ output [] named "GLOBAL from function call"        \ 110 \
 output GLOBAL named "GLOBAL after function call"   \ 100 \
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=ZnVuY3Rpb246IHsgR0xPQkFMOiBHTE9CQUwgKyAxMCBcXCByZXN1bHQ6IEdMT0JBTCB9CkdMT0JBTDogMApvdXRwdXQgR0xPQkFMIG5hbWVkICJHTE9CQUwgYmVmb3JlIGZ1bmN0aW9uIGNhbGwiICBcICAwIFwKb3V0cHV0IFtdIG5hbWVkICJHTE9CQUwgZnJvbSBmdW5jdGlvbiBjYWxsIiAgICAgICAgXCAxMCBcCm91dHB1dCBHTE9CQUwgbmFtZWQgIkdMT0JBTCBhZnRlciBmdW5jdGlvbiBjYWxsIiAgIFwgKnNwb2lsZXIgYWxlcnQqOiAwIFwKR0xPQkFMOiAxMDAKb3V0cHV0IEdMT0JBTCBuYW1lZCAiR0xPQkFMIGJlZm9yZSBmdW5jdGlvbiBjYWxsIiAgXCAxMDAgXApvdXRwdXQgW10gbmFtZWQgIkdMT0JBTCBmcm9tIGZ1bmN0aW9uIGNhbGwiICAgICAgICBcIDExMCBcCm91dHB1dCBHTE9CQUwgbmFtZWQgIkdMT0JBTCBhZnRlciBmdW5jdGlvbiBjYWxsIiAgIFwgMTAwIFwK)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=ZnVuY3Rpb246IHsgR0xPQkFMOiBHTE9CQUwgKyAxMCBcXCByZXN1bHQ6IEdMT0JBTCB9CkdMT0JBTDogMApvdXRwdXQgR0xPQkFMIG5hbWVkICJHTE9CQUwgYmVmb3JlIGZ1bmN0aW9uIGNhbGwiICBcICAwIFwKb3V0cHV0IFtdIG5hbWVkICJHTE9CQUwgZnJvbSBmdW5jdGlvbiBjYWxsIiAgICAgICAgXCAxMCBcCm91dHB1dCBHTE9CQUwgbmFtZWQgIkdMT0JBTCBhZnRlciBmdW5jdGlvbiBjYWxsIiAgIFwgKnNwb2lsZXIgYWxlcnQqOiAwIFwKR0xPQkFMOiAxMDAKb3V0cHV0IEdMT0JBTCBuYW1lZCAiR0xPQkFMIGJlZm9yZSBmdW5jdGlvbiBjYWxsIiAgXCAxMDAgXApvdXRwdXQgW10gbmFtZWQgIkdMT0JBTCBmcm9tIGZ1bmN0aW9uIGNhbGwiICAgICAgICBcIDExMCBcCm91dHB1dCBHTE9CQUwgbmFtZWQgIkdMT0JBTCBhZnRlciBmdW5jdGlvbiBjYWxsIiAgIFwgMTAwIFwK)
 
 But there’s another more subtle behavior not mentioned ***at all*** in AnyDice’s documentation.
 
@@ -681,7 +681,7 @@ But there’s another more subtle behavior not mentioned ***at all*** in AnyDice
     \ output [d{2..6}] \  \ this results in an error \
     ```
 
-    Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=ZnVuY3Rpb246IE46biB7CiAgaWYgTiA9IDEgeyBWQVI6IDEgfSAgICBcIGRvbid0IGNhbGwgdGhpcyB3aGVyZSB0aGUgbG93ZXN0IHZhbHVlIG9mIGEgZGllIGlzIG5vdCAxIFwKICBlbHNlIHsgVkFSOiBWQVIgKiAyIH0gIFwgZG91YmxlIFZBUiBcCiAgcmVzdWx0OiBWQVIKfQpvdXRwdXQgW2Q2XQpcIG91dHB1dCBbZHsyLi42fV0gXCAgXCB0aGlzIHJlc3VsdHMgaW4gYW4gZXJyb3IgXAo)
+    Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=ZnVuY3Rpb246IE46biB7CiAgaWYgTiA9IDEgeyBWQVI6IDEgfSAgICBcIGRvbid0IGNhbGwgdGhpcyB3aGVyZSB0aGUgbG93ZXN0IHZhbHVlIG9mIGEgZGllIGlzIG5vdCAxIFwKICBlbHNlIHsgVkFSOiBWQVIgKiAyIH0gIFwgZG91YmxlIFZBUiBcCiAgcmVzdWx0OiBWQVIKfQpvdXRwdXQgW2Q2XQpcIG91dHB1dCBbZHsyLi42fV0gXCAgXCB0aGlzIHJlc3VsdHMgaW4gYW4gZXJyb3IgXAo)
 
     That tells us two things:
 
@@ -705,7 +705,7 @@ That behavior might have useful applications beyond the [expansion probe above](
     The `dyceum` interpreter does not reproduce this behavior.
 
 
-Many users are reasonably and completely unaware of this trap and often fall into it with more complicated programs. Consider the following (simplified from AnyDice program [`9010`](../playground/#id=9010)) as an illustration:
+Many users are reasonably and completely unaware of this trap and often fall into it with more complicated programs. Consider the following (simplified from AnyDice program [`9010`](playground/#id=9010)) as an illustration:
 
 ```c
 function: reroll N:n less than THRESHOLD:n depth DEPTH:n {
@@ -718,7 +718,7 @@ function: reroll N:n less than THRESHOLD:n depth DEPTH:n {
 output [reroll 1d6 less than 4 depth 3] named "reroll under 4, up to 3 tries"
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=ZnVuY3Rpb246IHJlcm9sbCBOOm4gbGVzcyB0aGFuIFRIUkVTSE9MRDpuIGRlcHRoIERFUFRIOm4gewogIGlmIE4gPCBUSFJFU0hPTEQgJiBERVBUSCA-IDAgewogICAgREVQVEg6IERFUFRIIC0gMQogICAgcmVzdWx0OiBbcmVyb2xsIDFkNiBsZXNzIHRoYW4gVEhSRVNIT0xEIGRlcHRoIERFUFRIXQogIH0KICByZXN1bHQ6IE4KfQpvdXRwdXQgW3Jlcm9sbCAxZDYgbGVzcyB0aGFuIDQgZGVwdGggM10gbmFtZWQgInJlcm9sbCB1bmRlciA0LCB1cCB0byAzIHRyaWVzIgo)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=ZnVuY3Rpb246IHJlcm9sbCBOOm4gbGVzcyB0aGFuIFRIUkVTSE9MRDpuIGRlcHRoIERFUFRIOm4gewogIGlmIE4gPCBUSFJFU0hPTEQgJiBERVBUSCA-IDAgewogICAgREVQVEg6IERFUFRIIC0gMQogICAgcmVzdWx0OiBbcmVyb2xsIDFkNiBsZXNzIHRoYW4gVEhSRVNIT0xEIGRlcHRoIERFUFRIXQogIH0KICByZXN1bHQ6IE4KfQpvdXRwdXQgW3Jlcm9sbCAxZDYgbGVzcyB0aGFuIDQgZGVwdGggM10gbmFtZWQgInJlcm9sbCB1bmRlciA0LCB1cCB0byAzIHRyaWVzIgo)
 
 The intent of the program is clear:
 Roll a `d6`, and if it’s under `4`, re-roll it up to `3` times.
@@ -754,7 +754,7 @@ function: A:n then B:n {
 output [(d6 * 100) then d6]
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=STogMApmdW5jdGlvbjogQTpuIHRoZW4gQjpuIHsKICBJOiBJICsgMTAwMDAKICBWOiBBICsgQiArIEkKICByZXN1bHQ6IFYKfQpvdXRwdXQgWyhkNiAqIDEwMCkgdGhlbiBkNl0K)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=STogMApmdW5jdGlvbjogQTpuIHRoZW4gQjpuIHsKICBJOiBJICsgMTAwMDAKICBWOiBBICsgQiArIEkKICByZXN1bHQ6IFYKfQpvdXRwdXQgWyhkNiAqIDEwMCkgdGhlbiBkNl0K)
 
 In that probe, the iteration number occupies the `XX0000` digits of each outcome, faces from `A` occupy the `00XX00` digits of each outcome, and faces from `B` occupy the `0000XX` digits of each outcome.
 Because the iteration number is most significant, iteration order is preserved during outcome sorting, and one can see that values of `A` vary fastest, looping around for each value of `B`.
@@ -773,7 +773,7 @@ function: A:n then B:n {
 output [(d6 * 100) then d6]
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=STogMApmdW5jdGlvbjogQTpuIHRoZW4gQjpuIHsKICBJOiBJICsgMTAwMDAKICBWOiBBICsgQiArIEkKICBBOiBBICsgMQogIHJlc3VsdDogVgp9Cm91dHB1dCBbKGQ2ICogMTAwKSB0aGVuIGQ2XQo)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=STogMApmdW5jdGlvbjogQTpuIHRoZW4gQjpuIHsKICBJOiBJICsgMTAwMDAKICBWOiBBICsgQiArIEkKICBBOiBBICsgMQogIHJlc3VsdDogVgp9Cm91dHB1dCBbKGQ2ICogMTAwKSB0aGVuIGQ2XQo)
 
 Both the `dyceum` interpreter and anydice.com produce the same output for both of the above programs.
 `A`’s value is reset to the next value in its inner loop for every iteration.
@@ -791,7 +791,7 @@ function: A:n then B:n {
 output [(d6 * 100) then d6]
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=STogMApmdW5jdGlvbjogQTpuIHRoZW4gQjpuIHsKICBJOiBJICsgMTAwMDAKICBWOiBBICsgQiArIEkKICBCOiBCICsgMSAgXCA8LSBUaGlzIGlzIGRpZmZlcmVudCBcCiAgcmVzdWx0OiBWCn0Kb3V0cHV0IFsoZDYgKiAxMDApIHRoZW4gZDZdCg)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=STogMApmdW5jdGlvbjogQTpuIHRoZW4gQjpuIHsKICBJOiBJICsgMTAwMDAKICBWOiBBICsgQiArIEkKICBCOiBCICsgMSAgXCA8LSBUaGlzIGlzIGRpZmZlcmVudCBcCiAgcmVzdWx0OiBWCn0Kb3V0cHV0IFsoZDYgKiAxMDApIHRoZW4gZDZdCg)
 
 As expected, the `dyceum` interpreter produces the same output as the prior two programs.
 On anydice.com, however, the first six outputs are `10101`, `20202`, ..., `60606`.
@@ -809,7 +809,7 @@ function: add one hundred times N:n to sum of S:s {
 output [add one hundred times d3 to sum of 3d6]
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=ZnVuY3Rpb246IGFkZCBvbmUgaHVuZHJlZCB0aW1lcyBOOm4gdG8gc3VtIG9mIFM6cyB7CiAgUzogUyArIDAKICByZXN1bHQ6IE4gKiAxMDAgKyBTCn0Kb3V0cHV0IFthZGQgb25lIGh1bmRyZWQgdGltZXMgZDMgdG8gc3VtIG9mIDNkNl0K)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=ZnVuY3Rpb246IGFkZCBvbmUgaHVuZHJlZCB0aW1lcyBOOm4gdG8gc3VtIG9mIFM6cyB7CiAgUzogUyArIDAKICByZXN1bHQ6IE4gKiAxMDAgKyBTCn0Kb3V0cHV0IFthZGQgb25lIGh1bmRyZWQgdGltZXMgZDMgdG8gc3VtIG9mIDNkNl0K)
 
 The `dyceum` interpreter produces the expected 54 outcomes: `{103-118, 203-218, 303-318}`.
 anydice.com, however, perplexingly, only produces three outcomes: `{118, 218, 318}`.
@@ -870,7 +870,7 @@ D: 4dD + 0
 output D
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=ZnVuY3Rpb246IGYgSzpuIHsgcmVzdWx0OiBLIH0KZnVuY3Rpb246IGcgRzpuIEQ6ZCB7IGlmIEcgPSAxIHsgcmVzdWx0OiA1IH0gZWxzZSB7IHJlc3VsdDogW2YgRF0gfSB9Cm91dHB1dCBbZyAoZDIpIChkMCldCkQ6IFtnIChkMikgKGR7fSldCm91dHB1dCBECkQ6IDRkRCArIDAKb3V0cHV0IEQ)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=ZnVuY3Rpb246IGYgSzpuIHsgcmVzdWx0OiBLIH0KZnVuY3Rpb246IGcgRzpuIEQ6ZCB7IGlmIEcgPSAxIHsgcmVzdWx0OiA1IH0gZWxzZSB7IHJlc3VsdDogW2YgRF0gfSB9Cm91dHB1dCBbZyAoZDIpIChkMCldCkQ6IFtnIChkMikgKGR7fSldCm91dHB1dCBECkQ6IDRkRCArIDAKb3V0cHV0IEQ)
 
 The `dyceum` interpreter produces expected outputs that all sum to 100%.
 anydice.com’s results, however, only sum to 100% for the first output.
@@ -878,10 +878,10 @@ The second output has a phantom that occupies 50% of the total weight.
 That is compounded to 93.75% for the third output, so the phantom is durable over at least some operations.
 
 Again, the mechanism by which this happens, and the context under which is it triggered is unclear.
-[`140df`](../playground/#id=140df) is especially illustrative.
+[`140df`](playground/#id=140df) is especially illustrative.
 Despite calling the same function with `2d6`, `3d6`, ..., `6d6`, this effect is only visible when the argument is `4d6`, where the total outcome weight only sums to 90.12%.
-Additional examples include programs [`455`](../playground/#id=455) (55.56% on anydice.com), [`11182`](../playground/#id=11182) (14.5% on anydice.com).
-[`1065f`](../playground/#id=1065f) (also [making an appearance above](#certain-operators-and-the-empty-die)) is an even subtler example where the phantom mass in the second output somehow comes from the default result when exhausting recursion depth.
+Additional examples include programs [`455`](playground/#id=455) (55.56% on anydice.com), [`11182`](playground/#id=11182) (14.5% on anydice.com).
+[`1065f`](playground/#id=1065f) (also [making an appearance above](#certain-operators-and-the-empty-die)) is an even subtler example where the phantom mass in the second output somehow comes from the default result when exhausting recursion depth.
 
 ### Overflows
 
@@ -892,7 +892,7 @@ A trivial example is as follows:
 output 1d{9}^(1d10*10)
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=b3V0cHV0IDFkezl9XigxZDEwKjEwKQ)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=b3V0cHV0IDFkezl9XigxZDEwKjEwKQ)
 
 The `dyceum` interpreter correctly handles large integer outcomes.
 anydice.com produces four outcomes, two of which are negative, despite being mathematically impossible.
@@ -913,14 +913,14 @@ loop N over {1..60} {
 }
 ```
 
-Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](../playground/#p=RDogZHsxOjk5LCAwfQpsb29wIE4gb3ZlciB7MS4uNjB9IHsKICBEOiBEICogRAogIG91dHB1dCBEIG5hbWVkICJkezE6OTksIDB9IGFmdGVyIGxvb3AgW05dIgp9Cm91dHB1dCBke30gbmFtZWQgIj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IgpEOiBkezE6OSwgMH0KbG9vcCBOIG92ZXIgezEuLjYwfSB7CiAgRDogRCAqIEQKICBvdXRwdXQgRCBuYW1lZCAiZHsxOjksIDB9IGFmdGVyIGxvb3AgW05dIgp9Cg)
+Open in playground: [![Try the AnyDice-compatible playground](anydice-playground.svg)](playground/#p=RDogZHsxOjk5LCAwfQpsb29wIE4gb3ZlciB7MS4uNjB9IHsKICBEOiBEICogRAogIG91dHB1dCBEIG5hbWVkICJkezE6OTksIDB9IGFmdGVyIGxvb3AgW05dIgp9Cm91dHB1dCBke30gbmFtZWQgIj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09IgpEOiBkezE6OSwgMH0KbG9vcCBOIG92ZXIgezEuLjYwfSB7CiAgRDogRCAqIEQKICBvdXRwdXQgRCBuYW1lZCAiZHsxOjksIDB9IGFmdGVyIGxvb3AgW05dIgp9Cg)
 
 As [described above](#features), the `dyceum` interpreter handles these calculations reasonably, even with truncation.
 However, on anydice.com, later loops’ cumulative weights fail to sum to 100% (sometimes approaching zero, sometimes approaching infinity).
 
 ### “Legacy” programs
 
-anydice.com allows interpretation and execution of an undocumented “legacy” syntax (e.g., `output legacy "8d6h4-4"` from program [`1f`](../playground/#id=1f)).
+anydice.com allows interpretation and execution of an undocumented “legacy” syntax (e.g., `output legacy "8d6h4-4"` from program [`1f`](playground/#id=1f)).
 The `dyceum` interpreter does not recognize the `legacy` keyword and is incapable of interpreting the corresponding notation.
 
 ## Conclusion

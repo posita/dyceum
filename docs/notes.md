@@ -23,7 +23,7 @@
     Please review before upgrading.
 
 - Renamed the project and Python package from `anydyce` to `dyceum`.
-- Adds the [AnyDice-compatible playground](../playground/)!
+- Adds the [AnyDice-compatible playground](playground/)!
   - See the [implementation notes](anydice.md) for details
 - Drops support for 3.9 and 3.10 and extends support to 3.14
 - Removes the following (analogies now live in [`dyce==0.7.0`](https://github.com/posita/dyce/releases/tag/v0.7.0).
