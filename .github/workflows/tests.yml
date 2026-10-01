@@ -82,9 +82,7 @@ jobs:
       - run: uv run --no-dev --group docs make -C docs-src -j 4
         # Both builders must succeed while mkdocs remains.
       - run: uv run --no-dev --group docs mkdocs build
-        # TODO(@posita): add --strict after fixing the unresolved autorefs and
-        # the missing anchors
-      - run: uv run --no-dev --group docs zensical build
+      - run: uv run --no-dev --group docs zensical build --strict
         # Files can be excluded by adding, e.g.
         # ':(exclude)docs-src/perf_*.txt' to the pathspecs
       - run: git diff --exit-code -- docs/notebooks docs/images docs-src

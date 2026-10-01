@@ -83,6 +83,11 @@ _NON_NEGATIVE_INT_OR_SYMBOLIC: dict[str, dict[str, int]] = {
 
 
 class Settings:
+    r"""
+    Holds the settings for one AnyDice program run.
+    The interpreter mutates these while the program runs, so the caller can read the final state.
+    """
+
     def __init__(self) -> None:
         self._data: dict[str, int | str] = dict(_DEFAULTS)
 

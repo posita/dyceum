@@ -452,8 +452,8 @@ class PlotWidgets(_PlotWidgetsDataclass):
         This class should be considered experimental and may change or disappear in
         future versions.
 
-    Class to encapsulate interactive plot control widgets. All parameters for the
-    [initializer][dyceum.viz.PlotWidgets.__init__] are optional.
+    Class to encapsulate interactive plot control widgets. All initializer
+    parameters are optional.
 
     - *initial_alpha* is the starting alpha value for graphs (defaults to `#!python
        0.75`).
@@ -1006,7 +1006,7 @@ class HPlotterChooser:
 
     A controller for coordinating the display of a histogram data set and selection of
     one or more plotters as well as triggering updates in response to either control or
-    data changes. All parameters for the [initializer][dyceum.HPlotterChooser.__init__]
+    data changes. All parameters for the [initializer][dyceum.viz.HPlotterChooser.__init__]
     are optional.
 
     *histogram_specs* is the histogram data set which defaults to an empty tuple. If
