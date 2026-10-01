@@ -212,7 +212,16 @@ test("ghMirrorUrlForProgramId: well-known corpus IDs from our session", () => {
 });
 
 test("ghMirrorUrlForProgramId: throws on invalid input", () => {
-  assert.throws(() => ghMirrorUrlForProgramId("not-hex!"));
+  for (const id of [
+    "not-hex!",
+    "../1",
+    "%2e%2e%2f1",
+    "1?redirect=https://example.invalid/",
+    "https://example.invalid/1",
+    "//example.invalid/1",
+  ]) {
+    assert.throws(() => ghMirrorUrlForProgramId(id));
+  }
 });
 
 test("ghMirrorUrlForProgramId: stays on the corpus mirror", () => {
