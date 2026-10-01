@@ -27,24 +27,24 @@
   },
   "dyceum": {
     "releases": {
-      "0.5.0rc6": [
+      "0.5.0rc7.dev3+g741607829": [
         {
           "comment_text": "",
           "digests": {
-            "md5": "909f2b3ef21daa19472689f0857308cc",
-            "sha256": "5d984369db71a2141389980fce10925772d3bf3985d53d9240fc51f453ad942e"
+            "md5": "495b098c345b93eac916e55dee676fe7",
+            "sha256": "ed47f796f34c600abf4e827dad584497930d0288f2a638fa8eca870ffe4412d1"
           },
           "downloads": -1,
-          "filename": "dyceum-0.5.0rc6-py3-none-any.whl",
+          "filename": "dyceum-0.5.0rc7.dev3+g741607829-py3-none-any.whl",
           "has_sig": false,
-          "md5_digest": "909f2b3ef21daa19472689f0857308cc",
+          "md5_digest": "495b098c345b93eac916e55dee676fe7",
           "packagetype": "bdist_wheel",
           "python_version": "py3",
           "requires_python": ">=3.11",
-          "size": 63205,
-          "upload_time": "2026-10-01T02:27:22.857444Z",
-          "upload_time_iso_8601": "2026-10-01T02:27:22.857444Z",
-          "url": "./dyceum-0.5.0rc6-py3-none-any.whl",
+          "size": 63392,
+          "upload_time": "2026-10-01T12:39:57.910984Z",
+          "upload_time_iso_8601": "2026-10-01T12:39:57.910984Z",
+          "url": "./dyceum-0.5.0rc7.dev3+g741607829-py3-none-any.whl",
           "yanked": false,
           "yanked_reason": null
         }
@@ -172,8 +172,8 @@
           "python_version": "py3",
           "requires_python": ">=3.7",
           "size": 2225148,
-          "upload_time": "2026-08-18T08:52:55Z",
-          "upload_time_iso_8601": "2026-08-18T08:52:55Z",
+          "upload_time": "2026-08-18T08:52:56Z",
+          "upload_time_iso_8601": "2026-08-18T08:52:56Z",
           "url": "./widgetsnbextension-4.0.16-py3-none-any.whl",
           "yanked": false,
           "yanked_reason": null
