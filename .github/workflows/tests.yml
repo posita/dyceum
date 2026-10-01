@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os || 'ubuntu-latest' }}
     strategy:
       fail-fast: false
       matrix:
@@ -36,8 +36,7 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
           cache-python: true
-      - run: uv sync --no-dev --group tox
-      - run: uv run --no-sync tox -e ${{ matrix.tox-env }}
+      - run: uv run --no-dev --group tox tox -e ${{ matrix.tox-env }}
 
   coverage:
     runs-on: ubuntu-latest
@@ -48,9 +47,8 @@ jobs:
       - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
         with:
           cache-python: true
-      - run: uv sync --no-dev --group test
-      - run: uv run --no-sync pytest --cov --cov-report=xml
-      - run: uv run --no-sync coverage report --format=markdown >> $GITHUB_STEP_SUMMARY
+      - run: uv run --no-dev --group test pytest --cov --cov-report=xml
+      - run: uv run --no-dev --group test coverage report --format=markdown >> $GITHUB_STEP_SUMMARY
       - uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -64,8 +62,7 @@ jobs:
       - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
         with:
           cache-python: true
-      - run: uv sync --no-dev --group lint
-      - run: uv run --no-sync pre-commit run --all-files --hook-stage pre-push
+      - run: uv run --no-dev --group lint pre-commit run --all-files --hook-stage pre-push
         env:
           SKIP: gitleaks,osv-scanner,semgrep,trivyfs-docker,trivyconfig-docker
       - run: git diff --quiet HEAD --  # fails if any tracked files have changed
@@ -80,8 +77,6 @@ jobs:
         with:
           cache-python: true
       - run: uv run --no-dev --group docs make -C docs-src -j 4
-        # Both builders must succeed while mkdocs remains.
-      - run: uv run --no-dev --group docs mkdocs build
       - run: uv run --no-dev --group docs zensical build --strict
         # Files can be excluded by adding, e.g.
         # ':(exclude)docs-src/perf_*.txt' to the pathspecs

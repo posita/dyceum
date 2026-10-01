@@ -67,8 +67,9 @@ To try it on your own hardware, use the [`quickstart-local.sh` script](https://g
 ```sh
 % git clone https://github.com/posita/dyceum.git dyceum && ./dyceum/quickstart-local.sh
 ...
-INFO    -  Documentation built in 4.84 seconds
-INFO    -  [20:39:05] Serving on http://127.0.0.1:8000/
+Serving …/path/to/dyceum/site on http://localhost:8000
+Build started
+No issues found
 ```
 
 Once loaded, try the following:
