@@ -12,12 +12,12 @@
   There is no guarantee that other docs/resources will be available where this content is displayed.
 -->
 
-<!-- mkdocs:hide:start -->
+<!-- docs:hide:start -->
 *Copyright and other protections apply.
 Please see the accompanying `LICENSE` file for rights and restrictions governing use of this software.
 All rights not expressly waived or licensed are reserved.
 If that file is missing or appears to be modified from its original, then please contact the author before viewing or using this software in any capacity.*
-<!-- mkdocs:hide:end -->
+<!-- docs:hide:end -->
 
 [![Tests](https://github.com/posita/dyceum/actions/workflows/tests.yml/badge.svg)](https://github.com/posita/dyceum/actions/workflows/tests.yml)
 [![Coverage](https://codecov.io/gh/posita/dyceum/branch/main/graph/badge.svg)](https://app.codecov.io/gh/posita/dyceum)
@@ -33,7 +33,7 @@ If that file is missing or appears to be modified from its original, then please
 # `dyceum` (née `anydyce`) – Application experiments for [`dyce`](https://posita.github.io/dyce/)
 
 <div align="center">
-  <a href="https://dyceum.org/latest/playground/"><img src="https://dyceum.org/latest/assets/anydice-clone.png" alt="Dyceum’s AnyDice interpreter in action"></a><br>
+  <a href="https://dyceum.org/latest/playground/"><img src="https://dyceum.org/latest/images/anydice-clone.png" alt="Dyceum’s AnyDice interpreter in action"></a><br>
   <i>Dyceum’s AnyDice language interpreter and interactive playground in action</i>
 </div>
 

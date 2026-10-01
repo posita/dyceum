@@ -252,4 +252,8 @@ Stmt = OutputStmt | FunctionDef | LoopStmt | IfStmt | SetStmt | ResultStmt | Var
 
 @dataclass
 class Program:
+    r"""
+    The root node of an AnyDice abstract syntax tree.
+    """
+
     stmts: "list[Stmt]" = field(default_factory=list)
